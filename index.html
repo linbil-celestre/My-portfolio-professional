@@ -37,8 +37,10 @@
             <ul>
                 <li class="active"><a href="#home" data-page="home"> <i class="fa-solid fa-house"></i> Home </a></li>
                 <li><a href="#about" data-page="about"><i class="fa-solid fa-user"></i> About </a></li>
+                <li><a href="#services" data-page="services"><i class="fa-solid fa-briefcase"></i> Services </a></li>
                 <li><a href="#project" data-page="project"><i class="fa-solid fa-file"></i> Projects </a></li>
-                <li><a href="#certificate" data-page="certificate"><i class="fa-solid fa-image"></i> Image</a></li>
+                <li><a href="#certificate" data-page="certificate"><i class="fa-solid fa-image"></i> certificate</a>
+                </li>
                 <li><a href="#contact" data-page="contact"><i class="fa-solid fa-phone"></i>Contact </a></li>
             </ul>
         </nav>
@@ -52,111 +54,160 @@
     <main class="content">
         <section class="page active" id="page-home">
             <div class="intro-band">
-                <h1 class="greeting">Hi, I'm Lin Bil Impuesto Celestre</h1>
-            </div>
-            <div class="dash-grid">
-                <div class="card projects">
-                    <h2 class="projects-subheading">Featured Projects</h2>
-                    <hr class="projects-divider">
+                <div class="greeting-row">
+                    <h1 class="greeting">Hi, I'm Lin Bil Impuesto Celestre</h1>
+                    <a class="hire-me-btn" href="#contact" data-page="contact"><i class="fa-solid fa-paper-plane"></i>
+                        Hire Me</a>
+                </div>
+                <div class="card tools-card">
+                    <div class="tools-card-heading">
+                        <div class="tools-card-title-group">
+                            <h3>Daily Drivers</h3>
+                            <p class="tools-card-sub">Tools I use to create websites</p>
+                        </div>
+                        <span class="tools-card-status"><span class="status-dot"></span> Always learning</span>
+                    </div>
+                    <div class="tools-carousel" aria-label="Tools I work with">
+                        <div class="tools-carousel-track">
+                            <div class="tool-item"><span>vscode</span></div>
+                            <div class="tool-item"><span>Gemeni AI</span></div>
+                            <div class="tool-item"><span>Cursor</span></div>
+                            <div class="tool-item"><span>HTML</span></div>
+                            <div class="tool-item"><span>CSS</span></div>
+                            <div class="tool-item"><span>JavaScript</span></div>
+                            <div class="tool-item"><span>PHP</span></div>
+                            <div class="tool-item"><span>MySQL</span></div>
+                            <div class="tool-item"><span>React JS</span></div>
+                            <div class="tool-item"><span>Tailwind</span></div>
+                            <div class="tool-item"><span>Bootstrap</span></div>
+                            <div class="tool-item"><span>Laravel</span></div>
+                            <!-- Duplicates for seamless loop -->
+                            <div class="tool-item" aria-hidden="true"><span>vscode</span></div>
+                            <div class="tool-item" aria-hidden="true"><span>Gemeni AI</span></div>
+                            <div class="tool-item" aria-hidden="true"><span>Cursor</span></div>
+                            <div class="tool-item" aria-hidden="true"><span>HTML</span></div>
+                            <div class="tool-item" aria-hidden="true"><span>CSS</span></div>
+                            <div class="tool-item" aria-hidden="true"><span>JavaScript</span></div>
+                            <div class="tool-item" aria-hidden="true"><span>PHP</span></div>
+                            <div class="tool-item" aria-hidden="true"><span>MySQL</span></div>
+                            <div class="tool-item" aria-hidden="true"><span>React JS</span></div>
+                            <div class="tool-item" aria-hidden="true"><span>Tailwind</span></div>
+                            <div class="tool-item" aria-hidden="true"><span>Bootstrap</span></div>
+                            <div class="tool-item" aria-hidden="true"><span>Laravel</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-grid">
+                    <div class="card projects">
+                        <h2 class="projects-subheading">Featured Projects</h2>
+                        <hr class="projects-divider">
 
-                    <div class="project-row">
-                        <a class="project-thumb project-image-button" href="./logo/logo.png" target="_blank"
-                            rel="noopener" aria-label="Open Portfolio 1 preview" title="Open Image Preview">
-                            <img src="./logo/logo.png" alt="Portfolio 1" class="project-thumb-img">
-                        </a>
-                        <div class="project-info">
-                            <p class="p-title">Portfolio 1</p>
-                            <p class="p-description">A dark-themed portfolio hero section featuring a blue hexagonal
-                                pattern background, text introducing a Front End Developer, social media links, a
-                                "Resume CV" button, and a circular portrait in graduation attire.</p>
+                        <div class="project-row">
+                            <a class="project-thumb project-image-button" href="./logo/logo.png" target="_blank"
+                                rel="noopener" aria-label="Open Portfolio 1 preview" title="Open Image Preview">
+                                <img src="./logo/logo.png" alt="Portfolio 1" class="project-thumb-img">
+                            </a>
+                            <div class="project-info">
+                                <p class="p-title">Portfolio 1</p>
 
-                            <div class="project-actions">
-                                <a class="live-demo" href="#" target="_blank" rel="noopener"
-                                    data-tooltip="View on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
-                                <a class="live-demo" href="./index.html" target="_self" rel="noopener"
-                                    data-tooltip="Completed project"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                                <a class="live-demo image-link" href="./logo/logo.png" target="_blank" rel="noopener"
-                                    data-tooltip="See picture of result"><i class="fa-solid fa-image"></i> Image</a>
+                                <p class="p-description">A dark-themed portfolio hero section featuring a blue hexagonal
+                                    pattern background, text introducing a Front End Developer, social media links, a
+                                    "Resume CV" button, and a circular portrait in graduation attire.</p>
+
+                                <div class="project-actions">
+                                    <a class="live-demo" href="#" target="_blank" rel="noopener"
+                                        data-tooltip="View on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+                                    <a class="live-demo" href="./index.html" target="_self" rel="noopener"
+                                        data-tooltip="Completed project"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                    <a class="live-demo image-link" href="./logo/logo.png" target="_blank"
+                                        rel="noopener" data-tooltip="See picture of result"><i
+                                            class="fa-solid fa-image"></i> Image</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-row">
+                            <a class="project-thumb project-image-button" href="./logo/logo1.jpg" target="_blank"
+                                rel="noopener" aria-label="Open Portfolio 2 preview" title="Open Image Preview">
+                                <img src="./logo/logo1.jpg" alt="Portfolio 2" class="project-thumb-img">
+                            </a>
+                            <div class="project-info">
+                                <p class="p-title">Portfolio 2   </p>
+                                <p class="p-description">A light-themed, modern portfolio web page with soft gradients,
+                                    displaying intro text, target role tags, action buttons ("Download Resume", "View
+                                    Profile"), and a dark footer section.</p>
+
+                                <div class="project-actions">
+                                    <a class="live-demo" href="#" target="_blank" rel="noopener"
+                                        data-tooltip="View on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+                                    <a class="live-demo" href="./index.html" target="_self" rel="noopener"
+                                        data-tooltip="Completed project"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                    <a class="live-demo image-link" href="./logo/logo1.jpg" target="_blank"
+                                        rel="noopener" data-tooltip="See picture of result"><i
+                                            class="fa-solid fa-image"></i> Image</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-row">
+                            <a class="project-thumb project-image-button" href="./logo/logo3.jpg" target="_blank"
+                                rel="noopener" aria-label="Open Portfolio 3 preview" title="Open Image Preview">
+                                <img src="./logo/logo3.jpg" alt="Portfolio 3" class="project-thumb-img">
+                            </a>
+                            <div class="project-info">
+                                <p class="p-title">Portfolio 3 </p>
+                                <p class="p-description">A dashboard-style portfolio layout with a dark navigation
+                                    sidebar
+                                    on the left and a main content area containing featured projects, tech stack skill
+                                    bars,
+                                    and a "Quick Facts" card.</p>
+
+                                <div class="project-actions">
+                                    <a class="live-demo" href="#" target="_blank" rel="noopener"
+                                        data-tooltip="View on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+                                    <a class="live-demo" href="./index.html" target="_self" rel="noopener"
+                                        data-tooltip="Completed project"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                    <a class="live-demo image-link" href="./logo/logo3.jpg" target="_blank"
+                                        rel="noopener" data-tooltip="See picture of result"><i
+                                            class="fa-solid fa-image"></i> Image</a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-row">
-                        <a class="project-thumb project-image-button" href="./logo/logo1.jpg" target="_blank"
-                            rel="noopener" aria-label="Open Portfolio 2 preview" title="Open Image Preview">
-                            <img src="./logo/logo1.jpg" alt="Portfolio 2" class="project-thumb-img">
-                        </a>
-                        <div class="project-info">
-                            <p class="p-title">Portfolio 2</p>
-                            <p class="p-description">A light-themed, modern portfolio web page with soft gradients,
-                                displaying intro text, target role tags, action buttons ("Download Resume", "View
-                                Profile"), and a dark footer section.</p>
-
-                            <div class="project-actions">
-                                <a class="live-demo" href="#" target="_blank" rel="noopener"
-                                    data-tooltip="View on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
-                                <a class="live-demo" href="./index.html" target="_self" rel="noopener"
-                                    data-tooltip="Completed project"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                                <a class="live-demo image-link" href="./logo/logo1.jpg" target="_blank" rel="noopener"
-                                    data-tooltip="See picture of result"><i class="fa-solid fa-image"></i> Image</a>
+                    <div class="card summary-card">
+                        <h3>Portfolio skills</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-heading"><span>Portfolio 1</span><strong>80%</strong></div>
+                                <div class="skill-bar"><span style="--skill-level: 80%"></span></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-heading"><span>Portfolio 2</span><strong>95%</strong></div>
+                                <div class="skill-bar"><span style="--skill-level: 95%"></span></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-heading"><span>Portfolio 3</span><strong>100%</strong></div>
+                                <div class="skill-bar"><span style="--skill-level: 100%"></span></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-row">
-                        <a class="project-thumb project-image-button" href="./logo/logo3.jpg" target="_blank"
-                            rel="noopener" aria-label="Open Portfolio 3 preview" title="Open Image Preview">
-                            <img src="./logo/logo3.jpg" alt="Portfolio 3" class="project-thumb-img">
-                        </a>
-                        <div class="project-info">
-                            <p class="p-title">Portfolio 3</p>
-                            <p class="p-description">A dashboard-style portfolio layout with a dark navigation sidebar
-                                on the left and a main content area containing featured projects, tech stack skill bars,
-                                and a "Quick Facts" card.</p>
-
-                            <div class="project-actions">
-                                <a class="live-demo" href="#" target="_blank" rel="noopener"
-                                    data-tooltip="View on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
-                                <a class="live-demo" href="./index.html" target="_self" rel="noopener"
-                                    data-tooltip="Completed project"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                                <a class="live-demo image-link" href="./logo/logo3.jpg" target="_blank" rel="noopener"
-                                    data-tooltip="See picture of result"><i class="fa-solid fa-image"></i> Image</a>
-                            </div>
+                    <div class="card summary-card">
+                        <h3>Quick Facts</h3>
+                        <div class="fact-list">
+                            <p><strong>Focus</strong><span>Front-end development</span></p>
+                            <p><strong>Experience</strong><span>OJT Front-end Intern &bull; Web Development Team</span>
+                            </p>
+                            <p><strong>Status</strong><span class="available"><span class="status-dot"></span>Available
+                                    for
+                                    work</span></p>
                         </div>
                     </div>
                 </div>
-
-                <div class="card summary-card">
-                    <h3>Portfolio skills</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-heading"><span>Portfolio 1</span><strong>80%</strong></div>
-                            <div class="skill-bar"><span style="--skill-level: 80%"></span></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-heading"><span>Portfolio 2</span><strong>95%</strong></div>
-                            <div class="skill-bar"><span style="--skill-level: 95%"></span></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-heading"><span>Portfolio 3</span><strong>100%</strong></div>
-                            <div class="skill-bar"><span style="--skill-level: 100%"></span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card summary-card">
-                    <h3>Quick Facts</h3>
-                    <div class="fact-list">
-                        <p><strong>Focus</strong><span>Front-end development</span></p>
-                        <p><strong>Experience</strong><span>OJT Front-end Intern &bull; Web Development Team</span></p>
-                        <p><strong>Status</strong><span class="available"><span class="status-dot"></span>Available for
-                                work</span></p>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- End of Home -->
@@ -316,7 +367,6 @@
 
         <!-- End of About -->
 
-
         <!-- Start of Project -->
 
         <!-- Project Style -->
@@ -377,7 +427,7 @@
                                 </div>
                             </div>
                             <p class="p-description">Operational web platform for managing hotel and restaurant
-                                services, records, and activity flow.</p>
+                                operations, records, and activity flow.</p>
                             <div class="p-tags">
                                 <span>PHP</span>
                                 <span>MySQL</span>
@@ -464,7 +514,7 @@
                                 </div>
                             </div>
                             <p class="p-description">Operational web platform for managing hotel and restaurant
-                                services, records, and activity flow.</p>
+                                operations, records, and activity flow.</p>
                             <div class="p-tags">
                                 <span>PHP</span>
                                 <span>MySQL</span>
@@ -755,17 +805,15 @@
                     </div>
                     <div class="contact-qr-frame">
                         <div class="contact-qr-scanline"></div>
-                        <img src="qr-code.png" alt="QR Code — scan to contact" class="contact-qr-img" />
+                        <img src="qr-code.png" alt="QR Code - scan to contact" class="contact-qr-img">
                     </div>
                     <p class="contact-qr-hint">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         Point your phone camera at the code
                     </p>
                 </div>
-
             </div>
         </section>
-
 
         <!-- Certificate Section -->
         <section class="page" id="page-certificate">
@@ -904,191 +952,200 @@
                 </div>
             </div>
 
-<!-- TESDA CERTIFICATES (VERTICAL & LEFT-ALIGNED) -->
-<section class="cert-category tesda-section">
-    <div class="cert-category-head">
-        <h2 class="category-title">Other Certificate</h2>
-        <button id="tesdaGridBtn" class="cert-layout-tag" type="button" aria-pressed="false">
-           
-        </button>
-    </div>
+            <!-- TESDA CERTIFICATES (VERTICAL & LEFT-ALIGNED) -->
+            <section class="cert-category tesda-section">
+                <div class="cert-category-head">
+                    <h2 class="category-title">Other Certificate</h2>
+                    <button id="tesdaGridBtn" class="cert-layout-tag" type="button" aria-pressed="false">
 
-    <div id="tesdaCarouselContainer" class="carousel-container tesda-vertical-container">
-        <div class="split-carousel-track">
-            
-            <!-- LEFT COLUMN (PABABANG SCROLL) -->
-            <div class="carousel-col col-left">
-                <!-- Card 1 -->
-                <article class="certificate-card">
-                   <div class="cert-image-wrapper cert-file-preview">
-                        <img src="./Requiements/Tesda/NCSS.jpg" alt="NCSS National Certificate" class="cert-image">
-                        <div class="cert-overlay">
-                            <a href="./Requiements/Tesda/NCSS.jpg" class="cert-btn" target="_blank">View Certificate</a>
+                    </button>
+                </div>
+
+                <div id="tesdaCarouselContainer" class="carousel-container tesda-vertical-container">
+                    <div class="split-carousel-track">
+
+                        <!-- LEFT COLUMN (PABABANG SCROLL) -->
+                        <div class="carousel-col col-left">
+                            <!-- Card 1 -->
+                            <article class="certificate-card">
+                                <div class="cert-image-wrapper cert-file-preview">
+                                    <img src="./Requiements/Tesda/NCSS.jpg" alt="NCSS National Certificate"
+                                        class="cert-image">
+                                    <div class="cert-overlay">
+                                        <a href="./Requiements/Tesda/NCSS.jpg" class="cert-btn" target="_blank">View
+                                            Certificate</a>
+                                    </div>
+                                </div>
+                                <div class="cert-content">
+                                    <span class="cert-issuer">TESDA</span>
+                                    <h3 class="cert-title">Introduction to Computer System Servicing</h3>
+
+                                </div>
+                            </article>
+
+                            <!-- Card 2 -->
+                            <article class="certificate-card">
+                                <div class="cert-image-wrapper cert-file-preview">
+                                    <img src="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg"
+                                        alt="NCSS National Certificate" class="cert-image">
+                                    <div class="cert-overlay">
+                                        <a href="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg"
+                                            class="cert-btn" target="_blank">View Certificate</a>
+                                    </div>
+                                </div>
+                                <div class="cert-content">
+                                    <span class="cert-issuer">TESDA</span>
+                                    <h3 class="cert-title">COVID-19 Preventive Measures in the Workplace</h3>
+                                </div>
+                            </article>
+
+                            <!-- Duplicate for Loop -->
+
                         </div>
-                    </div>
-                    <div class="cert-content">
-                        <span class="cert-issuer">TESDA</span>
-                        <h3 class="cert-title">Introduction to Computer System Servicing</h3>
-                       
-                    </div>
-                </article>
 
-                <!-- Card 2 -->
-                <article class="certificate-card">
-                    <div class="cert-image-wrapper cert-file-preview">
-                         <img src="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg" alt="NCSS National Certificate" class="cert-image">
-                        <div class="cert-overlay">
-                            <a href="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg" class="cert-btn" target="_blank">View Certificate</a>
+                        <!-- RIGHT COLUMN (PATAAS NA SCROLL) -->
+                        <div class="carousel-col col-right">
+                            <!-- Card 3 -->
+                            <article class="certificate-card">
+                                <div class="cert-image-wrapper cert-file-preview">
+                                    <img src="./Requiements/Certificate/Adobe Premire Pro_page.jpg"
+                                        alt="adobe-premire-pro" class="cert-image">
+                                    <div class="cert-overlay">
+                                        <a href="./Requiements/Certificate/Adobe Premire Pro_page.jpg" class="cert-btn"
+                                            target="_blank">View Certificate</a>
+                                    </div>
+                                </div>
+                                <div class="cert-content">
+                                    <span class="cert-issuer">Seminar</span>
+                                    <h3 class="cert-title">Adobe Premire Pro</h3>
+                                </div>
+                            </article>
+
+                            <!-- Card 4 -->
+                            <article class="certificate-card">
+                                <div class="cert-image-wrapper cert-file-preview">
+                                    <img src="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg"
+                                        alt="adobe-premire-pro" class="cert-image">
+                                    <div class="cert-overlay">
+                                        <a href="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg"
+                                            class="cert-btn" target="_blank">View Certificate</a>
+                                    </div>
+                                </div>
+                                <div class="cert-content">
+                                    <span class="cert-issuer">DICT</span>
+                                    <h3 class="cert-title">MICROSOFT EXCEL FOR DATA ANALYSIS</h3>
+                                </div>
+                            </article>
+
+
                         </div>
-                    </div>
-                    <div class="cert-content">
-                        <span class="cert-issuer">TESDA</span>
-                        <h3 class="cert-title">COVID-19 Preventive Measures in the Workplace</h3>
-                    </div>
-                </article>
 
-                <!-- Duplicate for Loop -->
-              
+                    </div>
+                </div>
+            </section>
+
+
             </div>
-
-            <!-- RIGHT COLUMN (PATAAS NA SCROLL) -->
-            <div class="carousel-col col-right">
-                <!-- Card 3 -->
-                <article class="certificate-card">
-                    <div class="cert-image-wrapper cert-file-preview">
-                            <img src="./Requiements/Certificate/Adobe Premire Pro_page.jpg" alt="adobe-premire-pro" class="cert-image">
-                        <div class="cert-overlay">
-                            <a href="./Requiements/Certificate/Adobe Premire Pro_page.jpg" class="cert-btn" target="_blank">View Certificate</a>
-                        </div>
-                    </div>
-                    <div class="cert-content">
-                        <span class="cert-issuer">Seminar</span>
-                        <h3 class="cert-title">Adobe Premire Pro</h3>
-                    </div>
-                </article>
-
-                <!-- Card 4 -->
-                <article class="certificate-card">
-                    <div class="cert-image-wrapper cert-file-preview">
-                          <img src="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg" alt="adobe-premire-pro" class="cert-image">
-                        <div class="cert-overlay">
-                            <a href="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg" class="cert-btn" target="_blank">View Certificate</a>
-                        </div>
-                    </div>
-                    <div class="cert-content">
-                        <span class="cert-issuer">DICT</span>
-                        <h3 class="cert-title">MICROSOFT EXCEL FOR DATA ANALYSIS</h3>
-                    </div>
-                </article>
-
-             
-            </div>
-
-        </div>
-    </div>
-</section>
+        </section>
 
 
-</div>
-</div>
-
-
-</main>
-<script>
-    /* Contact form feedback */
-    function handleContactForm(e) {
-        e.preventDefault();
-        var btn = document.getElementById('contact-submit-btn');
-        var success = document.getElementById('contact-form-success');
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending…';
-        setTimeout(function () {
-            btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
-            btn.disabled = false;
-            success.classList.add('visible');
-            e.target.reset();
-            setTimeout(function () { success.classList.remove('visible'); }, 4000);
-        }, 1200);
-    }
-
-    /* Tooltip Handler */
-    document.querySelectorAll('.project-card-button[title]').forEach(function (button) {
-        button.dataset.tooltip = button.getAttribute('title');
-        button.removeAttribute('title');
-    });
-
-    /* Single Page Application (SPA) Routing & Titles */
-    var pageTitles = {
-        home: 'Portfolio',
-        about: 'About',
-        project: 'Projects',
-        contact: 'Contact',
-        certificate: 'Certificate'
-    };
-
-    function showPage(target) {
-        document.querySelectorAll('.page').forEach(function (p) {
-            p.classList.toggle('active', p.id === 'page-' + target);
-        });
-
-        document.querySelectorAll('nav li').forEach(function (li) {
-            var link = li.querySelector('a[data-page]');
-            li.classList.toggle('active', link && link.dataset.page === target);
-        });
-
-        // Update browser tab title
-        document.title = pageTitles[target] || 'Portfolio | Lin Bil Celestre';
-
-        if (target && target !== 'home') {
-            history.replaceState(null, '', '#' + target);
-        } else {
-            history.replaceState(null, '', window.location.pathname);
-        }
-    }
-
-    function initPageFromHash() {
-        var hash = (location.hash || '').replace('#', '').trim();
-        var page = hash || 'home';
-        var valid = document.getElementById('page-' + page);
-        if (!valid) page = 'home';
-        showPage(page);
-    }
-
-    document.querySelectorAll('nav a[data-page]').forEach(function (link) {
-        link.addEventListener('click', function (e) {
+    </main>
+    <script>
+        /* Contact form feedback */
+        function handleContactForm(e) {
             e.preventDefault();
-            var target = this.dataset.page;
-            showPage(target);
-        });
-    });
-
-/* CERTIFICATE GRID & CAROUSEL TOGGLE LOGIC */
-/* TOGGLE BETWEEN CAROUSEL AND GRID LAYOUT */
-var certificateGridBtn = document.getElementById('certificateGridBtn');
-var certSectionContainer = document.getElementById('certSectionContainer');
-
-if (certificateGridBtn && certSectionContainer) {
-    certificateGridBtn.addEventListener('click', function () {
-        var isGrid = certSectionContainer.classList.toggle('is-grid');
-
-        this.classList.toggle('active', isGrid);
-        this.setAttribute('aria-pressed', String(isGrid));
-
-        if (isGrid) {
-            this.innerHTML = '<i class="fa-solid fa-rotate"></i> CAROUSEL LAYOUT';
-        } else {
-            this.innerHTML = '<i class="fa-solid fa-border-all"></i> GRID LAYOUT';
+            var btn = document.getElementById('contact-submit-btn');
+            var success = document.getElementById('contact-form-success');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending…';
+            setTimeout(function () {
+                btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+                btn.disabled = false;
+                success.classList.add('visible');
+                e.target.reset();
+                setTimeout(function () { success.classList.remove('visible'); }, 4000);
+            }, 1200);
         }
-    });
-}
 
-    window.addEventListener('hashchange', function () {
+        /* Tooltip Handler */
+        document.querySelectorAll('.project-card-button[title]').forEach(function (button) {
+            button.dataset.tooltip = button.getAttribute('title');
+            button.removeAttribute('title');
+        });
+
+        /* Single Page Application (SPA) Routing & Titles */
+        var pageTitles = {
+            home: 'Portfolio',
+            about: 'About',
+            project: 'Projects',
+            contact: 'Contact',
+            certificate: 'Certificate'
+
+        };
+
+        function showPage(target) {
+            document.querySelectorAll('.page').forEach(function (p) {
+                p.classList.toggle('active', p.id === 'page-' + target);
+            });
+
+            document.querySelectorAll('nav li').forEach(function (li) {
+                var link = li.querySelector('a[data-page]');
+                li.classList.toggle('active', link && link.dataset.page === target);
+            });
+
+            // Update browser tab title
+            document.title = pageTitles[target] || 'Portfolio | Lin Bil Celestre';
+
+            if (target && target !== 'home') {
+                history.replaceState(null, '', '#' + target);
+            } else {
+                history.replaceState(null, '', window.location.pathname);
+            }
+        }
+
+        function initPageFromHash() {
+            var hash = (location.hash || '').replace('#', '').trim();
+            var page = hash || 'home';
+            var valid = document.getElementById('page-' + page);
+            if (!valid) page = 'home';
+            showPage(page);
+        }
+
+        document.querySelectorAll('nav a[data-page]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                var target = this.dataset.page;
+                showPage(target);
+            });
+        });
+
+        /* CERTIFICATE GRID & CAROUSEL TOGGLE LOGIC */
+        /* TOGGLE BETWEEN CAROUSEL AND GRID LAYOUT */
+        var certificateGridBtn = document.getElementById('certificateGridBtn');
+        var certSectionContainer = document.getElementById('certSectionContainer');
+
+        if (certificateGridBtn && certSectionContainer) {
+            certificateGridBtn.addEventListener('click', function () {
+                var isGrid = certSectionContainer.classList.toggle('is-grid');
+
+                this.classList.toggle('active', isGrid);
+                this.setAttribute('aria-pressed', String(isGrid));
+
+                if (isGrid) {
+                    this.innerHTML = '<i class="fa-solid fa-rotate"></i> CAROUSEL LAYOUT';
+                } else {
+                    this.innerHTML = '<i class="fa-solid fa-border-all"></i> GRID LAYOUT';
+                }
+            });
+        }
+
+        window.addEventListener('hashchange', function () {
+            initPageFromHash();
+        });
+
+        // Initialize page display
         initPageFromHash();
-    });
-
-    // Initialize page display
-    initPageFromHash();
-</script>
+    </script>
 </body>
 
 </html>

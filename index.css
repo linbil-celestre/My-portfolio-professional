@@ -277,11 +277,11 @@ nav li.active a {
    HOME PAGE — Intro Band & Section Header
    ============================================================ */
 .intro-band {
-    max-width: 760px;
+    max-width: none;
 }
 
 .section-header {
-    max-width: 1180px;
+    max-width: 100%;
     width: 100%;
     margin-bottom: 0;
     padding-bottom: 16px;
@@ -296,6 +296,46 @@ nav li.active a {
     font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
+}
+
+/* Greeting row with Hire Me button */
+.greeting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.greeting-row .greeting {
+    margin: 0;
+}
+
+.hire-me-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border: 1px solid rgba(168, 194, 160, 0.7);
+    border-radius: 999px;
+    color: #fff;
+    background: linear-gradient(135deg, #8eab85, #a8c2a0);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(142, 171, 133, 0.3);
+    transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+
+.hire-me-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(142, 171, 133, 0.4);
+}
+
+.hire-me-btn i {
+    font-size: 0.78rem;
 }
 
 .role {
@@ -323,7 +363,7 @@ nav li.active a {
     grid-auto-rows: minmax(170px, auto);
     align-items: stretch;
     gap: 18px;
-    width: min(1180px, 100%);
+    width: 100%;
     max-width: 100%;
     margin-top: 36px;
 }
@@ -491,6 +531,12 @@ nav li.active a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.version{
+    font-weight: 500;
+    font-size: 5%;
+    text-transform: capitalize;
 }
 
 .project-card-title-long {
@@ -755,6 +801,112 @@ nav li.active a {
     height: 100%;
     border-radius: inherit;
     background: linear-gradient(90deg, #8eab85, #b8cdb1);
+}
+
+.tools-card {
+    width: 100%;
+    margin-top: 18px;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.tools-card:hover {
+    border-color: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+.tools-card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.tools-card-heading h3 {
+    margin: 0;
+    color: #20251f;
+    font-family: 'Fraunces', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+.tools-card-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tools-card-sub {
+    margin: 0;
+    color: #687067;
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
+.tools-card-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #687b65;
+    font-size: 0.72rem;
+}
+
+.tools-carousel {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 2%, #000 99%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 2%, #000 99%, transparent);
+}
+
+.tools-carousel-track {
+    display: flex;
+    width: max-content;
+    gap: 12px;
+    animation: tools-scroll 24s linear infinite;
+}
+
+.tools-carousel:hover .tools-carousel-track {
+    animation-play-state: paused;
+}
+
+.tool-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 132px;
+    padding: 12px 16px;
+    border: 1px solid rgba(168, 194, 160, 0.45);
+    border-radius: 8px;
+    color: #596653;
+    background: rgba(168, 194, 160, 0.08);
+    font-size: 0.82rem;
+    white-space: nowrap;
+}
+
+.tool-item i {
+    width: 18px;
+    color: #687b65;
+    text-align: center;
+    font-size: 1rem;
+}
+
+@keyframes tools-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 6px));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tools-carousel-track {
+        animation: none;
+    }
 }
 
 /* ============================================================
@@ -1619,6 +1771,9 @@ nav li.active a {
 /* Override grid to align card heights */
 .contact-template-grid {
     align-items: start;
+    width: min(1180px, 100%);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* Left card: info layout */
@@ -1627,6 +1782,7 @@ nav li.active a {
     flex-direction: column;
     gap: 28px;
     padding: 28px;
+    min-height: 100%;
 }
 
 .contact-info-top {
@@ -1977,6 +2133,7 @@ a.contact-info-value:hover {
     justify-content: center;
     gap: 22px;
     padding: 32px 28px;
+    min-height: 100%;
     text-align: center;
 }
 
@@ -2138,7 +2295,8 @@ a.contact-info-value:hover {
    CERTIFICATES PAGE
    ============================================================ */
 .cert-category {
-    margin-top: 36px;
+    width: min(1180px, 100%);
+    margin: 28px auto 0;
 }
 
 .cert-category-head {
@@ -2147,7 +2305,7 @@ a.contact-info-value:hover {
     justify-content: space-between;
     gap: 12px;
     flex-wrap: wrap;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 .category-title {
@@ -2195,8 +2353,13 @@ a.contact-info-value:hover {
 }
 
 @keyframes infinite-scroll-right {
-    0% { transform: translateX(calc(-50% - 0.625rem)); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(calc(-50% - 0.625rem));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 /* ==========================================
@@ -2217,11 +2380,13 @@ a.contact-info-value:hover {
 .other-certificates-grid.is-grid .carousel-track {
     display: flex !important;
     flex-wrap: wrap !important;
-    justify-content: center !important; /* Gitna ang mga cards */
+    justify-content: center !important;
+    /* Gitna ang mga cards */
     align-items: stretch !important;
     gap: 1.25rem !important;
     width: 100% !important;
-    max-width: 800px !important; /* Sakto para mag-center ang 2 cards */
+    max-width: 800px !important;
+    /* Sakto para mag-center ang 2 cards */
     margin: 0 auto !important;
     animation: none !important;
     transform: none !important;
@@ -2398,6 +2563,7 @@ a.contact-info-value:hover {
 }
 
 @media (max-width: 640px) {
+
     .carousel-container.is-grid .certificate-card,
     .tesda-certificate-grid.is-grid .certificate-card,
     .other-certificates-grid.is-grid .certificate-card {
@@ -2408,6 +2574,7 @@ a.contact-info-value:hover {
 
 /* RESPONSIVE DESIGN FOR GRID MODE */
 @media (max-width: 1024px) {
+
     .carousel-container.is-grid .carousel-track,
     .carousel-container.is-grid .carousel-track-right,
     .tesda-certificate-grid.is-grid .carousel-track {
@@ -2416,12 +2583,14 @@ a.contact-info-value:hover {
 }
 
 @media (max-width: 560px) {
+
     .carousel-container.is-grid .carousel-track,
     .carousel-container.is-grid .carousel-track-right,
     .tesda-certificate-grid.is-grid .carousel-track {
         grid-template-columns: 1fr !important;
     }
 }
+
 /* ==========================================
    4-COLUMN GRID MODE (KAPAG PININDOT ANG BUTTON)
    ========================================== */
@@ -2543,12 +2712,14 @@ a.contact-info-value:hover {
 .cert-section-container.is-grid .certificate-card[aria-hidden="true"] {
     display: none !important;
 }
+
 /* ==========================================
    OPPOSITE DIRECTION 2-COLUMN SCROLL
    ========================================== */
 
 .tesda-section .tesda-vertical-container:not(.is-grid) {
-    height: 620px !important; /* Nilakihan ang lalagyan */
+    height: 620px !important;
+    /* Nilakihan ang lalagyan */
     overflow: hidden !important;
     position: relative !important;
     display: flex !important;
@@ -2559,7 +2730,8 @@ a.contact-info-value:hover {
 /* TRACK WRAPPER FOR 2 COLUMNS */
 .tesda-section .split-carousel-track {
     display: flex !important;
-    gap: 1.5rem !important; /* Espasyo sa pagitan ng 2 column */
+    gap: 1.5rem !important;
+    /* Espasyo sa pagitan ng 2 column */
     justify-content: center !important;
     width: max-content !important;
 }
@@ -2569,7 +2741,13 @@ a.contact-info-value:hover {
     display: flex !important;
     flex-direction: column !important;
     gap: 1.25rem !important;
-    width: 340px !important; /* MAS MALAKING CARD WIDTH */
+    width: 340px !important;
+    /* MAS MALAKING CARD WIDTH */
+}
+
+.tesda-section {
+    width: min(1180px, 100%);
+    margin: 34px auto 0;
 }
 
 
@@ -2581,6 +2759,7 @@ a.contact-info-value:hover {
     0% {
         transform: translate3d(0, calc(-50% - 0.625rem), 0);
     }
+
     100% {
         transform: translate3d(0, 0, 0);
     }
@@ -2645,6 +2824,20 @@ a.contact-info-value:hover {
     /* Contact page: single column */
     .contact-template-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-info-card,
+    .contact-qr-card {
+        min-height: 0;
+    }
+
+    .cert-category,
+    .tesda-section {
+        margin-top: 24px;
+    }
+
+    .cert-category-head {
+        align-items: flex-start;
     }
 }
 
