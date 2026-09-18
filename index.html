@@ -39,7 +39,7 @@
                 <li><a href="#about" data-page="about"><i class="fa-solid fa-user"></i> About </a></li>
                 <li><a href="#services" data-page="services"><i class="fa-solid fa-briefcase"></i> Services </a></li>
                 <li><a href="#project" data-page="project"><i class="fa-solid fa-file"></i> Projects </a></li>
-                <li><a href="#certificate" data-page="certificate"><i class="fa-solid fa-image"></i> certificate</a>
+                <li><a href="#certificate" data-page="certificate"><i class="fa-solid fa-image"></i>Certificate</a>
                 </li>
                 <li><a href="#contact" data-page="contact"><i class="fa-solid fa-phone"></i>Contact </a></li>
             </ul>
@@ -806,7 +806,19 @@
                     <div class="contact-qr-frame">
                         <div class="contact-qr-scanline"></div>
                         <img src="qr-code.png" alt="QR Code - scan to contact" class="contact-qr-img">
+                        <div class="contact-qr-overlay">
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" target="_blank" rel="noopener" class="contact-qr-overlay-btn" title="Send message via Gmail">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Message Me</span> 
+                            </a>
+                        </div>
                     </div>
+                   
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" target="_blank" rel="noopener" class="contact-qr-view-action-btn" title="Send message via Gmail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Send Message</span>
+                    </a>
+
                     <p class="contact-qr-hint">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         Point your phone camera at the code
@@ -952,92 +964,130 @@
                 </div>
             </div>
 
-            <!-- TESDA CERTIFICATES (VERTICAL & LEFT-ALIGNED) -->
-            <section class="cert-category tesda-section">
+            <!-- OTHER CERTIFICATE 3D COVERFLOW CARD SLIDER -->
+            <section class="cert-category other-cert-3d-section" id="otherCertSection">
                 <div class="cert-category-head">
                     <h2 class="category-title">Other Certificate</h2>
-                    <button id="tesdaGridBtn" class="cert-layout-tag" type="button" aria-pressed="false">
-
-                    </button>
                 </div>
 
-                <div id="tesdaCarouselContainer" class="carousel-container tesda-vertical-container">
-                    <div class="split-carousel-track">
+                <div class="cert-3d-wrapper">
+                    <!-- 3D Slider Component -->
+                    <div class="cert-3d-slider" id="cert3dSlider" aria-label="Other Certificates 3D Slider" tabindex="0">
+                        
+                        <!-- Navigation Arrows -->
+                        <button class="cert-3d-nav prev-btn" id="cert3dPrev" aria-label="Previous Certificate" type="button">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="cert-3d-nav next-btn" id="cert3dNext" aria-label="Next Certificate" type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
 
-                        <!-- LEFT COLUMN (PABABANG SCROLL) -->
-                        <div class="carousel-col col-left">
-                            <!-- Card 1 -->
-                            <article class="certificate-card">
-                                <div class="cert-image-wrapper cert-file-preview">
-                                    <img src="./Requiements/Tesda/NCSS.jpg" alt="NCSS National Certificate"
-                                        class="cert-image">
-                                    <div class="cert-overlay">
-                                        <a href="./Requiements/Tesda/NCSS.jpg" class="cert-btn" target="_blank">View
-                                            Certificate</a>
+                        <!-- 3D Perspective Viewport -->
+                        <div class="cert-3d-viewport" id="cert3dViewport">
+                            <div class="cert-3d-stage" id="cert3dStage">
+                                <!-- Card 1 -->
+                                <article class="cert-3d-card" data-index="0"
+                                    data-title="Introduction to Computer System Servicing"
+                                    data-issuer="TESDA"
+                                    data-link="./Requiements/Tesda/NCSS.jpg">
+                                    <div class="cert-3d-card-img-wrap">
+                                        <img src="./Requiements/Tesda/NCSS.jpg" alt="Introduction to Computer System Servicing" loading="lazy">
+                                        <div class="cert-3d-card-overlay"></div>
                                     </div>
-                                </div>
-                                <div class="cert-content">
-                                    <span class="cert-issuer">TESDA</span>
-                                    <h3 class="cert-title">Introduction to Computer System Servicing</h3>
+                                </article>
 
-                                </div>
-                            </article>
-
-                            <!-- Card 2 -->
-                            <article class="certificate-card">
-                                <div class="cert-image-wrapper cert-file-preview">
-                                    <img src="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg"
-                                        alt="NCSS National Certificate" class="cert-image">
-                                    <div class="cert-overlay">
-                                        <a href="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg"
-                                            class="cert-btn" target="_blank">View Certificate</a>
+                                <!-- Card 2 -->
+                                <article class="cert-3d-card" data-index="1"
+                                    data-title="COVID-19 Preventive Measures in the Workplace"
+                                    data-issuer="TESDA"
+                                    data-link="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg">
+                                    <div class="cert-3d-card-img-wrap">
+                                        <img src="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg" alt="COVID-19 Preventive Measures in the Workplace" loading="lazy">
+                                        <div class="cert-3d-card-overlay"></div>
                                     </div>
-                                </div>
-                                <div class="cert-content">
-                                    <span class="cert-issuer">TESDA</span>
-                                    <h3 class="cert-title">COVID-19 Preventive Measures in the Workplace</h3>
-                                </div>
-                            </article>
+                                </article>
 
-                            <!-- Duplicate for Loop -->
+                                <!-- Card 3 -->
+                                <article class="cert-3d-card" data-index="2"
+                                    data-title="Adobe Premire Pro"
+                                    data-issuer="Seminar"
+                                    data-link="./Requiements/Certificate/Adobe Premire Pro_page.jpg">
+                                    <div class="cert-3d-card-img-wrap">
+                                        <img src="./Requiements/Certificate/Adobe Premire Pro_page.jpg" alt="Adobe Premire Pro" loading="lazy">
+                                        <div class="cert-3d-card-overlay"></div>
+                                    </div>
+                                </article>
 
+                                <!-- Card 4 -->
+                                <article class="cert-3d-card" data-index="3"
+                                    data-title="MICROSOFT EXCEL FOR DATA ANALYSIS"
+                                    data-issuer="DICT"
+                                    data-link="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg">
+                                    <div class="cert-3d-card-img-wrap">
+                                        <img src="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg" alt="MICROSOFT EXCEL FOR DATA ANALYSIS" loading="lazy">
+                                        <div class="cert-3d-card-overlay"></div>
+                                    </div>
+                                </article>
+
+                                <!-- Card 5 (Duplicated for 3D fan depth) -->
+                                <article class="cert-3d-card" data-index="4"
+                                    data-title="Introduction to Computer System Servicing"
+                                    data-issuer="TESDA"
+                                    data-link="./Requiements/Tesda/NCSS.jpg">
+                                    <div class="cert-3d-card-img-wrap">
+                                        <img src="./Requiements/Tesda/NCSS.jpg" alt="Introduction to Computer System Servicing" loading="lazy">
+                                        <div class="cert-3d-card-overlay"></div>
+                                    </div>
+                                </article>
+
+                                <!-- Card 6 -->
+                                <article class="cert-3d-card" data-index="5"
+                                    data-title="COVID-19 Preventive Measures in the Workplace"
+                                    data-issuer="TESDA"
+                                    data-link="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg">
+                                    <div class="cert-3d-card-img-wrap">
+                                        <img src="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg" alt="COVID-19 Preventive Measures in the Workplace" loading="lazy">
+                                        <div class="cert-3d-card-overlay"></div>
+                                    </div>
+                                </article>
+
+                                <!-- Card 7 -->
+                                <article class="cert-3d-card" data-index="6"
+                                    data-title="Adobe Premire Pro"
+                                    data-issuer="Seminar"
+                                    data-link="./Requiements/Certificate/Adobe Premire Pro_page.jpg">
+                                    <div class="cert-3d-card-img-wrap">
+                                        <img src="./Requiements/Certificate/Adobe Premire Pro_page.jpg" alt="Adobe Premire Pro" loading="lazy">
+                                        <div class="cert-3d-card-overlay"></div>
+                                    </div>
+                                </article>
+
+                                <!-- Card 8 -->
+                                <article class="cert-3d-card" data-index="7"
+                                    data-title="MICROSOFT EXCEL FOR DATA ANALYSIS"
+                                    data-issuer="DICT"
+                                    data-link="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg">
+                                    <div class="cert-3d-card-img-wrap">
+                                        <img src="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg" alt="MICROSOFT EXCEL FOR DATA ANALYSIS" loading="lazy">
+                                        <div class="cert-3d-card-overlay"></div>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
 
-                        <!-- RIGHT COLUMN (PATAAS NA SCROLL) -->
-                        <div class="carousel-col col-right">
-                            <!-- Card 3 -->
-                            <article class="certificate-card">
-                                <div class="cert-image-wrapper cert-file-preview">
-                                    <img src="./Requiements/Certificate/Adobe Premire Pro_page.jpg"
-                                        alt="adobe-premire-pro" class="cert-image">
-                                    <div class="cert-overlay">
-                                        <a href="./Requiements/Certificate/Adobe Premire Pro_page.jpg" class="cert-btn"
-                                            target="_blank">View Certificate</a>
-                                    </div>
-                                </div>
-                                <div class="cert-content">
-                                    <span class="cert-issuer">Seminar</span>
-                                    <h3 class="cert-title">Adobe Premire Pro</h3>
-                                </div>
-                            </article>
+                        <!-- Active Certificate Info (Title, Issuer, View Button) -->
+                        <div class="cert-3d-info-box">
+                            <h3 class="cert-3d-title" id="cert3dActiveTitle">Introduction to Computer System Servicing</h3>
+                            <span class="cert-3d-issuer" id="cert3dActiveIssuer">TESDA</span>
+                            <a href="./Requiements/Tesda/NCSS.jpg" target="_blank" rel="noopener" class="cert-3d-view-btn" id="cert3dActiveLink">
+                                <span>View Certificate</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
 
-                            <!-- Card 4 -->
-                            <article class="certificate-card">
-                                <div class="cert-image-wrapper cert-file-preview">
-                                    <img src="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg"
-                                        alt="adobe-premire-pro" class="cert-image">
-                                    <div class="cert-overlay">
-                                        <a href="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg"
-                                            class="cert-btn" target="_blank">View Certificate</a>
-                                    </div>
-                                </div>
-                                <div class="cert-content">
-                                    <span class="cert-issuer">DICT</span>
-                                    <h3 class="cert-title">MICROSOFT EXCEL FOR DATA ANALYSIS</h3>
-                                </div>
-                            </article>
-
-
+                        <!-- Pagination Dots -->
+                        <div class="cert-3d-dots" id="cert3dDots" role="tablist" aria-label="Certificate navigation">
+                            <!-- Populated dynamically via JS -->
                         </div>
 
                     </div>
@@ -1143,8 +1193,268 @@
             initPageFromHash();
         });
 
+        // QR Code Frame click handler
+        var contactQrFrame = document.querySelector('.contact-qr-frame');
+        if (contactQrFrame) {
+            contactQrFrame.addEventListener('click', function (e) {
+                if (e.target.closest('a')) return;
+                window.open('https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com', '_blank', 'noopener');
+            });
+        }
+
         // Initialize page display
         initPageFromHash();
+
+        /* ============================================================
+           OTHER CERTIFICATES - 3D COVERFLOW CARD SLIDER LOGIC
+           ============================================================ */
+        (function initOtherCert3DSlider() {
+            var slider = document.getElementById('cert3dSlider');
+            if (!slider) return;
+
+            var stage = document.getElementById('cert3dStage');
+            var cards = Array.from(stage.querySelectorAll('.cert-3d-card'));
+            var prevBtn = document.getElementById('cert3dPrev');
+            var nextBtn = document.getElementById('cert3dNext');
+            var dotsContainer = document.getElementById('cert3dDots');
+            var activeTitle = document.getElementById('cert3dActiveTitle');
+            var activeIssuer = document.getElementById('cert3dActiveIssuer');
+            var activeLink = document.getElementById('cert3dActiveLink');
+            var viewport = document.getElementById('cert3dViewport');
+
+            var totalCards = cards.length;
+            var uniqueCount = 4; // 4 unique certificates
+            var currentIndex = 0;
+            var autoplayTimer = null;
+            var isPointerDown = false;
+            var pointerStartX = 0;
+            var pointerMoveX = 0;
+
+            // Generate pagination dots for unique certificates
+            dotsContainer.innerHTML = '';
+            for (var d = 0; d < uniqueCount; d++) {
+                var dot = document.createElement('button');
+                dot.className = 'cert-3d-dot' + (d === 0 ? ' active' : '');
+                dot.type = 'button';
+                dot.setAttribute('aria-label', 'Go to certificate ' + (d + 1));
+                (function (dotIndex) {
+                    dot.addEventListener('click', function () {
+                        goToUnique(dotIndex);
+                        restartAutoplay();
+                    });
+                })(d);
+                dotsContainer.appendChild(dot);
+            }
+            var dots = Array.from(dotsContainer.querySelectorAll('.cert-3d-dot'));
+
+            function updateSlider(animateText) {
+                cards.forEach(function (card, idx) {
+                    // Calculate shortest circular difference
+                    var diff = (idx - currentIndex) % totalCards;
+                    if (diff > totalCards / 2) diff -= totalCards;
+                    if (diff < -totalCards / 2) diff += totalCards;
+
+                    // Reset position classes
+                    card.classList.remove('pos-center', 'pos-prev-1', 'pos-next-1', 'pos-prev-2', 'pos-next-2', 'pos-hidden');
+
+                    if (diff === 0) {
+                        card.classList.add('pos-center');
+                        card.setAttribute('aria-hidden', 'false');
+                    } else if (diff === -1) {
+                        card.classList.add('pos-prev-1');
+                        card.setAttribute('aria-hidden', 'true');
+                    } else if (diff === 1) {
+                        card.classList.add('pos-next-1');
+                        card.setAttribute('aria-hidden', 'true');
+                    } else if (diff === -2) {
+                        card.classList.add('pos-prev-2');
+                        card.setAttribute('aria-hidden', 'true');
+                    } else if (diff === 2) {
+                        card.classList.add('pos-next-2');
+                        card.setAttribute('aria-hidden', 'true');
+                    } else {
+                        card.classList.add('pos-hidden');
+                        card.setAttribute('aria-hidden', 'true');
+                    }
+                });
+
+                // Update active info
+                var currentCard = cards[currentIndex];
+                var title = currentCard.dataset.title || '';
+                var issuer = currentCard.dataset.issuer || '';
+                var link = currentCard.dataset.link || '#';
+
+                if (activeTitle && activeIssuer && activeLink) {
+                    if (animateText) {
+                        activeTitle.style.opacity = '0';
+                        activeTitle.style.transform = 'translateY(6px)';
+                        activeIssuer.style.opacity = '0';
+                        activeIssuer.style.transform = 'translateY(4px)';
+
+                        setTimeout(function () {
+                            activeTitle.textContent = title;
+                            activeIssuer.textContent = issuer;
+                            activeLink.href = link;
+                            activeTitle.style.opacity = '1';
+                            activeTitle.style.transform = 'translateY(0)';
+                            activeIssuer.style.opacity = '1';
+                            activeIssuer.style.transform = 'translateY(0)';
+                        }, 180);
+                    } else {
+                        activeTitle.textContent = title;
+                        activeIssuer.textContent = issuer;
+                        activeLink.href = link;
+                    }
+                }
+
+                // Update dots
+                var activeDotIndex = currentIndex % uniqueCount;
+                dots.forEach(function (dot, i) {
+                    dot.classList.toggle('active', i === activeDotIndex);
+                });
+            }
+
+            function next() {
+                currentIndex = (currentIndex + 1) % totalCards;
+                updateSlider(true);
+            }
+
+            function prev() {
+                currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+                updateSlider(true);
+            }
+
+            function goToUnique(targetUnique) {
+                var currentUnique = currentIndex % uniqueCount;
+                var diff = targetUnique - currentUnique;
+                if (diff > uniqueCount / 2) diff -= uniqueCount;
+                if (diff < -uniqueCount / 2) diff += uniqueCount;
+
+                currentIndex = (currentIndex + diff + totalCards) % totalCards;
+                updateSlider(true);
+            }
+
+            // Card click events
+            cards.forEach(function (card, idx) {
+                card.addEventListener('click', function (e) {
+                    if (idx === currentIndex) {
+                        var link = card.dataset.link;
+                        if (link) window.open(link, '_blank');
+                    } else {
+                        currentIndex = idx;
+                        updateSlider(true);
+                        restartAutoplay();
+                    }
+                });
+            });
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    next();
+                    restartAutoplay();
+                });
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    prev();
+                    restartAutoplay();
+                });
+            }
+
+            // Keyboard navigation when slider is focused
+            slider.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowRight') {
+                    next();
+                    restartAutoplay();
+                } else if (e.key === 'ArrowLeft') {
+                    prev();
+                    restartAutoplay();
+                }
+            });
+
+            // Touch and mouse drag gestures
+            viewport.addEventListener('mousedown', function (e) {
+                isPointerDown = true;
+                pointerStartX = e.clientX;
+                pointerMoveX = e.clientX;
+            });
+
+            window.addEventListener('mousemove', function (e) {
+                if (!isPointerDown) return;
+                pointerMoveX = e.clientX;
+            });
+
+            window.addEventListener('mouseup', function (e) {
+                if (!isPointerDown) return;
+                isPointerDown = false;
+                var diff = pointerMoveX - pointerStartX;
+                if (Math.abs(diff) > 40) {
+                    if (diff < 0) {
+                        next();
+                    } else {
+                        prev();
+                    }
+                    restartAutoplay();
+                }
+            });
+
+            viewport.addEventListener('touchstart', function (e) {
+                if (e.touches.length > 0) {
+                    pointerStartX = e.touches[0].clientX;
+                    pointerMoveX = e.touches[0].clientX;
+                }
+            }, { passive: true });
+
+            viewport.addEventListener('touchmove', function (e) {
+                if (e.touches.length > 0) {
+                    pointerMoveX = e.touches[0].clientX;
+                }
+            }, { passive: true });
+
+            viewport.addEventListener('touchend', function () {
+                var diff = pointerMoveX - pointerStartX;
+                if (Math.abs(diff) > 40) {
+                    if (diff < 0) {
+                        next();
+                    } else {
+                        prev();
+                    }
+                    restartAutoplay();
+                }
+            });
+
+            // Gentle autoplay
+            function startAutoplay() {
+                stopAutoplay();
+                autoplayTimer = setInterval(function () {
+                    next();
+                }, 4000);
+            }
+
+            function stopAutoplay() {
+                if (autoplayTimer) {
+                    clearInterval(autoplayTimer);
+                    autoplayTimer = null;
+                }
+            }
+
+            function restartAutoplay() {
+                stopAutoplay();
+                startAutoplay();
+            }
+
+            slider.addEventListener('mouseenter', stopAutoplay);
+            slider.addEventListener('mouseleave', startAutoplay);
+            slider.addEventListener('focusin', stopAutoplay);
+            slider.addEventListener('focusout', startAutoplay);
+
+            // Initial render without text animation jump
+            updateSlider(false);
+            startAutoplay();
+        })();
     </script>
 </body>
 
