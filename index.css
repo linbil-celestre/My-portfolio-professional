@@ -4123,48 +4123,68 @@ a.contact-info-value:hover {
         gap: 6px;
     }
 
-    /* --- Page 4: Projects Mobile — Clean Card (like desktop style) --- */
+    /* --- Page 4: Projects Mobile — Single Swipeable Row --- */
     .projects-showcase-wrapper {
         margin-top: 10px;
     }
 
+    /* The outer container becomes the single swipe row */
     .projects-vertical-container {
-        gap: 14px;
-        padding: 4px 0;
-    }
-
-    .projects-col-wrapper {
-        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        height: auto;
+        max-height: none;
         overflow-x: auto;
+        overflow-y: visible;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
-        padding: 4px 24px;
+        padding: 6px 20px 10px;
+        -webkit-mask-image: none;
+        mask-image: none;
+        /* Start scroll at beginning so first card shows */
+        scroll-padding-left: 20px;
     }
 
-    .projects-col-wrapper::-webkit-scrollbar {
+    .projects-vertical-container::-webkit-scrollbar {
         display: none;
     }
 
+    /* Hide the second col-wrapper — cards from both tracks shown in one row */
+    .projects-col-wrapper:last-child {
+        display: none;
+    }
+
+    /* First col-wrapper: normal block flow, no overflow */
+    .projects-col-wrapper {
+        overflow: visible;
+        width: auto;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    /* The track is now just a flat flex row */
     .projects-track-vertical {
+        display: contents; /* children participate directly in parent flex */
+        width: auto;
         gap: 0;
+        will-change: auto;
     }
 
-    .projects-track-up {
-        animation: project-scroll-side-left 22s linear infinite;
-    }
-
+    /* Kill all animations on mobile */
+    .projects-track-up,
     .projects-track-down {
-        animation: project-scroll-side-right 22s linear infinite;
+        animation: none !important;
     }
 
-    /* === Mobile Card: matches desktop card layout === */
+    /* === Each Card === */
     .project-card {
         width: 82vw !important;
         min-width: 82vw !important;
-        max-width: 340px !important;
+        max-width: 320px !important;
         flex: 0 0 82vw !important;
-        scroll-snap-align: center;
+        scroll-snap-align: start;
         min-height: auto;
         padding: 20px 18px 18px;
         border-radius: 16px;
@@ -4176,6 +4196,15 @@ a.contact-info-value:hover {
         flex-direction: column;
         display: flex;
         gap: 0;
+        cursor: pointer;
+        pointer-events: auto;
+        touch-action: pan-y;
+        flex-shrink: 0;
+    }
+
+    /* Hide aria-hidden duplicate cards on mobile */
+    .project-card[aria-hidden="true"] {
+        display: none !important;
     }
 
     /* Top row: logo + title side-by-side */
@@ -4490,11 +4519,16 @@ a.contact-info-value:hover {
     }
 
     /* --- Projects on Small Phones: Compact Clean Card --- */
+    .projects-vertical-container {
+        padding: 6px 14px 10px;
+        gap: 10px;
+    }
+
     .project-card {
-        width: 85vw !important;
-        min-width: 85vw !important;
-        max-width: 300px !important;
-        flex: 0 0 85vw !important;
+        width: 86vw !important;
+        min-width: 86vw !important;
+        max-width: 290px !important;
+        flex: 0 0 86vw !important;
         padding: 16px 14px 14px;
     }
 
