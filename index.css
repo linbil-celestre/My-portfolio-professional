@@ -4139,6 +4139,7 @@ a.contact-info-value:hover {
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
+        padding: 4px 24px;
     }
 
     .projects-col-wrapper::-webkit-scrollbar {
@@ -4159,10 +4160,10 @@ a.contact-info-value:hover {
 
     /* === Mobile Card: matches desktop card layout === */
     .project-card {
-        width: 100% !important;
-        min-width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
+        width: 82vw !important;
+        min-width: 82vw !important;
+        max-width: 340px !important;
+        flex: 0 0 82vw !important;
         scroll-snap-align: center;
         min-height: auto;
         padding: 20px 18px 18px;
@@ -4490,10 +4491,10 @@ a.contact-info-value:hover {
 
     /* --- Projects on Small Phones: Compact Clean Card --- */
     .project-card {
-        width: 100% !important;
-        min-width: 100% !important;
-        max-width: 100% !important;
-        flex: 0 0 100% !important;
+        width: 85vw !important;
+        min-width: 85vw !important;
+        max-width: 300px !important;
+        flex: 0 0 85vw !important;
         padding: 16px 14px 14px;
     }
 
