@@ -274,6 +274,40 @@ nav li.active a {
 }
 
 /* ============================================================
+   GLOBAL PAGE ENTRANCE ANIMATION KEYFRAME
+   ============================================================ */
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Home Page Staggered Fade-in Animations ── */
+#page-home.active .greeting-row {
+    animation: page-fade-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+#page-home.active .tools-card {
+    animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+#page-home.active .dash-grid .projects {
+    animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.16s both;
+}
+#page-home.active .dash-grid .summary-card:nth-of-type(1) {
+    animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+}
+#page-home.active .dash-grid .summary-card:nth-of-type(2) {
+    animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.32s both;
+}
+#page-home.active .skill-bar span {
+    animation: about-skill-fill 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+/* ============================================================
    HOME PAGE — Intro Band & Section Header
    ============================================================ */
 .intro-band {
@@ -1488,8 +1522,15 @@ nav li.active a {
 }
 
 /* ============================================================
-   PROJECTS PAGE — Full Grid of Project Cards
+   PROJECTS PAGE — Full Grid & Entrance Animations
    ============================================================ */
+#page-project.active .section-header {
+    animation: page-fade-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+#page-project.active .projects-vertical-container {
+    animation: page-fade-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.10s both;
+}
+
 .project-page-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1748,8 +1789,18 @@ nav li.active a {
 }
 
 /* ============================================================
-   CONTACT PAGE — Contact Card & Grid
+   CONTACT PAGE — Entrance Animations & Layout
    ============================================================ */
+#page-contact.active .section-header {
+    animation: page-fade-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+#page-contact.active .contact-info-card {
+    animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+#page-contact.active .contact-qr-card {
+    animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
+}
+
 .contact-card {
     display: grid;
     gap: 18px;
@@ -2670,8 +2721,18 @@ a.contact-info-value:hover {
 
 
 /* ============================================================
-   CERTIFICATES PAGE
+   CERTIFICATES PAGE — Entrance Animations & Layout
    ============================================================ */
+#page-certificate.active .section-header {
+    animation: page-fade-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+#page-certificate.active .cert-category:first-of-type {
+    animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.10s both;
+}
+#page-certificate.active .other-cert-3d-section {
+    animation: page-fade-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.20s both;
+}
+
 .cert-category {
     width: min(1180px, 100%);
     margin: 28px auto 0;
