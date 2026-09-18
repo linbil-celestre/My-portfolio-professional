@@ -376,94 +376,117 @@
                 <p class="role">What I can do for you — skills and offerings.</p>
             </div>
 
-            <div class="services-grid">
+            <!-- Carousel wrapper -->
+            <div class="srv-carousel" id="srvCarousel">
 
-                <!-- Card 1: Web Development -->
-                <div class="service-card card">
-                    <div class="service-card-icon-wrap">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <h3 class="service-card-title">Web Development</h3>
-                    <p class="service-card-desc">Building clean, responsive, and functional websites from scratch using HTML, CSS, and JavaScript. I focus on writing structured, maintainable code that works smoothly across all modern browsers and devices.</p>
-                    <ul class="service-card-tags">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
+                <!-- Prev Button -->
+                <button class="srv-nav srv-prev" id="srvPrev" aria-label="Previous service" type="button">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
 
-                <!-- Card 2: UI / UX Design -->
-                <div class="service-card card">
-                    <div class="service-card-icon-wrap">
-                        <i class="fa-solid fa-pen-ruler"></i>
-                    </div>
-                    <h3 class="service-card-title">UI / UX Design</h3>
-                    <p class="service-card-desc">Crafting visually appealing and user-friendly interfaces with a strong focus on layout, typography, and usability. I translate design ideas into clean, interactive web pages that feel natural to use.</p>
-                    <ul class="service-card-tags">
-                        <li>Tailwind CSS</li>
-                        <li>Bootstrap</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                </div>
+                <!-- Slide Track -->
+                <div class="srv-viewport">
+                    <div class="srv-track" id="srvTrack">
 
-                <!-- Card 3: Frontend Frameworks -->
-                <div class="service-card card">
-                    <div class="service-card-icon-wrap">
-                        <i class="fa-brands fa-react"></i>
-                    </div>
-                    <h3 class="service-card-title">Frontend Frameworks</h3>
-                    <p class="service-card-desc">Developing component-based web applications using React JS, enabling dynamic, fast, and scalable user interfaces. I build reusable components and manage application state for seamless user experiences.</p>
-                    <ul class="service-card-tags">
-                        <li>React JS</li>
-                        <li>Component Design</li>
-                        <li>State Management</li>
-                    </ul>
-                </div>
+                        <!-- Card 1: Web Development -->
+                        <div class="service-card card">
+                            <div class="service-card-icon-wrap">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h3 class="service-card-title">Web Development</h3>
+                            <p class="service-card-desc">Building clean, responsive, and functional websites from scratch using HTML, CSS, and JavaScript. I focus on writing structured, maintainable code that works smoothly across all modern browsers and devices.</p>
+                            <ul class="service-card-tags">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
 
-                <!-- Card 4: Database Management -->
-                <div class="service-card card">
-                    <div class="service-card-icon-wrap">
-                        <i class="fa-solid fa-database"></i>
-                    </div>
-                    <h3 class="service-card-title">Database Management</h3>
-                    <p class="service-card-desc">Designing and managing relational databases using MySQL and PostgreSQL. I handle CRUD operations, write efficient SQL queries, and ensure data integrity for web applications and systems.</p>
-                    <ul class="service-card-tags">
-                        <li>MySQL</li>
-                        <li>PostgreSQL</li>
-                        <li>SQL Queries</li>
-                    </ul>
-                </div>
+                        <!-- Card 2: UI / UX Design -->
+                        <div class="service-card card">
+                            <div class="service-card-icon-wrap">
+                                <i class="fa-solid fa-pen-ruler"></i>
+                            </div>
+                            <h3 class="service-card-title">UI / UX Design</h3>
+                            <p class="service-card-desc">Crafting visually appealing and user-friendly interfaces with a strong focus on layout, typography, and usability. I translate design ideas into clean, interactive web pages that feel natural to use.</p>
+                            <ul class="service-card-tags">
+                                <li>Tailwind CSS</li>
+                                <li>Bootstrap</li>
+                                <li>Responsive Design</li>
+                            </ul>
+                        </div>
 
-                <!-- Card 5: Computer Servicing -->
-                <div class="service-card card">
-                    <div class="service-card-icon-wrap">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </div>
-                    <h3 class="service-card-title">Computer Servicing</h3>
-                    <p class="service-card-desc">Troubleshooting and maintaining computer hardware and software systems. With TESDA training in Computer Systems Servicing, I can diagnose issues, install components, and perform system maintenance.</p>
-                    <ul class="service-card-tags">
-                        <li>Hardware Repair</li>
-                        <li>OS Installation</li>
-                        <li>TESDA Certified</li>
-                    </ul>
-                </div>
+                        <!-- Card 3: Frontend Frameworks -->
+                        <div class="service-card card">
+                            <div class="service-card-icon-wrap">
+                                <i class="fa-brands fa-react"></i>
+                            </div>
+                            <h3 class="service-card-title">Frontend Frameworks</h3>
+                            <p class="service-card-desc">Developing component-based web applications using React JS, enabling dynamic, fast, and scalable user interfaces. I build reusable components and manage application state for seamless user experiences.</p>
+                            <ul class="service-card-tags">
+                                <li>React JS</li>
+                                <li>Component Design</li>
+                                <li>State Management</li>
+                            </ul>
+                        </div>
 
-                <!-- Card 6: Data Analysis -->
-                <div class="service-card card">
-                    <div class="service-card-icon-wrap">
-                        <i class="fa-solid fa-chart-column"></i>
-                    </div>
-                    <h3 class="service-card-title">Data Analysis</h3>
-                    <p class="service-card-desc">Organizing, analyzing, and visualizing data using Microsoft Excel for data analysis. I create structured reports, pivot tables, and charts to present insights in a clear and meaningful way.</p>
-                    <ul class="service-card-tags">
-                        <li>Microsoft Excel</li>
-                        <li>Data Visualization</li>
-                        <li>Reporting</li>
-                    </ul>
-                </div>
+                        <!-- Card 4: Database Management -->
+                        <div class="service-card card">
+                            <div class="service-card-icon-wrap">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <h3 class="service-card-title">Database Management</h3>
+                            <p class="service-card-desc">Designing and managing relational databases using MySQL and PostgreSQL. I handle CRUD operations, write efficient SQL queries, and ensure data integrity for web applications and systems.</p>
+                            <ul class="service-card-tags">
+                                <li>MySQL</li>
+                                <li>PostgreSQL</li>
+                                <li>SQL Queries</li>
+                            </ul>
+                        </div>
 
-            </div>
+                        <!-- Card 5: Computer Servicing -->
+                        <div class="service-card card">
+                            <div class="service-card-icon-wrap">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <h3 class="service-card-title">Computer Servicing</h3>
+                            <p class="service-card-desc">Troubleshooting and maintaining computer hardware and software systems. With TESDA training in Computer Systems Servicing, I can diagnose issues, install components, and perform system maintenance.</p>
+                            <ul class="service-card-tags">
+                                <li>Hardware Repair</li>
+                                <li>OS Installation</li>
+                                <li>TESDA Certified</li>
+                            </ul>
+                        </div>
+
+                        <!-- Card 6: Data Analysis -->
+                        <div class="service-card card">
+                            <div class="service-card-icon-wrap">
+                                <i class="fa-solid fa-chart-column"></i>
+                            </div>
+                            <h3 class="service-card-title">Data Analysis</h3>
+                            <p class="service-card-desc">Organizing, analyzing, and visualizing data using Microsoft Excel for data analysis. I create structured reports, pivot tables, and charts to present insights in a clear and meaningful way.</p>
+                            <ul class="service-card-tags">
+                                <li>Microsoft Excel</li>
+                                <li>Data Visualization</li>
+                                <li>Reporting</li>
+                            </ul>
+                        </div>
+
+                    </div><!-- /srv-track -->
+                </div><!-- /srv-viewport -->
+
+                <!-- Next Button -->
+                <button class="srv-nav srv-next" id="srvNext" aria-label="Next service" type="button">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div><!-- /srv-carousel -->
+
+            <!-- Dot indicators -->
+            <div class="srv-dots" id="srvDots" role="tablist" aria-label="Services navigation"></div>
+
         </section>
+
 
         <!-- End of Services -->
 
@@ -1268,6 +1291,107 @@
                 showPage(target);
             });
         });
+
+        /* ============================================================
+           SERVICES CAROUSEL LOGIC
+           ============================================================ */
+        (function initServicesCarousel() {
+            var track    = document.getElementById('srvTrack');
+            var prevBtn  = document.getElementById('srvPrev');
+            var nextBtn  = document.getElementById('srvNext');
+            var dotsWrap = document.getElementById('srvDots');
+            if (!track || !prevBtn || !nextBtn) return;
+
+            var cards      = Array.from(track.querySelectorAll('.service-card'));
+            var total      = cards.length;
+            var current    = 0;
+            var perView    = 3; // cards visible at once
+
+            // Determine perView from viewport
+            function getPerView() {
+                if (window.innerWidth <= 580) return 1;
+                if (window.innerWidth <= 900) return 2;
+                return 3;
+            }
+
+            // Number of slides = total - perView
+            function maxIndex() { return Math.max(0, total - perView); }
+
+            // Build dots
+            function buildDots() {
+                dotsWrap.innerHTML = '';
+                var steps = maxIndex() + 1;
+                for (var i = 0; i < steps; i++) {
+                    (function(idx) {
+                        var dot = document.createElement('button');
+                        dot.className = 'srv-dot' + (idx === current ? ' active' : '');
+                        dot.type = 'button';
+                        dot.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
+                        dot.addEventListener('click', function() { goTo(idx); });
+                        dotsWrap.appendChild(dot);
+                    })(i);
+                }
+            }
+
+            // Update dots highlight
+            function updateDots() {
+                var dots = dotsWrap.querySelectorAll('.srv-dot');
+                dots.forEach(function(d, i) {
+                    d.classList.toggle('active', i === current);
+                });
+            }
+
+            // Calculate card width including gap
+            function getOffset() {
+                if (!cards[0]) return 0;
+                var card = cards[0];
+                var gap  = parseInt(getComputedStyle(track).gap) || 18;
+                return (card.offsetWidth + gap) * current;
+            }
+
+            // Slide to index
+            function goTo(idx) {
+                current = Math.max(0, Math.min(idx, maxIndex()));
+                track.style.transform = 'translateX(-' + getOffset() + 'px)';
+                prevBtn.disabled = current === 0;
+                nextBtn.disabled = current >= maxIndex();
+                updateDots();
+            }
+
+            // Recalculate on resize
+            function onResize() {
+                perView = getPerView();
+                current = Math.min(current, maxIndex());
+                buildDots();
+                goTo(current);
+            }
+
+            prevBtn.addEventListener('click', function() { goTo(current - 1); });
+            nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+            // Keyboard support
+            document.getElementById('srvCarousel') && document.getElementById('srvCarousel').addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight') goTo(current + 1);
+                if (e.key === 'ArrowLeft')  goTo(current - 1);
+            });
+
+            // Touch / swipe
+            var touchStartX = 0;
+            track.addEventListener('touchstart', function(e) {
+                touchStartX = e.touches[0].clientX;
+            }, { passive: true });
+            track.addEventListener('touchend', function(e) {
+                var diff = touchStartX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 40) { diff > 0 ? goTo(current + 1) : goTo(current - 1); }
+            }, { passive: true });
+
+            window.addEventListener('resize', onResize);
+
+            // Init
+            perView = getPerView();
+            buildDots();
+            goTo(0);
+        })();
 
         /* CERTIFICATE GRID & CAROUSEL TOGGLE LOGIC */
         /* TOGGLE BETWEEN CAROUSEL AND GRID LAYOUT */
