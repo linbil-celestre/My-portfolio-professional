@@ -1206,6 +1206,57 @@ nav li.active a::after {
     letter-spacing: 0.01em;
 }
 
+/* About Actions Row: Resume & Files buttons */
+.about-actions-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0 6px;
+    flex-wrap: wrap;
+}
+
+.about-resume-btn,
+.about-files-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.about-resume-btn {
+    background: #14181c;
+    color: #eceae4;
+    border: 1px solid #14181c;
+    box-shadow: 0 4px 14px rgba(20, 24, 28, 0.16);
+}
+
+.about-resume-btn:hover {
+    background: #232b22;
+    color: #a8c2a0;
+    border-color: #a8c2a0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(20, 24, 28, 0.25);
+}
+
+.about-files-btn {
+    background: rgba(168, 194, 160, 0.16);
+    color: #3b463a;
+    border: 1px solid rgba(168, 194, 160, 0.6);
+}
+
+.about-files-btn:hover {
+    background: rgba(168, 194, 160, 0.32);
+    border-color: #a8c2a0;
+    color: #14181c;
+    transform: translateY(-2px);
+}
+
 .about-divider {
     height: 1px;
     margin: 22px 0 16px;
@@ -3829,6 +3880,7 @@ a.contact-info-value:hover {
         white-space: nowrap;
         flex-shrink: 0;
         margin: 0;
+        margin-left: auto;
     }
 
     .profile .status .status-dot {
@@ -4085,6 +4137,7 @@ a.contact-info-value:hover {
         font-size: clamp(0.64rem, 2.5vw, 0.72rem);
         white-space: nowrap;
         gap: 6px;
+        margin-left: auto;
     }
 
     .profile .status .status-dot {
@@ -4538,11 +4591,6 @@ a.contact-info-value:hover {
         color: #3a4839;
     }
 
-    /* When paused: hide duplicates */
-    .projects-vertical-container.is-paused .project-card[aria-hidden="true"] {
-        display: none !important;
-    }
-
     /* --- Page 5: Certificates Mobile --- */
     .cert-category {
         margin-top: 20px;
@@ -4788,6 +4836,7 @@ a.contact-info-value:hover {
         font-size: clamp(0.58rem, 2.4vw, 0.66rem);
         white-space: nowrap;
         gap: 5px;
+        margin-left: auto;
     }
 
     .profile .status .status-dot {

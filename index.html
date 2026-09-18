@@ -209,12 +209,40 @@
                             <p><strong>Focus</strong><span>Front-end development</span></p>
                             <p><strong>Experience</strong><span>OJT Front-end Intern &bull; Web Development Team</span>
                             </p>
-                            <p><strong>Status</strong><span class="available"><span class="status-dot"></span>Available
-                                    for
-                                    work</span></p>
+                            <p><strong>Status</strong><span class="available"><span class="status-dot"></span>Available for work</span></p>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Page Footer -->
+            <footer class="page-footer">
+                <div class="page-footer-card">
+                    <div class="page-footer-content">
+                        <div class="page-footer-brand">
+                            <div class="page-footer-title">Lin Bil Celestre</div>
+                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for Work</p>
+                        </div>
+                        <div class="page-footer-actions">
+                            <div class="page-footer-socials">
+                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="page-footer-social-btn" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                            <button type="button" class="page-footer-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top" aria-label="Back to top">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <span>Top</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="page-footer-divider"></div>
+                    <div class="page-footer-bottom">
+                        <p class="page-footer-copy">&copy; 2026 Lin Bil Celestre. All rights reserved.</p>
+                        <p class="page-footer-tag">Crafted with HTML, CSS &amp; JavaScript</p>
+                    </div>
+                </div>
+            </footer>
         </section>
 
         <!-- End of Home -->
@@ -233,7 +261,16 @@
                         user-friendly websites. I enjoy learning new technologies and improving my coding skills through
                         personal and academic projects.</p>
 
-                    <div class="about-details"></div>
+                    <div class="about-actions-row">
+                        <a class="about-resume-btn" href="./Requiements/files/LIN%20BIL%20CELESTRE%20RESUME.pdf" target="_blank" rel="noopener" download="LIN_BIL_CELESTRE_RESUME.pdf" title="Download Resume">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <span>Resume</span>
+                        </a>
+                        <a class="about-files-btn" href="./Requiements/files/linbil-celestre-cover-letter.pdf" target="_blank" rel="noopener" title="View Files">
+                            <i class="fa-solid fa-folder-open"></i>
+                            <span>Files</span>
+                        </a>
+                    </div>
 
                     <hr class="about-divider">
                     <div class="target-roles">
@@ -310,9 +347,9 @@
                             </div>
                         </div>
                         <div class="edu-actions">
-                            <a class="edu-button" href="#" title="View Files"><i class="fa-solid fa-folder-open"></i>
+                            <a class="edu-button" href="./Requiements/files/LIN%20BIL%20CELESTRE%20RESUME.pdf" target="_blank" rel="noopener" title="View Files"><i class="fa-solid fa-folder-open"></i>
                                 Files →</a>
-                            <a class="edu-button" href="#" title="View Certificate"><i
+                            <a class="edu-button" href="#certificate" data-page="certificate" title="View Certificate"><i
                                     class="fa-solid fa-certificate"></i> Certificate →</a>
                         </div>
                     </div>
@@ -335,9 +372,9 @@
                             </div>
                         </div>
                         <div class="edu-actions">
-                            <a class="edu-button" href="#" title="View Files"><i class="fa-solid fa-folder-open"></i>
+                            <a class="edu-button" href="./Requiements/files/LIN%20BIL%20CELESTRE%20RESUME.pdf" target="_blank" rel="noopener" title="View Files"><i class="fa-solid fa-folder-open"></i>
                                 Files →</a>
-                            <a class="edu-button" href="#" title="View Certificate"><i
+                            <a class="edu-button" href="#certificate" data-page="certificate" title="View Certificate"><i
                                     class="fa-solid fa-certificate"></i> Certificate →</a>
                         </div>
                     </div>
@@ -352,7 +389,7 @@
                                     <div>
                                         <h3 class="edu-school-name">Ama Computer College</h3>
                                         <span class="edu-school-link">ICT (Information and Communications
-                                            Technology)</span>
+                                             Technology)</span>
                                     </div>
                                     <span class="edu-badge">2016 – 2018</span>
                                 </div>
@@ -361,9 +398,9 @@
                             </div>
                         </div>
                         <div class="edu-actions">
-                            <a class="edu-button" href="#" title="View Files"><i class="fa-solid fa-folder-open"></i>
+                            <a class="edu-button" href="./Requiements/files/LIN%20BIL%20CELESTRE%20RESUME.pdf" target="_blank" rel="noopener" title="View Files"><i class="fa-solid fa-folder-open"></i>
                                 Files →</a>
-                            <a class="edu-button" href="#" title="View Certificate"><i
+                            <a class="edu-button" href="#certificate" data-page="certificate" title="View Certificate"><i
                                     class="fa-solid fa-certificate"></i> Certificate →</a>
                         </div>
                     </div>
@@ -756,10 +793,11 @@
                         <!-- Set 1 (Originals) -->
                         <div class="card project-card">
                             <div class="project-card-top">
-                                <div class="project-thumb">
+                                <a class="project-thumb project-image-button" href="./logo/project-logo-log2.jpg" target="_blank"
+                                    rel="noopener" title="Open Log2minutes image" aria-label="Open Log2minutes image">
                                     <img src="./logo/project-logo-log2.jpg" alt="Log2minutes (barangay) logo"
                                         class="project-thumb-img">
-                                </div>
+                                </a>
                                 <div class="project-card-title-wrap">
                                     <p class="p-title">Log2minutes (barangay)</p>
                                     <p class="subject">Client . Capstone-Project</p>
@@ -780,6 +818,9 @@
                                 <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
                                     rel="noopener" title="View project image" aria-label="View project image"><i
                                         class="fa-regular fa-image"></i> Image</a>
+                                <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
+                                    rel="noopener" title="Open project preview" aria-label="Open project preview"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                             </div>
                         </div>
 
@@ -850,9 +891,10 @@
                         <!-- Set 2 (Duplicates for seamless loop) -->
                         <div class="card project-card" aria-hidden="true">
                             <div class="project-card-top">
-                                <div class="project-thumb">
+                                <a class="project-thumb project-image-button" href="./logo/project-logo-log2.jpg" target="_blank"
+                                    rel="noopener" title="Open Log2minutes image" aria-label="Open Log2minutes image">
                                     <img src="./logo/project-logo-log2.jpg" alt="" class="project-thumb-img">
-                                </div>
+                                </a>
                                 <div class="project-card-title-wrap">
                                     <p class="p-title">Log2minutes (barangay)</p>
                                     <p class="subject">Client . Capstone-Project</p>
@@ -867,10 +909,13 @@
                                 <span>JavaScript</span>
                             </div>
                             <div class="project-card-actions">
-                                <a class="project-card-button" href="#" tabindex="-1"><i
+                                <a class="project-card-button" href="#" title="Completed project repository" aria-label="Completed project repository"><i
                                         class="fa-brands fa-github"></i> Github</a>
                                 <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
-                                    rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i> Image</a>
+                                    rel="noopener" title="View project image" aria-label="View project image"><i class="fa-regular fa-image"></i> Image</a>
+                                <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
+                                    rel="noopener" title="Open project preview" aria-label="Open project preview"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                             </div>
                         </div>
 
