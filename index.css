@@ -43,6 +43,37 @@ body::-webkit-scrollbar {
 }
 
 /* ============================================================
+   GLOBAL — Top Page Loading Progress Bar
+   ============================================================ */
+.page-loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #7b9e73, #a8c2a0, #d5edd1, #ffffff);
+    box-shadow: 0 0 10px rgba(168, 194, 160, 0.85), 0 0 4px #a8c2a0;
+    z-index: 999999;
+    transform: scaleX(0);
+    transform-origin: left;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.1, 0.9, 0.2, 1), opacity 0.2s ease;
+}
+
+.page-loading-bar.is-loading {
+    opacity: 1;
+    transform: scaleX(0.78);
+    transition: transform 0.25s cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+.page-loading-bar.is-finished {
+    transform: scaleX(1);
+    opacity: 0;
+    transition: transform 0.15s ease, opacity 0.3s ease 0.12s;
+}
+
+/* ============================================================
    SIDEBAR — Layout & Container
    ============================================================ */
 .sidebar {
@@ -183,7 +214,13 @@ nav ul {
     gap: 2px;
 }
 
+nav li {
+    position: relative;
+}
+
 nav a {
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -195,13 +232,14 @@ nav a {
     font-size: 0.92rem;
     font-weight: 500;
     border-radius: 4px;
-    transition: color .15s ease, border-color .15s ease, background .15s ease;
+    transition: color .2s ease, border-color .2s ease, background .2s ease;
 }
 
 nav a i {
     width: 16px;
     text-align: center;
     font-size: 0.85rem;
+    transition: transform 0.25s ease, color 0.2s ease;
 }
 
 nav a:hover {
@@ -213,6 +251,76 @@ nav li.active a {
     color: var(--text-primary);
     border-left-color: var(--accent);
     background: var(--accent-dim);
+    box-shadow: inset 2px 0 8px rgba(168, 194, 160, 0.15);
+}
+
+/* Active icon pop animation on page switch */
+nav li.active a i {
+    color: var(--accent);
+    animation: nav-icon-pop 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes nav-icon-pop {
+    0%   { transform: scale(0.8); }
+    50%  { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+
+/* Shimmer / loading sweep across active sidebar nav link */
+nav li.active a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(168, 194, 160, 0.28) 50%, transparent 100%);
+    animation: nav-link-sweep 0.55s ease-out;
+    pointer-events: none;
+}
+
+@keyframes nav-link-sweep {
+    0%   { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* ============================================================
+   CONTENT AREA — Center Circular Page Transition Spinner
+   ============================================================ */
+.content-spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 272px; /* same as sidebar width */
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 9000;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.content-spinner-overlay.is-visible {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.content-spinner {
+    width: 44px;
+    height: 44px;
+    border: 3.5px solid rgba(168, 194, 160, 0.2);
+    border-top-color: var(--accent);
+    border-right-color: var(--accent);
+    border-radius: 50%;
+    animation: center-spin 0.65s linear infinite;
+    box-shadow: 0 0 16px rgba(168, 194, 160, 0.3);
+}
+
+@keyframes center-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
 }
 
 /* ============================================================
@@ -3448,111 +3556,157 @@ a.contact-info-value:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive queries */
-@media (max-width: 900px) {
-    .cert-3d-slider {
-        padding: 14px 0 18px;
-    }
-    .cert-3d-card {
-        width: 270px;
-        height: 200px;
-    }
-    .cert-3d-card.pos-next-1 {
-        transform: translate3d(165px, 0, -30px) rotateY(-22deg) scale(0.86);
-    }
-    .cert-3d-card.pos-prev-1 {
-        transform: translate3d(-165px, 0, -30px) rotateY(22deg) scale(0.86);
-    }
-    .cert-3d-card.pos-next-2 {
-        transform: translate3d(280px, 0, -100px) rotateY(-30deg) scale(0.7);
-    }
-    .cert-3d-card.pos-prev-2 {
-        transform: translate3d(-280px, 0, -100px) rotateY(30deg) scale(0.7);
-    }
-    .cert-3d-viewport {
-        height: 250px;
-    }
-}
-
-@media (max-width: 650px) {
-    .cert-3d-slider {
-        padding: 10px 0 14px;
-        border-radius: 0;
-    }
-    .cert-3d-card {
-        width: 220px;
-        height: 165px;
-        border-radius: 14px;
-    }
-    .cert-3d-card.pos-next-1 {
-        transform: translate3d(110px, 0, -25px) rotateY(-20deg) scale(0.84);
-    }
-    .cert-3d-card.pos-prev-1 {
-        transform: translate3d(-110px, 0, -25px) rotateY(20deg) scale(0.84);
-    }
-    .cert-3d-card.pos-next-2 {
-        transform: translate3d(180px, 0, -80px) rotateY(-26deg) scale(0.66);
-        opacity: 0.25;
-    }
-    .cert-3d-card.pos-prev-2 {
-        transform: translate3d(-180px, 0, -80px) rotateY(26deg) scale(0.66);
-        opacity: 0.25;
-    }
-    .cert-3d-viewport {
-        height: 200px;
-    }
-    .cert-3d-nav {
-        width: 36px;
-        height: 44px;
-        font-size: 0.95rem;
-    }
-    .cert-3d-nav.prev-btn {
-        left: 8px;
-    }
-    .cert-3d-nav.next-btn {
-        right: 8px;
-    }
-    .cert-3d-title {
-        font-size: 1.15rem;
-    }
-}
-
-
+/* ============================================================
+   RESPONSIVE DESIGN SYSTEM — Tablet & Mobile Views
+   Covers: Navigation/Sidebar, Home, About, Services, Projects,
+   Certificates, and Contact
+   ============================================================ */
 
 /* ============================================================
-   RESPONSIVE — Tablet (max-width: 900px)
+   1. TABLET & BELOW (max-width: 900px)
    ============================================================ */
 @media (max-width: 900px) {
 
-    /* Home page: stack dashboard grid to single column */
+    /* --- Global & Sidebar Layout --- */
+    body {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 14px 18px 10px;
+        gap: 12px;
+        background: var(--sidebar-bg);
+        border-bottom: 1px solid var(--hairline);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .profile {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .profile img {
+        align-self: center;
+        width: 46px;
+        height: 46px;
+        border-width: 1.5px;
+        padding: 2px;
+    }
+
+    .profile h2 {
+        font-size: 0.95rem;
+        white-space: normal;
+        line-height: 1.25;
+    }
+
+    .profile .tagline {
+        display: none;
+    }
+
+    .profile .status {
+        font-size: 0.72rem;
+    }
+
+    .social-media {
+        display: none;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        overflow-x: auto;
+        padding: 4px 2px 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav li {
+        flex-shrink: 0;
+    }
+
+    nav a {
+        margin-left: 0;
+        padding: 7px 12px;
+        font-size: 0.8rem;
+        gap: 7px;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        border-radius: 6px;
+        white-space: nowrap;
+    }
+
+    nav li.active a {
+        border-left-color: transparent;
+        border-bottom-color: var(--accent);
+        background: var(--accent-dim);
+    }
+
+    .content-spinner-overlay {
+        left: 0;
+    }
+
+    .content {
+        padding: 24px 20px 48px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* --- Page 1: Home --- */
     .dash-grid {
         grid-template-columns: 1fr;
         grid-auto-rows: auto;
         width: 100%;
+        gap: 18px;
+        margin-top: 24px;
     }
 
     .projects {
         grid-row: auto;
     }
 
-    /* Projects page: 2-column grid on tablet */
-    .project-page-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    /* Home page: keep 2-col summary list on tablet */
     .summary-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    /* Project card tags & actions: full width */
     .project-card .p-tags,
     .project-card-actions {
         margin-left: 0;
         width: 100%;
     }
 
-    /* Education page: stack to single column */
+    /* --- Page 2: About --- */
+    .about-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 18px;
+    }
+
+    .about-card-full {
+        width: 100%;
+        padding: 24px;
+    }
+
     .education-container {
         grid-template-columns: 1fr;
     }
@@ -3562,66 +3716,593 @@ a.contact-info-value:hover {
         max-width: 100%;
         margin: 0;
     }
+
+    /* --- Page 3: Services --- */
+    #page-services.active {
+        min-height: auto;
+    }
+
+    .srv-carousel-container {
+        padding: 20px 0 16px;
+        width: 100%;
+    }
+
+    .service-card {
+        flex: 0 0 calc((100% - 18px) / 2);
+    }
+
+    /* --- Page 4: Projects --- */
+    .project-page-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* --- Page 5: Certificates 3D Slider on Tablet --- */
+    .cert-3d-slider {
+        padding: 14px 0 18px;
+    }
+
+    .cert-3d-card {
+        width: 270px;
+        height: 200px;
+    }
+
+    .cert-3d-card.pos-next-1 {
+        transform: translate3d(165px, 0, -30px) rotateY(-22deg) scale(0.86);
+    }
+
+    .cert-3d-card.pos-prev-1 {
+        transform: translate3d(-165px, 0, -30px) rotateY(22deg) scale(0.86);
+    }
+
+    .cert-3d-card.pos-next-2 {
+        transform: translate3d(280px, 0, -100px) rotateY(-30deg) scale(0.7);
+    }
+
+    .cert-3d-card.pos-prev-2 {
+        transform: translate3d(-280px, 0, -100px) rotateY(30deg) scale(0.7);
+    }
+
+    .cert-3d-viewport {
+        height: 250px;
+    }
+
+    /* --- Page 6: Contact --- */
+    .contact-template-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 18px;
+    }
 }
 
 /* ============================================================
-   RESPONSIVE — Mobile (max-width: 600px)
+   2. MOBILE VIEW (max-width: 650px)
    ============================================================ */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+
+    /* --- Global Mobile Typography & Spacing --- */
+    .content {
+        padding: 18px 14px 40px;
+    }
+
+    .section-header {
+        padding-bottom: 12px;
+    }
+
+    .greeting {
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+
+    .role {
+        font-size: 0.86rem;
+        margin-top: 6px;
+    }
+
+    .card {
+        padding: 20px 16px;
+        border-radius: 12px;
+    }
+
+    /* --- Page 1: Home Mobile --- */
+    .greeting-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .hire-me-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 18px;
+        box-sizing: border-box;
+    }
+
+    .tools-card-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .tools-card-heading h3 {
+        font-size: 1.15rem;
+    }
+
+    .tool-item {
+        min-width: 110px;
+        padding: 9px 12px;
+        font-size: 0.78rem;
+    }
+
+    .project-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px 0;
+    }
+
+    .project-row .project-thumb {
+        width: 100%;
+        height: 140px;
+        border-radius: 8px;
+    }
+
+    .project-row .project-thumb-img {
+        object-fit: cover;
+    }
+
+    .project-info {
+        width: 100%;
+    }
+
+    .p-title {
+        font-size: 0.88rem;
+    }
+
+    .p-description {
+        font-size: 0.78rem;
+        line-height: 1.5;
+        margin-top: 6px;
+    }
+
+    .project-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .project-actions .live-demo {
+        flex: 1 1 auto;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.76rem;
+        padding: 8px 10px;
+    }
+
+    /* Disable floating hover tooltips on mobile touch screens */
+    .live-demo::before,
+    .live-demo::after,
+    .project-card-button::before,
+    .project-card-button::after {
+        display: none !important;
+    }
+
+    .summary-card {
+        padding: 18px 16px;
+    }
+
+    .summary-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+
+    /* --- Page 2: About Mobile --- */
+    .about-card h2 {
+        font-size: 1.05rem;
+    }
+
+    .about-card p {
+        font-size: 0.82rem;
+        line-height: 1.6;
+    }
+
+    .target-role-list {
+        gap: 6px;
+    }
+
+    .target-role {
+        font-size: 0.72rem;
+        padding: 5px 10px;
+    }
+
+    .about-card-full {
+        padding: 18px 14px;
+    }
+
+    .about-card-full-heading {
+        font-size: 1rem;
+    }
+
+    .edu-section-sub {
+        font-size: 0.78rem;
+        margin-bottom: 14px;
+    }
+
+    .education-item {
+        padding: 16px 14px;
+        gap: 12px;
+    }
+
+    .edu-card-top {
+        gap: 10px;
+    }
+
+    .edu-card-icon-wrap {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .edu-school-name {
+        font-size: 0.88rem;
+    }
+
+    .edu-school-link {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .edu-badge {
+        font-size: 0.68rem;
+        padding: 3px 8px;
+    }
+
+    .edu-description {
+        font-size: 0.75rem;
+    }
+
+    .edu-actions {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+    }
+
+    .edu-button {
+        flex: 1 1 calc(50% - 4px);
+        text-align: center;
+        justify-content: center;
+        padding: 8px 10px;
+        font-size: 0.72rem;
+    }
+
+    /* --- Page 3: Services Mobile --- */
+    .srv-carousel {
+        gap: 8px;
+    }
+
+    .service-card {
+        flex: 0 0 100%;
+        padding: 22px 18px;
+        gap: 12px;
+        border-radius: 14px;
+    }
+
+    .service-card-title {
+        font-size: 1.02rem;
+    }
+
+    .service-card-desc {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+
+    .service-card-icon-wrap {
+        width: 46px;
+        height: 46px;
+    }
+
+    .service-card-icon-wrap i {
+        font-size: 1.25rem;
+    }
+
+    .srv-nav {
+        width: 36px;
+        height: 46px;
+        font-size: 0.92rem;
+        border-radius: 10px;
+    }
+
+    .srv-dots {
+        margin-top: 18px;
+        gap: 6px;
+    }
+
+    /* --- Page 4: Projects Mobile --- */
     .projects-vertical-container {
         grid-template-columns: 1fr;
         height: 520px;
+        gap: 16px;
     }
 
-    /* Contact page: single column */
+    .project-card {
+        padding: 16px 14px;
+    }
+
+    .project-card-top {
+        gap: 10px;
+    }
+
+    .project-thumb {
+        width: 52px;
+        height: 52px;
+    }
+
+    .project-card .p-title {
+        font-size: 0.85rem;
+    }
+
+    .project-card .p-tags {
+        gap: 6px;
+        margin-top: 12px;
+    }
+
+    .project-card .p-tags span {
+        padding: 4px 8px;
+        font-size: 0.68rem;
+    }
+
+    .project-card-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .project-card-button {
+        flex: 1 1 auto;
+        text-align: center;
+        justify-content: center;
+        padding: 7px 10px;
+        font-size: 0.74rem;
+    }
+
+    /* --- Page 5: Certificates Mobile --- */
+    .cert-category {
+        margin-top: 20px;
+    }
+
+    .category-title {
+        font-size: 1.05rem;
+    }
+
+    .carousel-container:not(.is-grid) .certificate-card {
+        width: 240px !important;
+        flex: 0 0 240px !important;
+    }
+
+    .cert-section-container.is-grid .certificate-card,
+    .carousel-container.is-grid .certificate-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    .certificate-card {
+        border-radius: 10px;
+    }
+
+    .cert-content {
+        padding: 12px 14px;
+    }
+
+    .cert-title {
+        font-size: 0.88rem;
+    }
+
+    .cert-issuer {
+        font-size: 0.68rem;
+    }
+
+    /* Other Certificate 3D Coverflow Slider Mobile */
+    .cert-3d-slider {
+        padding: 10px 0 14px;
+        border-radius: 0;
+    }
+
+    .cert-3d-card {
+        width: 210px;
+        height: 155px;
+        border-radius: 12px;
+    }
+
+    .cert-3d-card.pos-next-1 {
+        transform: translate3d(90px, 0, -25px) rotateY(-18deg) scale(0.84);
+    }
+
+    .cert-3d-card.pos-prev-1 {
+        transform: translate3d(-90px, 0, -25px) rotateY(18deg) scale(0.84);
+    }
+
+    .cert-3d-card.pos-next-2 {
+        transform: translate3d(145px, 0, -70px) rotateY(-24deg) scale(0.64);
+        opacity: 0.15;
+    }
+
+    .cert-3d-card.pos-prev-2 {
+        transform: translate3d(-145px, 0, -70px) rotateY(24deg) scale(0.64);
+        opacity: 0.15;
+    }
+
+    .cert-3d-viewport {
+        height: 195px;
+    }
+
+    .cert-3d-nav {
+        width: 34px;
+        height: 42px;
+        font-size: 0.88rem;
+    }
+
+    .cert-3d-nav.prev-btn {
+        left: 4px;
+    }
+
+    .cert-3d-nav.next-btn {
+        right: 4px;
+    }
+
+    .cert-3d-info-box {
+        margin-top: 14px;
+        padding: 0 10px;
+    }
+
+    .cert-3d-title {
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+
+    .cert-3d-issuer {
+        font-size: 0.72rem;
+        margin-bottom: 10px;
+    }
+
+    .cert-3d-view-btn {
+        padding: 7px 18px;
+        font-size: 0.78rem;
+    }
+
+    /* --- Page 6: Contact Mobile --- */
     .contact-template-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 18px;
     }
 
     .contact-info-card,
     .contact-qr-card {
         min-height: 0;
+        padding: 20px 16px;
     }
 
-    .cert-category,
-    .tesda-section {
-        margin-top: 24px;
+    .contact-info-heading {
+        font-size: 1.35rem;
     }
 
-    .cert-category-head {
-        align-items: flex-start;
+    .contact-info-desc {
+        font-size: 0.82rem;
+        line-height: 1.6;
+    }
+
+    .contact-info-item {
+        gap: 10px;
+    }
+
+    .contact-info-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+
+    .contact-info-label {
+        font-size: 0.68rem;
+    }
+
+    .contact-info-value {
+        font-size: 0.82rem;
+    }
+
+    .contact-socials-row {
+        gap: 8px;
+    }
+
+    .contact-social-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+
+    .contact-qr-frame {
+        width: 170px;
+        height: 170px;
+    }
+
+    .contact-qr-view-action-btn {
+        width: 100%;
+        max-width: 220px;
+        justify-content: center;
+        padding: 8px 16px;
+        font-size: 0.78rem;
     }
 }
 
 /* ============================================================
-   RESPONSIVE — Mobile (max-width: 480px)
+   3. SMALL MOBILE PHONES (max-width: 480px)
    ============================================================ */
 @media (max-width: 480px) {
 
-    /* Home page: single column summary list */
+    /* --- Home: Single Column Summary List --- */
     .summary-list {
         grid-template-columns: 1fr;
     }
 
-    /* Projects page: single column */
+    /* --- Projects: Single Column --- */
     .project-page-grid {
         grid-template-columns: 1fr;
     }
 
-    /* About / Education: tighter padding on mobile */
+    /* --- About: Tighten Education Elements --- */
     .about-card-full {
-        padding: 20px 16px;
+        padding: 16px 12px;
     }
 
     .Education-1,
     .Education-2,
-    .Education-3 {
-        padding: 16px;
+    .Education-3,
+    .education-item {
+        padding: 14px 12px;
     }
 
-    /* Education badge: allow wrapping on very small screens */
     .edu-badge {
         white-space: normal;
         text-align: center;
+        align-self: flex-start;
+    }
+
+    .edu-actions {
+        flex-direction: column;
+    }
+
+    .edu-button {
+        width: 100%;
+    }
+
+    /* --- 3D Coverflow on Small Phones --- */
+    .cert-3d-card {
+        width: 185px;
+        height: 140px;
+    }
+
+    .cert-3d-card.pos-next-1 {
+        transform: translate3d(70px, 0, -20px) rotateY(-16deg) scale(0.85);
+    }
+
+    .cert-3d-card.pos-prev-1 {
+        transform: translate3d(-70px, 0, -20px) rotateY(16deg) scale(0.85);
+    }
+
+    .cert-3d-card.pos-next-2,
+    .cert-3d-card.pos-prev-2 {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .cert-3d-viewport {
+        height: 175px;
+    }
+
+    /* --- Contact Form Inputs --- */
+    .contact-form-row {
+        grid-template-columns: 1fr;
     }
 }

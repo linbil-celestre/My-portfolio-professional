@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <!-- Top Progress / Loading Bar for Page Transitions -->
+    <div class="page-loading-bar" id="pageLoadingBar" aria-hidden="true"></div>
+
     <aside class="sidebar">
         <div class="profile">
 
@@ -35,13 +38,12 @@
         </div>
         <nav>
             <ul>
-                <li class="active"><a href="#home" data-page="home"> <i class="fa-solid fa-house"></i> Home </a></li>
-                <li><a href="#about" data-page="about"><i class="fa-solid fa-user"></i> About </a></li>
-                <li><a href="#services" data-page="services"><i class="fa-solid fa-briefcase"></i> Services </a></li>
-                <li><a href="#project" data-page="project"><i class="fa-solid fa-file"></i> Projects </a></li>
-                <li><a href="#certificate" data-page="certificate"><i class="fa-solid fa-image"></i>Certificate</a>
-                </li>
-                <li><a href="#contact" data-page="contact"><i class="fa-solid fa-phone"></i>Contact </a></li>
+                <li class="active"><a href="#home" data-page="home"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about" data-page="about"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="#services" data-page="services"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+                <li><a href="#project" data-page="project"><i class="fa-solid fa-file"></i> Projects</a></li>
+                <li><a href="#certificate" data-page="certificate"><i class="fa-solid fa-image"></i> Certificate</a></li>
+                <li><a href="#contact" data-page="contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
             </ul>
         </nav>
         <div class="sidebar-footer">
@@ -51,6 +53,11 @@
 
 
     <!-- Start of Home -->
+    <!-- Center circular spinner overlay for page transitions -->
+    <div class="content-spinner-overlay" id="contentSpinnerOverlay" aria-hidden="true">
+        <div class="content-spinner"></div>
+    </div>
+
     <main class="content">
         <section class="page active" id="page-home">
             <div class="intro-band">
@@ -1261,14 +1268,46 @@
             certificate: 'Certificate'
         };
 
+        var loadingBar = document.getElementById('pageLoadingBar');
+        var contentSpinnerOverlay = document.getElementById('contentSpinnerOverlay');
+        var loadingTimeout;
+        var spinnerTimeout;
+
+        function triggerPageLoading() {
+            // Top bar
+            if (loadingBar) {
+                clearTimeout(loadingTimeout);
+                loadingBar.classList.remove('is-finished', 'is-loading');
+                void loadingBar.offsetWidth;
+                loadingBar.classList.add('is-loading');
+                loadingTimeout = setTimeout(function () {
+                    loadingBar.classList.remove('is-loading');
+                    loadingBar.classList.add('is-finished');
+                    setTimeout(function () {
+                        loadingBar.classList.remove('is-finished');
+                    }, 350);
+                }, 260);
+            }
+            // Center circular spinner
+            if (contentSpinnerOverlay) {
+                clearTimeout(spinnerTimeout);
+                contentSpinnerOverlay.classList.add('is-visible');
+                spinnerTimeout = setTimeout(function () {
+                    contentSpinnerOverlay.classList.remove('is-visible');
+                }, 380);
+            }
+        }
+
         function showPage(target) {
+            triggerPageLoading();
+
             document.querySelectorAll('.page').forEach(function (p) {
                 p.classList.toggle('active', p.id === 'page-' + target);
             });
 
             document.querySelectorAll('nav li').forEach(function (li) {
                 var link = li.querySelector('a[data-page]');
-                li.classList.toggle('active', link && link.dataset.page === target);
+                li.classList.toggle('active', Boolean(link && link.dataset.page === target));
             });
 
             // Update browser tab title
@@ -1289,7 +1328,7 @@
             showPage(page);
         }
 
-        document.querySelectorAll('nav a[data-page]').forEach(function (link) {
+        document.querySelectorAll('a[data-page]').forEach(function (link) {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
                 var target = this.dataset.page;
