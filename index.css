@@ -2381,10 +2381,28 @@ a.contact-info-value:hover {
    SERVICES PAGE — CAROUSEL SLIDER
    ============================================================ */
 
+/* Full height flex container so services section centers vertically on screen */
+#page-services.active {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 112px);
+}
+
 /* Keyframe: card slides up and fades in (entrance on page load) */
 @keyframes service-card-in {
     from { opacity: 0; transform: translateY(36px) scale(0.97); }
     to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Middle container: centers carousel + dots vertically in the space below header */
+.srv-carousel-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 36px 0 24px;
+    width: 100%;
+    max-width: 1180px;
 }
 
 /* Outer wrapper: holds buttons + viewport in a row */
@@ -2393,7 +2411,7 @@ a.contact-info-value:hover {
     width: 100%;
     display: flex;
     align-items: stretch;
-    gap: 12px;
+    gap: 16px;
 }
 
 /* Clipping window — hides cards outside view */
@@ -2506,7 +2524,7 @@ a.contact-info-value:hover {
     display: flex;
     gap: 8px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .srv-dot {
@@ -2595,6 +2613,8 @@ a.contact-info-value:hover {
 
 /* ── Responsive: 2 cards visible on tablet ── */
 @media (max-width: 900px) {
+    #page-services.active { min-height: auto; }
+    .srv-carousel-container { padding: 24px 0 16px; }
     .service-card { flex: 0 0 calc((100% - 18px) / 2); }
 }
 
