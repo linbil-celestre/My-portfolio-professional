@@ -4123,7 +4123,7 @@ a.contact-info-value:hover {
         gap: 6px;
     }
 
-    /* --- Page 4: Projects Mobile — Premium Single Card View --- */
+    /* --- Page 4: Projects Mobile — Clean Card (like desktop style) --- */
     .projects-showcase-wrapper {
         margin-top: 10px;
     }
@@ -4157,7 +4157,7 @@ a.contact-info-value:hover {
         animation: project-scroll-side-right 22s linear infinite;
     }
 
-    /* === Premium Mobile Card Layout === */
+    /* === Mobile Card: matches desktop card layout === */
     .project-card {
         width: 100% !important;
         min-width: 100% !important;
@@ -4165,153 +4165,144 @@ a.contact-info-value:hover {
         flex: 0 0 100% !important;
         scroll-snap-align: center;
         min-height: auto;
-        padding: 0;
-        border-radius: 18px;
+        padding: 20px 18px 18px;
+        border-radius: 16px;
         box-sizing: border-box;
-        overflow: hidden;
-        background: rgba(255, 255, 255, 0.72);
-        border: 1px solid rgba(168, 194, 160, 0.3);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 8px 32px rgba(32, 37, 31, 0.10), 0 2px 8px rgba(168, 194, 160, 0.1);
+        overflow: visible;
+        background: #ffffff;
+        border: 1px solid rgba(32, 37, 31, 0.09);
+        box-shadow: 0 4px 20px rgba(32, 37, 31, 0.07);
         flex-direction: column;
         display: flex;
-    }
-
-    /* Banner: project thumbnail shown full-width at top */
-    .project-card .project-card-top {
-        flex-direction: column;
-        align-items: stretch;
         gap: 0;
-        margin-bottom: 0;
     }
 
+    /* Top row: logo + title side-by-side */
+    .project-card .project-card-top {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 12px;
+    }
+
+    /* Square logo thumbnail */
     .project-card .project-thumb {
-        width: 100%;
-        height: 130px;
-        border-radius: 0;
-        border: none;
-        background: linear-gradient(135deg, #1a2318 0%, #2d3d2a 50%, #1a2318 100%);
-        position: relative;
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        border-radius: 12px;
+        border: 1.5px solid rgba(168, 194, 160, 0.45);
+        background: #f5f7f4;
+        box-shadow: 0 2px 8px rgba(32, 37, 31, 0.06);
         overflow: hidden;
-        flex-shrink: 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
+        position: relative;
     }
 
     .project-card .project-thumb::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to bottom, rgba(20, 24, 28, 0) 40%, rgba(20, 24, 28, 0.55) 100%);
-        pointer-events: none;
+        display: none;
     }
 
     .project-card .project-thumb-img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
-        opacity: 0.88;
-        padding: 0;
-        border-radius: 0;
-        filter: saturate(1.1);
+        opacity: 1;
+        padding: 4px;
+        border-radius: inherit;
+        filter: none;
     }
 
-    /* Title block sits below the banner */
+    /* Title/subtitle next to logo */
     .project-card .project-card-title-wrap {
-        width: 100%;
-    }
-
-    /* Content body: all text and actions */
-    .project-card-body-mobile {
-        padding: 14px 16px 16px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
         flex: 1;
-    }
-
-    /* Since there's no .project-card-body-mobile wrapper in HTML yet,
-       we use padding on card children directly */
-    .project-card .project-card-title-wrap {
-        padding: 12px 16px 0;
+        min-width: 0;
+        width: auto;
+        padding: 0;
     }
 
     .project-card .p-title {
         font-size: 1rem;
         font-weight: 700;
         color: #171e16;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        line-height: 1.25;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+        line-height: 1.3;
         margin: 0;
     }
 
     .project-card-title-long {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
     }
 
     .project-card .subject {
-        font-size: 0.7rem;
-        font-weight: 600;
-        color: var(--accent);
-        letter-spacing: 0.03em;
+        font-size: 0.72rem;
+        font-weight: 500;
+        color: #687067;
+        letter-spacing: 0;
         margin: 3px 0 0;
-        text-transform: uppercase;
+        text-transform: none;
     }
 
+    /* Description */
     .project-card .p-description {
-        font-size: 0.78rem;
-        line-height: 1.5;
-        margin: 8px 16px 0;
+        font-size: 0.82rem;
+        line-height: 1.55;
+        margin: 0 0 12px 0;
         color: #505c4e;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
 
+    /* Tags row */
     .project-card .p-tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 5px;
-        margin: 8px 16px 0;
-        width: auto;
+        gap: 6px;
+        margin: 0 0 14px 0;
+        width: 100%;
     }
 
     .project-card .p-tags span {
-        padding: 3px 9px;
-        font-size: 0.67rem;
-        font-weight: 600;
+        padding: 4px 11px;
+        font-size: 0.72rem;
+        font-weight: 500;
         border-radius: 999px;
-        background: rgba(168, 194, 160, 0.18);
-        border: 1px solid rgba(168, 194, 160, 0.4);
-        color: #3a5238;
+        background: transparent;
+        border: 1px solid rgba(32, 37, 31, 0.18);
+        color: #3a4839;
     }
 
+    /* Action buttons */
     .project-card-actions {
         display: flex;
         flex-wrap: nowrap;
         gap: 8px;
-        margin: 10px 16px 16px;
-        width: auto;
+        margin: 0;
+        width: 100%;
     }
 
     .project-card-button {
         flex: 1 1 0;
         text-align: center;
         justify-content: center;
-        padding: 9px 10px;
-        font-size: 0.74rem;
+        padding: 10px 10px;
+        font-size: 0.76rem;
         font-weight: 600;
-        border-radius: 10px;
-        background: rgba(168, 194, 160, 0.15);
-        border: 1.5px solid rgba(89, 102, 83, 0.25);
+        border-radius: 8px;
+        background: transparent;
+        border: 1px solid rgba(32, 37, 31, 0.16);
+        color: #3a4839;
     }
 
     .projects-vertical-container.is-paused .project-card[aria-hidden="true"] {
@@ -4497,17 +4488,19 @@ a.contact-info-value:hover {
         grid-template-columns: 1fr;
     }
 
-    /* --- Projects on Small Phones: Compact Premium Card --- */
+    /* --- Projects on Small Phones: Compact Clean Card --- */
     .project-card {
         width: 100% !important;
         min-width: 100% !important;
         max-width: 100% !important;
         flex: 0 0 100% !important;
-        padding: 0;
+        padding: 16px 14px 14px;
     }
 
     .project-card .project-thumb {
-        height: 110px;
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
     }
 
     .project-card .p-title {
@@ -4515,7 +4508,7 @@ a.contact-info-value:hover {
     }
 
     .project-card-button {
-        padding: 8px 8px;
+        padding: 9px 8px;
         font-size: 0.7rem;
     }
 
