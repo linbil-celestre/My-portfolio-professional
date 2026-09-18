@@ -4123,107 +4123,99 @@ a.contact-info-value:hover {
         gap: 6px;
     }
 
-    /* --- Page 4: Projects Mobile — Single Swipeable Row --- */
+    /* --- Page 4: Projects Mobile — Two-Row Horizontal Auto-Scroll (like desktop) --- */
     .projects-showcase-wrapper {
         margin-top: 10px;
     }
 
-    /* The outer container becomes the single swipe row */
+    /* Two stacked rows, each scrolls sideways */
     .projects-vertical-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 12px;
         height: auto;
         max-height: none;
-        overflow-x: auto;
-        overflow-y: visible;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        padding: 6px 20px 10px;
-        -webkit-mask-image: none;
-        mask-image: none;
-        /* Start scroll at beginning so first card shows */
-        scroll-padding-left: 20px;
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%);
+        padding: 6px 0 8px;
     }
 
-    .projects-vertical-container::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Hide the second col-wrapper — cards from both tracks shown in one row */
-    .projects-col-wrapper:last-child {
-        display: none;
-    }
-
-    /* First col-wrapper: normal block flow, no overflow */
+    /* Each row clips its track */
     .projects-col-wrapper {
-        overflow: visible;
-        width: auto;
+        overflow: hidden;
+        width: 100%;
         height: auto;
         flex-shrink: 0;
+        display: block;
     }
 
-    /* The track is now just a flat flex row */
+    /* Track: horizontal flex strip of cards */
     .projects-track-vertical {
-        display: contents; /* children participate directly in parent flex */
-        width: auto;
-        gap: 0;
-        will-change: auto;
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+        gap: 12px;
+        will-change: transform;
     }
 
-    /* Kill all animations on mobile */
-    .projects-track-up,
+    /* Row 1 scrolls left, Row 2 scrolls right */
+    .projects-track-up {
+        animation: project-scroll-side-left 20s linear infinite;
+    }
+
     .projects-track-down {
-        animation: none !important;
+        animation: project-scroll-side-right 20s linear infinite;
     }
 
-    /* === Each Card === */
+    /* Pause on hover/touch */
+    .projects-col-wrapper:hover .projects-track-vertical,
+    .projects-col-wrapper:active .projects-track-vertical,
+    .projects-vertical-container:hover .projects-track-vertical,
+    .projects-vertical-container:active .projects-track-vertical,
+    .projects-showcase-wrapper.is-paused .projects-track-vertical {
+        animation-play-state: paused;
+    }
+
+    /* === Each Card — fixed width, multiple visible per row === */
     .project-card {
-        width: 82vw !important;
-        min-width: 82vw !important;
-        max-width: 320px !important;
-        flex: 0 0 82vw !important;
-        scroll-snap-align: start;
+        width: 210px !important;
+        min-width: 210px !important;
+        max-width: 210px !important;
+        flex: 0 0 210px !important;
         min-height: auto;
-        padding: 20px 18px 18px;
-        border-radius: 16px;
+        padding: 16px 14px 14px;
+        border-radius: 14px;
         box-sizing: border-box;
-        overflow: visible;
+        overflow: hidden;
         background: #ffffff;
         border: 1px solid rgba(32, 37, 31, 0.09);
-        box-shadow: 0 4px 20px rgba(32, 37, 31, 0.07);
+        box-shadow: 0 4px 16px rgba(32, 37, 31, 0.07);
         flex-direction: column;
         display: flex;
         gap: 0;
         cursor: pointer;
-        pointer-events: auto;
-        touch-action: pan-y;
         flex-shrink: 0;
-    }
-
-    /* Hide aria-hidden duplicate cards on mobile */
-    .project-card[aria-hidden="true"] {
-        display: none !important;
+        scroll-snap-align: unset;
     }
 
     /* Top row: logo + title side-by-side */
     .project-card .project-card-top {
         flex-direction: row;
         align-items: flex-start;
-        gap: 14px;
-        margin-bottom: 12px;
+        gap: 10px;
+        margin-bottom: 10px;
     }
 
     /* Square logo thumbnail */
     .project-card .project-thumb {
-        width: 52px;
-        height: 52px;
-        min-width: 52px;
-        border-radius: 12px;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        border-radius: 10px;
         border: 1.5px solid rgba(168, 194, 160, 0.45);
         background: #f5f7f4;
-        box-shadow: 0 2px 8px rgba(32, 37, 31, 0.06);
+        box-shadow: 0 2px 6px rgba(32, 37, 31, 0.06);
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -4242,7 +4234,7 @@ a.contact-info-value:hover {
         object-fit: contain;
         object-position: center;
         opacity: 1;
-        padding: 4px;
+        padding: 3px;
         border-radius: inherit;
         filter: none;
     }
@@ -4256,56 +4248,58 @@ a.contact-info-value:hover {
     }
 
     .project-card .p-title {
-        font-size: 1rem;
+        font-size: 0.82rem;
         font-weight: 700;
         color: #171e16;
         white-space: normal;
-        overflow: visible;
-        text-overflow: unset;
-        line-height: 1.3;
+        line-height: 1.25;
         margin: 0;
-    }
-
-    .project-card-title-long {
-        white-space: normal;
-        overflow: visible;
-        text-overflow: unset;
-    }
-
-    .project-card .subject {
-        font-size: 0.72rem;
-        font-weight: 500;
-        color: #687067;
-        letter-spacing: 0;
-        margin: 3px 0 0;
-        text-transform: none;
-    }
-
-    /* Description */
-    .project-card .p-description {
-        font-size: 0.82rem;
-        line-height: 1.55;
-        margin: 0 0 12px 0;
-        color: #505c4e;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
-        line-clamp: 3;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
 
-    /* Tags row */
+    .project-card-title-long {
+        white-space: normal;
+    }
+
+    .project-card .subject {
+        font-size: 0.66rem;
+        font-weight: 500;
+        color: #687067;
+        margin: 2px 0 0;
+        text-transform: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Description */
+    .project-card .p-description {
+        font-size: 0.74rem;
+        line-height: 1.5;
+        margin: 0 0 10px 0;
+        color: #505c4e;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* Tags */
     .project-card .p-tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 6px;
-        margin: 0 0 14px 0;
+        gap: 5px;
+        margin: 0 0 10px 0;
         width: 100%;
     }
 
     .project-card .p-tags span {
-        padding: 4px 11px;
-        font-size: 0.72rem;
+        padding: 3px 8px;
+        font-size: 0.65rem;
         font-weight: 500;
         border-radius: 999px;
         background: transparent;
@@ -4316,25 +4310,26 @@ a.contact-info-value:hover {
     /* Action buttons */
     .project-card-actions {
         display: flex;
-        flex-wrap: nowrap;
-        gap: 8px;
+        flex-wrap: wrap;
+        gap: 6px;
         margin: 0;
         width: 100%;
     }
 
     .project-card-button {
-        flex: 1 1 0;
+        flex: 1 1 auto;
         text-align: center;
         justify-content: center;
-        padding: 10px 10px;
-        font-size: 0.76rem;
+        padding: 7px 8px;
+        font-size: 0.68rem;
         font-weight: 600;
-        border-radius: 8px;
+        border-radius: 7px;
         background: transparent;
         border: 1px solid rgba(32, 37, 31, 0.16);
         color: #3a4839;
     }
 
+    /* When paused: hide duplicates */
     .projects-vertical-container.is-paused .project-card[aria-hidden="true"] {
         display: none !important;
     }
@@ -4518,33 +4513,28 @@ a.contact-info-value:hover {
         grid-template-columns: 1fr;
     }
 
-    /* --- Projects on Small Phones: Compact Clean Card --- */
-    .projects-vertical-container {
-        padding: 6px 14px 10px;
-        gap: 10px;
-    }
-
+    /* --- Projects on Small Phones: Narrower Cards for Animation --- */
     .project-card {
-        width: 86vw !important;
-        min-width: 86vw !important;
-        max-width: 290px !important;
-        flex: 0 0 86vw !important;
-        padding: 16px 14px 14px;
+        width: 180px !important;
+        min-width: 180px !important;
+        max-width: 180px !important;
+        flex: 0 0 180px !important;
+        padding: 14px 12px 12px;
     }
 
     .project-card .project-thumb {
-        width: 46px;
-        height: 46px;
-        min-width: 46px;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
     }
 
     .project-card .p-title {
-        font-size: 0.92rem;
+        font-size: 0.76rem;
     }
 
     .project-card-button {
-        padding: 9px 8px;
-        font-size: 0.7rem;
+        padding: 6px 6px;
+        font-size: 0.64rem;
     }
 
     /* --- About: Tighten Education Elements --- */
