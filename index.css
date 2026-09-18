@@ -3731,9 +3731,58 @@ a.contact-info-value:hover {
         flex: 0 0 calc((100% - 18px) / 2);
     }
 
-    /* --- Page 4: Projects --- */
-    .project-page-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* --- Page 4: Projects Horizontal Side-Scrolling Carousel on Tablet & Mobile --- */
+    .projects-vertical-container {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        height: auto;
+        max-height: none;
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, #000 3%, #000 97%, transparent 100%);
+        padding: 8px 0;
+    }
+
+    .projects-col-wrapper {
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+
+    .projects-track-vertical {
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+        gap: 16px;
+        will-change: transform;
+    }
+
+    /* Row 1: scrolls sideways to the left */
+    .projects-track-up {
+        animation: project-scroll-side-left 26s linear infinite;
+    }
+
+    /* Row 2: scrolls sideways to the right */
+    .projects-track-down {
+        animation: project-scroll-side-right 26s linear infinite;
+    }
+
+    .projects-col-wrapper:hover .projects-track-vertical,
+    .projects-col-wrapper:active .projects-track-vertical,
+    .projects-vertical-container:hover .projects-track-vertical,
+    .projects-vertical-container:active .projects-track-vertical {
+        animation-play-state: paused;
+    }
+
+    .project-card {
+        width: 300px;
+        min-width: 300px;
+        max-width: 300px;
+        min-height: auto;
+        padding: 18px 16px;
+        flex-shrink: 0;
+        box-sizing: border-box;
     }
 
     /* --- Page 5: Certificates 3D Slider on Tablet --- */
@@ -4018,53 +4067,104 @@ a.contact-info-value:hover {
         gap: 6px;
     }
 
-    /* --- Page 4: Projects Mobile --- */
+    /* --- Page 4: Projects Mobile Side Cards --- */
     .projects-vertical-container {
-        grid-template-columns: 1fr;
-        height: 520px;
-        gap: 16px;
+        gap: 14px;
+        padding: 6px 0;
+    }
+
+    .projects-track-vertical {
+        gap: 12px;
+    }
+
+    .projects-track-up {
+        animation: project-scroll-side-left 22s linear infinite;
+    }
+
+    .projects-track-down {
+        animation: project-scroll-side-right 22s linear infinite;
     }
 
     .project-card {
-        padding: 16px 14px;
+        width: 270px;
+        min-width: 270px;
+        max-width: 270px;
+        min-height: auto;
+        padding: 15px 13px;
+        border-radius: 12px;
     }
 
     .project-card-top {
         gap: 10px;
+        margin-bottom: 6px;
     }
 
-    .project-thumb {
-        width: 52px;
-        height: 52px;
+    .project-card .project-thumb {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+        border-radius: 8px;
     }
 
     .project-card .p-title {
-        font-size: 0.85rem;
+        font-size: 0.84rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .project-card-title-long {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .project-card .subject {
+        font-size: 0.68rem;
+        margin: 2px 0 0;
+    }
+
+    .project-card .p-description {
+        font-size: 0.76rem;
+        line-height: 1.45;
+        margin: 6px 0 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .project-card .p-tags {
-        gap: 6px;
-        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 10px;
+        margin-left: 0;
+        width: 100%;
     }
 
     .project-card .p-tags span {
-        padding: 4px 8px;
-        font-size: 0.68rem;
+        padding: 3px 8px;
+        font-size: 0.66rem;
     }
 
     .project-card-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 12px;
+        gap: 6px;
+        margin-top: 10px;
+        margin-left: 0;
+        width: 100%;
     }
 
     .project-card-button {
         flex: 1 1 auto;
         text-align: center;
         justify-content: center;
-        padding: 7px 10px;
-        font-size: 0.74rem;
+        padding: 6px 10px;
+        font-size: 0.72rem;
+        border-radius: 6px;
     }
 
     /* --- Page 5: Certificates Mobile --- */
@@ -4246,9 +4346,12 @@ a.contact-info-value:hover {
         grid-template-columns: 1fr;
     }
 
-    /* --- Projects: Single Column --- */
-    .project-page-grid {
-        grid-template-columns: 1fr;
+    /* --- Projects on Small Phones --- */
+    .project-card {
+        width: 250px;
+        min-width: 250px;
+        max-width: 250px;
+        padding: 13px 11px;
     }
 
     /* --- About: Tighten Education Elements --- */
@@ -4304,5 +4407,26 @@ a.contact-info-value:hover {
     /* --- Contact Form Inputs --- */
     .contact-form-row {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   PROJECTS HORIZONTAL SIDE-SCROLLING KEYFRAMES
+   ============================================================ */
+@keyframes project-scroll-side-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 6px));
+    }
+}
+
+@keyframes project-scroll-side-right {
+    from {
+        transform: translateX(calc(-50% - 6px));
+    }
+    to {
+        transform: translateX(0);
     }
 }
