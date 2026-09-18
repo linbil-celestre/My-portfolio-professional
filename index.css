@@ -3613,6 +3613,152 @@ a.contact-info-value:hover {
 }
 
 /* ============================================================
+   PAGE FOOTER (Shared across About, Services, Projects, Contact, Certificate)
+   ============================================================ */
+.page-footer {
+    width: 100%;
+    margin-top: 52px;
+    padding-bottom: 20px;
+}
+
+.page.active .page-footer {
+    animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
+}
+
+.page-footer-card {
+    background: rgba(255, 255, 255, 0.58);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(32, 37, 31, 0.1);
+    border-radius: 14px;
+    padding: 24px 28px;
+    box-shadow: 0 10px 28px rgba(32, 37, 31, 0.05);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.page-footer-card:hover {
+    border-color: rgba(168, 194, 160, 0.7);
+    box-shadow: 0 14px 34px rgba(32, 37, 31, 0.08);
+}
+
+.page-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.page-footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.page-footer-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #20251F;
+    letter-spacing: -0.2px;
+}
+
+.page-footer-desc {
+    margin: 0;
+    font-size: 0.82rem;
+    color: #687067;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.page-footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.page-footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-footer-social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(32, 37, 31, 0.05);
+    border: 1px solid rgba(32, 37, 31, 0.08);
+    color: #3E463D;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.page-footer-social-btn:hover {
+    background: #14181C;
+    border-color: #14181C;
+    color: #A8C2A0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(20, 24, 28, 0.2);
+}
+
+.page-footer-scroll-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(32, 37, 31, 0.05);
+    border: 1px solid rgba(32, 37, 31, 0.08);
+    color: #3E463D;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.page-footer-scroll-top:hover {
+    background: #14181C;
+    border-color: #14181C;
+    color: #A8C2A0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(20, 24, 28, 0.2);
+}
+
+.page-footer-divider {
+    height: 1px;
+    background: rgba(32, 37, 31, 0.08);
+    margin: 18px 0 14px;
+}
+
+.page-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.page-footer-copy {
+    margin: 0;
+    font-size: 0.78rem;
+    color: #687067;
+    font-weight: 500;
+}
+
+.page-footer-tag {
+    margin: 0;
+    font-size: 0.74rem;
+    color: #929990;
+    font-weight: 400;
+}
+
+/* ============================================================
    RESPONSIVE DESIGN SYSTEM — Tablet & Mobile Views
    Covers: Navigation/Sidebar, Home, About, Services, Projects,
    Certificates, and Contact
@@ -4512,6 +4658,40 @@ a.contact-info-value:hover {
         padding: 8px 16px;
         font-size: 0.78rem;
     }
+
+    /* --- Page Footer Mobile (650px) --- */
+    .page-footer {
+        margin-top: 36px;
+        padding-bottom: 24px;
+    }
+
+    .page-footer-card {
+        padding: 18px 16px;
+        border-radius: 12px;
+    }
+
+    .page-footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .page-footer-actions {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .page-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .page-footer-desc {
+        font-size: 0.78rem;
+    }
 }
 
 /* ============================================================
@@ -4601,6 +4781,27 @@ a.contact-info-value:hover {
     /* --- Contact Form Inputs --- */
     .contact-form-row {
         grid-template-columns: 1fr;
+    }
+
+    /* --- Page Footer Small Mobile (480px) --- */
+    .page-footer-title {
+        font-size: 1.02rem;
+    }
+
+    .page-footer-social-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+
+    .page-footer-scroll-top {
+        padding: 6px 12px;
+        font-size: 0.74rem;
+    }
+
+    .page-footer-copy,
+    .page-footer-tag {
+        font-size: 0.72rem;
     }
 }
 
