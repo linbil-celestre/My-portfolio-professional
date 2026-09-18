@@ -948,6 +948,50 @@ nav li.active a {
 }
 
 /* ============================================================
+   ABOUT PAGE — Animations & Entrance
+   ============================================================ */
+@keyframes about-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes about-skill-fill {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--skill-level);
+    }
+}
+
+/* Staggered fade in when About page is active */
+#page-about.active .section-header {
+    animation: about-fade-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+#page-about.active .about-card {
+    animation: about-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+
+#page-about.active .summary-card {
+    animation: about-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.16s both;
+}
+
+#page-about.active .about-card-full {
+    animation: about-fade-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+}
+
+#page-about.active .skill-bar span {
+    animation: about-skill-fill 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+/* ============================================================
    ABOUT PAGE — Container & Card Layout
    ============================================================ */
 .about-container {
