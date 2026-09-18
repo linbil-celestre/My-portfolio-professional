@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,6 +19,23 @@
     <div class="page-loading-bar" id="pageLoadingBar" aria-hidden="true"></div>
 
     <aside class="sidebar">
+        <!-- Sidebar Skeleton Loading Screen -->
+        <div class="sidebar-loading-overlay" id="sidebarLoadingOverlay" aria-hidden="true">
+            <div class="sidebar-skeleton">
+                <div class="sk-avatar"></div>
+                <div class="sk-line sk-line--lg"></div>
+                <div class="sk-line sk-line--sm"></div>
+                <div class="sk-line sk-line--md"></div>
+                <div class="sk-divider"></div>
+                <div class="sk-nav-item"></div>
+                <div class="sk-nav-item"></div>
+                <div class="sk-nav-item"></div>
+                <div class="sk-nav-item"></div>
+                <div class="sk-nav-item"></div>
+                <div class="sk-nav-item"></div>
+            </div>
+        </div>
+
         <div class="profile">
 
             <img src="./logo/logo3.jpg" alt="Profile-Picture">
@@ -31,9 +48,12 @@
         <div class="social-media">
             <p class="social-label">Social Media Account</p>
             <div class="social-links">
-                <a class="Social-Link" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a class="Social-Link" href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a class="Social-Link" href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a class="Social-Link" href="https://www.facebook.com/celestre.linbil" aria-label="Facebook"
+                    target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a class="Social-Link" href="https://github.com/linbil-celestre" aria-label="GitHub" target="_blank"><i
+                        class="fa-brands fa-github"></i></a>
+                <a class="Social-Link" href="https://www.linkedin.com/in/linbil-celestre-6bb6b2396/" target="_blank"
+                    aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
         <nav>
@@ -42,7 +62,8 @@
                 <li><a href="#about" data-page="about"><i class="fa-solid fa-user"></i> About</a></li>
                 <li><a href="#services" data-page="services"><i class="fa-solid fa-briefcase"></i> Services</a></li>
                 <li><a href="#project" data-page="project"><i class="fa-solid fa-file"></i> Projects</a></li>
-                <li><a href="#certificate" data-page="certificate"><i class="fa-solid fa-image"></i> Certificate</a></li>
+                <li><a href="#certificate" data-page="certificate"><i class="fa-solid fa-image"></i> Certificate</a>
+                </li>
                 <li><a href="#contact" data-page="contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
             </ul>
         </nav>
@@ -122,10 +143,11 @@
                                     "Resume CV" button, and a circular portrait in graduation attire.</p>
 
                                 <div class="project-actions">
-                                    <a class="live-demo" href="#" target="_blank" rel="noopener"
-                                        data-tooltip="View on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
-                                    <a class="live-demo" href="./index.html" target="_self" rel="noopener"
-                                        data-tooltip="Completed project"><i
+                                    <a class="live-demo" href="https://github.com/linbil-celestre/portfolio"
+                                        target="_blank" rel="noopener" data-tooltip="View on GitHub"><i
+                                            class="fa-brands fa-github"></i> GitHub</a>
+                                    <a class="live-demo" href="https://linbil-celestre.github.io/portfolio/index.html"
+                                        target="_blank" rel="noopener" data-tooltip="Completed project"><i
                                             class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
                                     <a class="live-demo image-link" href="./logo/logo.png" target="_blank"
                                         rel="noopener" data-tooltip="See picture of result"><i
@@ -140,16 +162,18 @@
                                 <img src="./logo/logo1.jpg" alt="Portfolio 2" class="project-thumb-img">
                             </a>
                             <div class="project-info">
-                                <p class="p-title">Portfolio 2   </p>
+                                <p class="p-title">Portfolio 2 </p>
                                 <p class="p-description">A light-themed, modern portfolio web page with soft gradients,
                                     displaying intro text, target role tags, action buttons ("Download Resume", "View
                                     Profile"), and a dark footer section.</p>
 
                                 <div class="project-actions">
-                                    <a class="live-demo" href="#" target="_blank" rel="noopener"
-                                        data-tooltip="View on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
-                                    <a class="live-demo" href="./index.html" target="_self" rel="noopener"
-                                        data-tooltip="Completed project"><i
+                                    <a class="live-demo" href="https://github.com/linbil-celestre/My-portfolio"
+                                        target="_blank" rel="noopener" data-tooltip="View on GitHub"><i
+                                            class="fa-brands fa-github"></i> GitHub</a>
+                                    <a class="live-demo"
+                                        href="https://my-portfolio-flame-theta-75.vercel.app/index.html" target="_blank"
+                                        rel="noopener" data-tooltip="Completed project"><i
                                             class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
                                     <a class="live-demo image-link" href="./logo/logo1.jpg" target="_blank"
                                         rel="noopener" data-tooltip="See picture of result"><i
@@ -172,10 +196,12 @@
                                     and a "Quick Facts" card.</p>
 
                                 <div class="project-actions">
-                                    <a class="live-demo" href="#" target="_blank" rel="noopener"
-                                        data-tooltip="View on GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
-                                    <a class="live-demo" href="./index.html" target="_self" rel="noopener"
-                                        data-tooltip="Completed project"><i
+                                    <a class="live-demo"
+                                        href="https://github.com/linbil-celestre/My-portfolio-professional"
+                                        target="_blank" rel="noopener" data-tooltip="View on GitHub"><i
+                                            class="fa-brands fa-github"></i> GitHub</a>
+                                    <a class="live-demo" href="https://my-portfolio-professional-gamma.vercel.app/"
+                                        target="_blank" rel="noopener" data-tooltip="Completed project"><i
                                             class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
                                     <a class="live-demo image-link" href="./logo/logo3.jpg" target="_blank"
                                         rel="noopener" data-tooltip="See picture of result"><i
@@ -209,7 +235,8 @@
                             <p><strong>Focus</strong><span>Front-end development</span></p>
                             <p><strong>Experience</strong><span>OJT Front-end Intern &bull; Web Development Team</span>
                             </p>
-                            <p><strong>Status</strong><span class="available"><span class="status-dot"></span>Available for work</span></p>
+                            <p><strong>Status</strong><span class="available"><span class="status-dot"></span>Available
+                                    for work</span></p>
                         </div>
                     </div>
                 </div>
@@ -221,16 +248,26 @@
                     <div class="page-footer-content">
                         <div class="page-footer-brand">
                             <div class="page-footer-title">Lin Bil Celestre</div>
-                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for Work</p>
+                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for
+                                Work</p>
                         </div>
                         <div class="page-footer-actions">
                             <div class="page-footer-socials">
-                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener"
+                                    class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="https://www.facebook.com/celestre.linbil" class="page-footer-social-btn"
+                                    aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/in/linbil-celestre-6bb6b2396/"
+                                    class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com"
+                                    target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email"
+                                    title="Email"><i class="fa-solid fa-envelope"></i></a>
                             </div>
-                            <button type="button" class="page-footer-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top" aria-label="Back to top">
+                            <button type="button" class="page-footer-scroll-top"
+                                onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top"
+                                aria-label="Back to top">
                                 <i class="fa-solid fa-arrow-up"></i>
                                 <span>Top</span>
                             </button>
@@ -262,13 +299,16 @@
                         personal and academic projects.</p>
 
                     <div class="about-actions-row">
-                        <a class="about-resume-btn" href="./Requiements/files/LIN%20BIL%20CELESTRE%20RESUME.pdf" target="_blank" rel="noopener" download="LIN_BIL_CELESTRE_RESUME.pdf" title="Download Resume">
+                        <a class="about-resume-btn" href="./Requiements/files/LIN%20BIL%20CELESTRE%20RESUME.pdf"
+                            target="_blank" rel="noopener" download="LIN_BIL_CELESTRE_RESUME.pdf"
+                            title="Download Resume">
                             <i class="fa-solid fa-file-arrow-down"></i>
                             <span>Resume</span>
                         </a>
-                        <a class="about-files-btn" href="./Requiements/files/linbil-celestre-cover-letter.pdf" target="_blank" rel="noopener" title="View Files">
-                            <i class="fa-solid fa-folder-open"></i>
-                            <span>Files</span>
+                        <a class="about-files-btn" href="./Requiements/files/linbil-celestre-cover-letter.pdf"
+                            target="_blank" rel="noopener" title="View Cover Letter">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                            <span>Cover Letter</span>
                         </a>
                     </div>
 
@@ -276,8 +316,11 @@
                     <div class="target-roles">
                         <span class="target-roles-label">Key Experience</span>
                         <div class="target-role-list">
-                            <span class="target-role">OJT Front-end Intern</span>
-                            <span class="target-role">Web Development Team</span>
+                            <span class="target-role">Capstone Project </span>
+                            <span class="target-role">Web Development intern</span>
+                            <span class="target-role">Data Entry</span>
+                            <span class="target-role">Video Editor</span>
+                            <span class="target-role">IT Support</span>
                         </div>
                     </div>
                 </div>
@@ -340,17 +383,20 @@
                                         <span class="edu-school-link">BSIT (Bachelor of Science in Information
                                             Technology)</span>
                                     </div>
-                                    <span class="edu-badge">2022 – 2026</span>
+                                    <span class="edu-badge">2022 - 2026</span>
                                 </div>
                                 <p class="edu-description">Focused on software development, web systems, database
                                     management, and information technology solutions.</p>
                             </div>
                         </div>
                         <div class="edu-actions">
-                            <a class="edu-button" href="./Requiements/files/LIN%20BIL%20CELESTRE%20RESUME.pdf" target="_blank" rel="noopener" title="View Files"><i class="fa-solid fa-folder-open"></i>
-                                Files →</a>
-                            <a class="edu-button" href="#certificate" data-page="certificate" title="View Certificate"><i
-                                    class="fa-solid fa-certificate"></i> Certificate →</a>
+                            <a class="edu-button" href="./Requiements/Diploma/Certificate of Clearance.jpg"
+                                target="_blank" rel="noopener" title="View Files"><i
+                                    class="fa-solid fa-folder-open"></i>
+                                Files</a>
+                            <a class="edu-button" href="./Requiements/Diploma/Certificate of Clearance.jpg"
+                                target="_blank" title="View Certificate"><i class="fa-solid fa-certificate"></i>
+                                Certificate </a>
                         </div>
                     </div>
 
@@ -365,17 +411,19 @@
                                         <h3 class="edu-school-name">Laverdad Christian School</h3>
                                         <span class="edu-school-link">ACT (Associate Computer Technology)</span>
                                     </div>
-                                    <span class="edu-badge">2018 – 2022</span>
+                                    <span class="edu-badge">2018 - 2022</span>
                                 </div>
                                 <p class="edu-description">Web development, PHP, database management, CRUD, SQL, and
                                     hardware troubleshooting.</p>
                             </div>
                         </div>
                         <div class="edu-actions">
-                            <a class="edu-button" href="./Requiements/files/LIN%20BIL%20CELESTRE%20RESUME.pdf" target="_blank" rel="noopener" title="View Files"><i class="fa-solid fa-folder-open"></i>
-                                Files →</a>
-                            <a class="edu-button" href="#certificate" data-page="certificate" title="View Certificate"><i
-                                    class="fa-solid fa-certificate"></i> Certificate →</a>
+                            <a class="edu-button" href="./Requiements/Diploma/Laverdad Christian School_page.jpg"
+                                target="_blank" rel="noopener" title="View Files"><i
+                                    class="fa-solid fa-folder-open"></i>
+                                Files </a>
+                            <a class="edu-button" href="./Requiements/Diploma/Laverdad Christian School_page.jpg"
+                                title="View Certificate"><i class="fa-solid fa-certificate"></i> Certificate </a>
                         </div>
                     </div>
 
@@ -389,19 +437,20 @@
                                     <div>
                                         <h3 class="edu-school-name">Ama Computer College</h3>
                                         <span class="edu-school-link">ICT (Information and Communications
-                                             Technology)</span>
+                                            Technology)</span>
                                     </div>
-                                    <span class="edu-badge">2016 – 2018</span>
+                                    <span class="edu-badge">2016 - 2017</span>
                                 </div>
                                 <p class="edu-description">Java, Visual Basic, CRUD operations, conditional logic,
                                     loops, functions, input/output handling, and simple GUI application development.</p>
                             </div>
                         </div>
                         <div class="edu-actions">
-                            <a class="edu-button" href="./Requiements/files/LIN%20BIL%20CELESTRE%20RESUME.pdf" target="_blank" rel="noopener" title="View Files"><i class="fa-solid fa-folder-open"></i>
-                                Files →</a>
-                            <a class="edu-button" href="#certificate" data-page="certificate" title="View Certificate"><i
-                                    class="fa-solid fa-certificate"></i> Certificate →</a>
+                            <a class="edu-button" href="./Requiements/Diploma/AMA COMPUTER COLLEGE.jpg" target="_blank"
+                                rel="noopener" title="View Files"><i class="fa-solid fa-folder-open"></i>
+                                Files </a>
+                            <a class="edu-button" href="./Requiements/Diploma/AMA COMPUTER COLLEGE.jpg"
+                                title="View Certificate"><i class="fa-solid fa-certificate"></i> Certificate</a>
                         </div>
                     </div>
 
@@ -414,16 +463,25 @@
                     <div class="page-footer-content">
                         <div class="page-footer-brand">
                             <div class="page-footer-title">Lin Bil Celestre</div>
-                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for Work</p>
+                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for
+                                Work</p>
                         </div>
                         <div class="page-footer-actions">
                             <div class="page-footer-socials">
-                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener"
+                                    class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="#" class="page-footer-social-btn" aria-label="Facebook" title="Facebook"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com"
+                                    target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email"
+                                    title="Email"><i class="fa-solid fa-envelope"></i></a>
                             </div>
-                            <button type="button" class="page-footer-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top" aria-label="Back to top">
+                            <button type="button" class="page-footer-scroll-top"
+                                onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top"
+                                aria-label="Back to top">
                                 <i class="fa-solid fa-arrow-up"></i>
                                 <span>Top</span>
                             </button>
@@ -446,7 +504,7 @@
         <section class="page" id="page-services">
             <div class="section-header">
                 <h1 class="greeting">Services</h1>
-                <p class="role">What I can do for you — skills and offerings.</p>
+                <p class="role">What I can do for you skills and offerings.</p>
             </div>
 
             <!-- Carousel wrapper container -->
@@ -470,7 +528,9 @@
                                     <i class="fa-solid fa-code"></i>
                                 </div>
                                 <h3 class="service-card-title">Web Development</h3>
-                                <p class="service-card-desc">Building clean, responsive, and functional websites from scratch using HTML, CSS, and JavaScript. I focus on writing structured, maintainable code that works smoothly across all modern browsers and devices.</p>
+                                <p class="service-card-desc">Building clean, responsive, and functional websites from
+                                    scratch using HTML, CSS, and JavaScript. I focus on writing structured, maintainable
+                                    code that works smoothly across all modern browsers and devices.</p>
                                 <ul class="service-card-tags">
                                     <li>HTML5</li>
                                     <li>CSS3</li>
@@ -484,7 +544,9 @@
                                     <i class="fa-solid fa-pen-ruler"></i>
                                 </div>
                                 <h3 class="service-card-title">UI / UX Design</h3>
-                                <p class="service-card-desc">Crafting visually appealing and user-friendly interfaces with a strong focus on layout, typography, and usability. I translate design ideas into clean, interactive web pages that feel natural to use.</p>
+                                <p class="service-card-desc">Crafting visually appealing and user-friendly interfaces
+                                    with a strong focus on layout, typography, and usability. I translate design ideas
+                                    into clean, interactive web pages that feel natural to use.</p>
                                 <ul class="service-card-tags">
                                     <li>Tailwind CSS</li>
                                     <li>Bootstrap</li>
@@ -498,7 +560,9 @@
                                     <i class="fa-brands fa-react"></i>
                                 </div>
                                 <h3 class="service-card-title">Frontend Frameworks</h3>
-                                <p class="service-card-desc">Developing component-based web applications using React JS, enabling dynamic, fast, and scalable user interfaces. I build reusable components and manage application state for seamless user experiences.</p>
+                                <p class="service-card-desc">Developing component-based web applications using React JS,
+                                    enabling dynamic, fast, and scalable user interfaces. I build reusable components
+                                    and manage application state for seamless user experiences.</p>
                                 <ul class="service-card-tags">
                                     <li>React JS</li>
                                     <li>Component Design</li>
@@ -512,7 +576,9 @@
                                     <i class="fa-solid fa-database"></i>
                                 </div>
                                 <h3 class="service-card-title">Database Management</h3>
-                                <p class="service-card-desc">Designing and managing relational databases using MySQL and PostgreSQL. I handle CRUD operations, write efficient SQL queries, and ensure data integrity for web applications and systems.</p>
+                                <p class="service-card-desc">Designing and managing relational databases using MySQL and
+                                    PostgreSQL. I handle CRUD operations, write efficient SQL queries, and ensure data
+                                    integrity for web applications and systems.</p>
                                 <ul class="service-card-tags">
                                     <li>MySQL</li>
                                     <li>PostgreSQL</li>
@@ -526,7 +592,9 @@
                                     <i class="fa-solid fa-screwdriver-wrench"></i>
                                 </div>
                                 <h3 class="service-card-title">Computer Servicing</h3>
-                                <p class="service-card-desc">Troubleshooting and maintaining computer hardware and software systems. With TESDA training in Computer Systems Servicing, I can diagnose issues, install components, and perform system maintenance.</p>
+                                <p class="service-card-desc">Troubleshooting and maintaining computer hardware and
+                                    software systems. With TESDA training in Computer Systems Servicing, I can diagnose
+                                    issues, install components, and perform system maintenance.</p>
                                 <ul class="service-card-tags">
                                     <li>Hardware Repair</li>
                                     <li>OS Installation</li>
@@ -540,7 +608,9 @@
                                     <i class="fa-solid fa-chart-column"></i>
                                 </div>
                                 <h3 class="service-card-title">Data Analysis</h3>
-                                <p class="service-card-desc">Organizing, analyzing, and visualizing data using Microsoft Excel for data analysis. I create structured reports, pivot tables, and charts to present insights in a clear and meaningful way.</p>
+                                <p class="service-card-desc">Organizing, analyzing, and visualizing data using Microsoft
+                                    Excel for data analysis. I create structured reports, pivot tables, and charts to
+                                    present insights in a clear and meaningful way.</p>
                                 <ul class="service-card-tags">
                                     <li>Microsoft Excel</li>
                                     <li>Data Visualization</li>
@@ -569,19 +639,30 @@
                     <div class="page-footer-content">
                         <div class="page-footer-brand">
                             <div class="page-footer-title">Lin Bil Celestre</div>
-                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for Work</p>
+                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for
+                                Work</p>
                         </div>
                         <div class="page-footer-actions">
                             <div class="page-footer-socials">
-                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener"
+                                    class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="https://www.facebook.com/celestre.linbil/" class="page-footer-social-btn"
+                                    aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/in/linbil-celestre-6bb6b2396/"
+                                    class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com"
+                                    target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email"
+                                    title="Email"><i class="fa-solid fa-envelope"></i></a>
                             </div>
-                            <button type="button" class="page-footer-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top" aria-label="Back to top">
+                            <button type="button" class="page-footer-scroll-top"
+                                onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top"
+                                aria-label="Back to top">
                                 <i class="fa-solid fa-arrow-up"></i>
                                 <span>Top</span>
                             </button>
+
                         </div>
                     </div>
                     <div class="page-footer-divider"></div>
@@ -607,377 +688,397 @@
 
             <div class="projects-showcase-wrapper" id="projectsShowcaseWrapper">
                 <div class="projects-vertical-container" id="projectsContainer" aria-label="Projects showcase">
-                <!-- Left Column: 3 Cards scrolling PATAAS (UP) -->
-                <div class="projects-col-wrapper" aria-label="Projects column left">
-                    <div class="projects-track-vertical projects-track-up">
-                        <!-- Set 1 (Originals) -->
-                        <div class="card project-card">
-                            <div class="project-card-top">
-                                <div class="project-thumb">
-                                    <img src="./logo/project-logo-master.jpg" alt="Master Driving School logo"
-                                        class="project-thumb-img">
+                    <!-- Left Column: 3 Cards scrolling PATAAS (UP) -->
+                    <div class="projects-col-wrapper" aria-label="Projects column left">
+                        <div class="projects-track-vertical projects-track-up">
+                            <!-- Set 1 (Originals) -->
+                             <!-- Master Driving Cards 1 -->
+                            <div class="card project-card">
+                                <div class="project-card-top">
+                                    <div class="project-thumb">
+                                        <img src="./logo/project-logo-master.jpg" alt="Master Driving School logo"
+                                            class="project-thumb-img">
+                                    </div>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title">Master Driving School</p>
+                                        <p class="subject">OJT (On Job Traning)</p>
+                                    </div>
                                 </div>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title">Master Driving School</p>
-                                    <p class="subject">OJT (On Job Traning)</p>
+                                <p class="p-description">Responsive landing page for a driving school business with
+                                    service
+                                    details and contact information.</p>
+                                <div class="p-tags">
+                                    <span>React js</span>
+                                    <span>Tailwind</span>
+                                    <span>JavaScript</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button"
+                                        href="https://github.com/linbil-celestre/Master_Driving_Site"
+                                        title="incompleted project repository"
+                                        aria-label="incompleted frontend project repository"><i
+                                            class="fa-brands fa-github"></i>
+                                        GitHub</a>
+                                    <a class="project-card-button" href="./logo/project-logo-master.jpg" target="_blank"
+                                        rel="noopener" title="View project image" aria-label="View project image"><i
+                                            class="fa-regular fa-image"></i> Image</a>
+                                    <a class="project-card-button" href="https://masterdriving.ph/home" target="_blank" rel="noopener"
+                                        title="Open live project" aria-label="Open live project"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                                 </div>
                             </div>
-                            <p class="p-description">Responsive landing page for a driving school business with service
-                                details and contact information.</p>
-                            <div class="p-tags">
-                                <span>React js</span>
-                                <span>Tailwind</span>
-                                <span>JavaScript</span>
-                                <span>Bootstrap</span>
+
+                            <div class="card project-card">
+                                <div class="project-card-top">
+                                    <div class="project-thumb">
+                                        <img src="./logo/Project-logo-Ateria.png"
+                                            alt="Ateria Hotel and Restaurant Management System logo"
+                                            class="project-thumb-img">
+                                    </div>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title project-card-title-long">Ateria Hotel and Restaurant
+                                            Management
+                                            System</p>
+                                        <p class="subject">Capstone-Project</p>
+                                    </div>
+                                </div>
+                                <p class="p-description">Operational web platform for managing hotel and restaurant
+                                    operations, records, and activity flow.</p>
+                                <div class="p-tags">
+                                    <span>PHP</span>
+                                    <span>MySQL</span>
+                                    <span>Bootstrap</span>
+                                    <span>Xampp</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button" href="https://github.com/linbil-celestre/administrative-hotel.git" title="Completed project repository"
+                                        aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
+                                        GitHub</a>
+                                    <a class="project-card-button" href="./logo/Project-logo-Ateria.png" target="_blank"
+                                        rel="noopener" title="View project image" aria-label="View project image"><i
+                                            class="fa-regular fa-image"></i> Image</a>
+                                </div>
                             </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" title="Completed project repository"
-                                    aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
-                                    GitHub</a>
-                                <a class="project-card-button" href="./logo/project-logo-master.jpg" target="_blank"
-                                    rel="noopener" title="View project image" aria-label="View project image"><i
-                                        class="fa-regular fa-image"></i> Image</a>
-                                <a class="project-card-button" href="./index.html" target="_blank" rel="noopener"
-                                    title="Open live project" aria-label="Open live project"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+
+                            <div class="card project-card">
+                                <div class="project-card-top">
+                                    <div class="project-thumb">
+                                        <img src="./logo/Project-logo-SMS.png" alt="School Management System logo"
+                                            class="project-thumb-img">
+                                    </div>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title">School Management System</p>
+                                        <p class="subject">Client . Capstone-Project</p>
+                                    </div>
+                                </div>
+                                <p class="p-description">School administration dashboard for managing students, records,
+                                    and
+                                    daily school operations.</p>
+                                <div class="p-tags">
+                                    <span>PHP</span>
+                                    <span>Tailwind</span>
+                                    <span>MySQL</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button" href="https://github.com/linbil-celestre/SchoolManagementSystem-SMS-.git" title="Completed project repository"
+                                        aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
+                                        Github</a>
+                                    <a class="project-card-button" href="./logo/Project-logo-SMS.png" target="_blank"
+                                        rel="noopener" title="View project image" aria-label="View project image"><i
+                                            class="fa-regular fa-image"></i> Image</a>
+                                </div>
+                            </div>
+
+                            <!-- Set 2 (Duplicates for seamless loop) -->
+                            <div class="card project-card" aria-hidden="true">
+                                <div class="project-card-top">
+                                    <div class="project-thumb">
+                                        <img src="./logo/project-logo-master.jpg" alt="" class="project-thumb-img">
+                                    </div>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title">Master Driving School</p>
+                                        <p class="subject">OJT (On Job Traning)</p>
+                                    </div>
+                                </div>
+                                <p class="p-description">Responsive landing page for a driving school business with
+                                    service
+                                    details and contact information.</p>
+                                <div class="p-tags">
+                                    <span>React js</span>
+                                    <span>Tailwind</span>
+                                    <span>JavaScript</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button" href="https://github.com/linbil-celestre/Master_Driving_Site.git" tabindex="-1"><i
+                                            class="fa-brands fa-github"></i> GitHub</a>
+                                    <a class="project-card-button" href="./logo/project-logo-master.jpg" target="_blank"
+                                        rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i> Image</a>
+                                    <a class="project-card-button" href="https://masterdriving.ph/home" target="_blank" rel="noopener"
+                                        tabindex="-1"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                                </div>
+                            </div>
+
+                            <div class="card project-card" aria-hidden="true">
+                                <div class="project-card-top">
+                                    <div class="project-thumb">
+                                        <img src="./logo/Project-logo-Ateria.png" alt="" class="project-thumb-img">
+                                    </div>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title project-card-title-long">Ateria Hotel and Restaurant
+                                            Management
+                                            System</p>
+                                        <p class="subject">Capstone-Project</p>
+                                    </div>
+                                </div>
+                                <p class="p-description">Operational web platform for managing hotel and restaurant
+                                    operations, records, and activity flow.</p>
+                                <div class="p-tags">
+                                    <span>PHP</span>
+                                    <span>MySQL</span>
+                                    <span>Bootstrap</span>
+                                    <span>Xampp</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button" href="https://github.com/linbil-celestre/administrative-hotel.git    " tabindex="-1"><i
+                                            class="fa-brands fa-github"></i> GitHub</a>
+                                    <a class="project-card-button" href="./logo/Project-logo-Ateria.png" target="_blank"
+                                        rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i> Image</a>
+                                </div>
+                            </div>
+
+                            <div class="card project-card" aria-hidden="true">
+                                <div class="project-card-top">
+                                    <div class="project-thumb">
+                                        <img src="./logo/Project-logo-SMS.png" alt="" class="project-thumb-img">
+                                    </div>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title">School Management System</p>
+                                        <p class="subject">Client . Capstone-Project</p>
+                                    </div>
+                                </div>
+                                <p class="p-description">School administration dashboard for managing students, records,
+                                    and
+                                    daily school operations.</p>
+                                <div class="p-tags">
+                                    <span>PHP</span>
+                                    <span>Tailwind</span>
+                                    <span>MySQL</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button" href="https://github.com/linbil-celestre/SchoolManagementSystem-SMS-.git" tabindex="-1"><i
+                                            class="fa-brands fa-github"></i> Github</a>
+                                    <a class="project-card-button" href="./logo/Project-logo-SMS.png" target="_blank"
+                                        rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i> Image</a>
+                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="card project-card">
-                            <div class="project-card-top">
-                                <div class="project-thumb">
-                                    <img src="./logo/Project-logo-Ateria.png"
-                                        alt="Ateria Hotel and Restaurant Management System logo"
-                                        class="project-thumb-img">
+                    <!-- Right Column: 3 Cards scrolling PABABA (DOWN) -->
+                    <div class="projects-col-wrapper" aria-label="Projects column right">
+                        <div class="projects-track-vertical projects-track-down">
+                            <!-- Set 1 (Originals) -->
+                            <div class="card project-card">
+                                <div class="project-card-top">
+                                    <a class="project-thumb project-image-button" href="./logo/project-logo-log2.jpg"
+                                        target="_blank" rel="noopener" title="Open Log2minutes image"
+                                        aria-label="Open Log2minutes image">
+                                        <img src="./logo/project-logo-log2.jpg" alt="Log2minutes (barangay) logo"
+                                            class="project-thumb-img">
+                                    </a>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title">Log2minutes (barangay)</p>
+                                        <p class="subject">Client . Capstone-Project</p>
+                                    </div>
                                 </div>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title project-card-title-long">Ateria Hotel and Restaurant Management
-                                        System</p>
-                                    <p class="subject">Capstone-Project</p>
+                                <p class="p-description">Barangay administration dashboard for managing residents,
+                                    records,
+                                    and daily community operations.</p>
+                                <div class="p-tags">
+                                    <span>Laravel</span>
+                                    <span>Tailwind</span>
+                                    <span>MySQL</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button" href="https://github.com/jampz-dev/lgu2minutes.git" title="Completed project repository"
+                                        aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
+                                        Github</a>
+                                    <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
+                                        rel="noopener" title="View project image" aria-label="View project image"><i
+                                            class="fa-regular fa-image"></i> Image</a>
+                                    <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
+                                        rel="noopener" title="Open project preview" aria-label="Open project preview"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                                 </div>
                             </div>
-                            <p class="p-description">Operational web platform for managing hotel and restaurant
-                                operations, records, and activity flow.</p>
-                            <div class="p-tags">
-                                <span>PHP</span>
-                                <span>MySQL</span>
-                                <span>Bootstrap</span>
-                                <span>Xampp</span>
-                            </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" title="Completed project repository"
-                                    aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
-                                    GitHub</a>
-                                <a class="project-card-button" href="./logo/Project-logo-Ateria.png" target="_blank"
-                                    rel="noopener" title="View project image" aria-label="View project image"><i
-                                        class="fa-regular fa-image"></i> Image</a>
-                            </div>
-                        </div>
 
-                        <div class="card project-card">
-                            <div class="project-card-top">
-                                <div class="project-thumb">
-                                    <img src="./logo/Project-logo-SMS.png" alt="School Management System logo"
-                                        class="project-thumb-img">
+                            <div class="card project-card">
+                                <div class="project-card-top">
+                                    <div class="project-thumb">
+                                        <img src="./logo/Project-logo-libarary.png" alt="Library System logo"
+                                            class="project-thumb-img">
+                                    </div>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title">Library System</p>
+                                        <p class="subject">System Administration and Maintenance</p>
+                                    </div>
                                 </div>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title">School Management System</p>
-                                    <p class="subject">Client . Capstone-Project</p>
+                                <p class="p-description">Library administration dashboard for managing catalog records,
+                                    member registrations, book circulation, and daily operations.</p>
+                                <div class="p-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button" href="https://github.com/linbil-celestre/library.git" title="Completed project repository"
+                                        aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
+                                        Github</a>
+                                    <a class="project-card-button" href="./logo/Project-logo-libarary.png"
+                                        target="_blank" rel="noopener" title="View project image"
+                                        aria-label="View project image"><i class="fa-regular fa-image"></i> Image</a>
+                                    <a class="project-card-button" href="https://linbil-celestre.github.io/library/login.html" target="_blank" rel="noopener"
+                                        title="Live project coming soon" aria-label="Live project coming soon"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                                 </div>
                             </div>
-                            <p class="p-description">School administration dashboard for managing students, records, and
-                                daily school operations.</p>
-                            <div class="p-tags">
-                                <span>PHP</span>
-                                <span>Tailwind</span>
-                                <span>MySQL</span>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" title="Completed project repository"
-                                    aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
-                                    Github</a>
-                                <a class="project-card-button" href="./logo/Project-logo-SMS.png" target="_blank"
-                                    rel="noopener" title="View project image" aria-label="View project image"><i
-                                        class="fa-regular fa-image"></i> Image</a>
-                            </div>
-                        </div>
 
-                        <!-- Set 2 (Duplicates for seamless loop) -->
-                        <div class="card project-card" aria-hidden="true">
-                            <div class="project-card-top">
-                                <div class="project-thumb">
-                                    <img src="./logo/project-logo-master.jpg" alt="" class="project-thumb-img">
+                            <div class="card project-card">
+                                <div class="project-card-top">
+                                    <div class="project-thumb">
+                                        <img src="./logo/Project-logo-Guidance-system.png" alt="Guidance System logo"
+                                            class="project-thumb-img">
+                                    </div>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title">Guidance System</p>
+                                        <p class="subject">Introduction To Human Computer Interaction</p>
+                                    </div>
                                 </div>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title">Master Driving School</p>
-                                    <p class="subject">OJT (On Job Traning)</p>
+                                <p class="p-description">Integrated administration dashboard for managing residents,
+                                    student
+                                    records, school coordination, and daily barangay operations.</p>
+                                <div class="p-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button" href="https://github.com/linbil-celestre/Guidance" title="Completed project repository"
+                                        aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
+                                        Github</a>
+                                    <a class="project-card-button" href="./logo/Project-logo-Guidance-system.png"
+                                        target="_blank" rel="noopener" title="View project image"
+                                        aria-label="View project image"><i class="fa-regular fa-image"></i> Image</a>
+                                    <a class="project-card-button" href="https://linbil-celestre.github.io/Guidance/login.html" target="_blank" rel="noopener"
+                                        title="Live project coming soon" aria-label="Live project coming soon"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                                 </div>
                             </div>
-                            <p class="p-description">Responsive landing page for a driving school business with service
-                                details and contact information.</p>
-                            <div class="p-tags">
-                                <span>React js</span>
-                                <span>Tailwind</span>
-                                <span>JavaScript</span>
-                                <span>Bootstrap</span>
-                            </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" tabindex="-1"><i
-                                        class="fa-brands fa-github"></i> GitHub</a>
-                                <a class="project-card-button" href="./logo/project-logo-master.jpg" target="_blank"
-                                    rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i> Image</a>
-                                <a class="project-card-button" href="./index.html" target="_blank" rel="noopener"
-                                    tabindex="-1"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                            </div>
-                        </div>
 
-                        <div class="card project-card" aria-hidden="true">
-                            <div class="project-card-top">
-                                <div class="project-thumb">
-                                    <img src="./logo/Project-logo-Ateria.png" alt="" class="project-thumb-img">
+                            <!-- Set 2 (Duplicates for seamless loop) -->
+                            <div class="card project-card" aria-hidden="true">
+                                <div class="project-card-top">
+                                    <a class="project-thumb project-image-button" href="./logo/project-logo-log2.jpg"
+                                        target="_blank" rel="noopener" title="Open Log2minutes image"
+                                        aria-label="Open Log2minutes image">
+                                        <img src="./logo/project-logo-log2.jpg" alt="" class="project-thumb-img">
+                                    </a>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title">Log2minutes (barangay)</p>
+                                        <p class="subject">Client . Capstone-Project</p>
+                                    </div>
                                 </div>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title project-card-title-long">Ateria Hotel and Restaurant Management
-                                        System</p>
-                                    <p class="subject">Capstone-Project</p>
+                                <p class="p-description">Barangay administration dashboard for managing residents,
+                                    records,
+                                    and daily community operations.</p>
+                                <div class="p-tags">
+                                    <span>Laravel</span>
+                                    <span>Tailwind</span>
+                                    <span>MySQL</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button" href="https://github.com/jampz-dev/lgu2minutes.git" title="Completed project repository"
+                                        aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
+                                        Github</a>
+                                    <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
+                                        rel="noopener" title="View project image" aria-label="View project image"><i
+                                            class="fa-regular fa-image"></i> Image</a>
+                                    <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
+                                        rel="noopener" title="Open project preview" aria-label="Open project preview"><i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                                 </div>
                             </div>
-                            <p class="p-description">Operational web platform for managing hotel and restaurant
-                                operations, records, and activity flow.</p>
-                            <div class="p-tags">
-                                <span>PHP</span>
-                                <span>MySQL</span>
-                                <span>Bootstrap</span>
-                                <span>Xampp</span>
-                            </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" tabindex="-1"><i
-                                        class="fa-brands fa-github"></i> GitHub</a>
-                                <a class="project-card-button" href="./logo/Project-logo-Ateria.png" target="_blank"
-                                    rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i> Image</a>
-                            </div>
-                        </div>
 
-                        <div class="card project-card" aria-hidden="true">
-                            <div class="project-card-top">
-                                <div class="project-thumb">
-                                    <img src="./logo/Project-logo-SMS.png" alt="" class="project-thumb-img">
+                            <div class="card project-card" aria-hidden="true">
+                                <div class="project-card-top">
+                                    <div class="project-thumb">
+                                        <img src="./logo/Project-logo-libarary.png" alt="" class="project-thumb-img">
+                                    </div>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title">Library System</p>
+                                        <p class="subject">System Administration and Maintenance</p>
+                                    </div>
                                 </div>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title">School Management System</p>
-                                    <p class="subject">Client . Capstone-Project</p>
+                                <p class="p-description">Library administration dashboard for managing catalog records,
+                                    member registrations, book circulation, and daily operations.</p>
+                                <div class="p-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button" href="https://github.com/linbil-celestre/library.git" tabindex="-1"><i
+                                            class="fa-brands fa-github"></i> Github</a>
+                                    <a class="project-card-button" href="./logo/Project-logo-libarary.png"
+                                        target="_blank" rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i>
+                                        Image</a>
+                                    <a class="project-card-button" href="https://linbil-celestre.github.io/library/login.html" target="_blank" rel="noopener"
+                                        tabindex="-1"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
                                 </div>
                             </div>
-                            <p class="p-description">School administration dashboard for managing students, records, and
-                                daily school operations.</p>
-                            <div class="p-tags">
-                                <span>PHP</span>
-                                <span>Tailwind</span>
-                                <span>MySQL</span>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" tabindex="-1"><i
-                                        class="fa-brands fa-github"></i> Github</a>
-                                <a class="project-card-button" href="./logo/Project-logo-SMS.png" target="_blank"
-                                    rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i> Image</a>
+
+                            <div class="card project-card" aria-hidden="true">
+                                <div class="project-card-top">
+                                    <div class="project-thumb">
+                                        <img src="./logo/Project-logo-Guidance-system.png" alt=""
+                                            class="project-thumb-img">
+                                    </div>
+                                    <div class="project-card-title-wrap">
+                                        <p class="p-title">Guidance System</p>
+                                        <p class="subject">Introduction To Human Computer Interaction</p>
+                                    </div>
+                                </div>
+                                <p class="p-description">Integrated administration dashboard for managing residents,
+                                    student
+                                    records, school coordination, and daily barangay operations.</p>
+                                <div class="p-tags">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="project-card-actions">
+                                    <a class="project-card-button" href="https://github.com/linbil-celestre/Guidance" tabindex="-1"><i
+                                            class="fa-brands fa-github"></i> Github</a>
+                                    <a class="project-card-button" href="./logo/Project-logo-Guidance-system.png"
+                                        target="_blank" rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i>
+                                        Image</a>
+                                    <a class="project-card-button" href="https://linbil-celestre.github.io/Guidance/login.html" target="_blank" rel="noopener"
+                                        tabindex="-1"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Right Column: 3 Cards scrolling PABABA (DOWN) -->
-                <div class="projects-col-wrapper" aria-label="Projects column right">
-                    <div class="projects-track-vertical projects-track-down">
-                        <!-- Set 1 (Originals) -->
-                        <div class="card project-card">
-                            <div class="project-card-top">
-                                <a class="project-thumb project-image-button" href="./logo/project-logo-log2.jpg" target="_blank"
-                                    rel="noopener" title="Open Log2minutes image" aria-label="Open Log2minutes image">
-                                    <img src="./logo/project-logo-log2.jpg" alt="Log2minutes (barangay) logo"
-                                        class="project-thumb-img">
-                                </a>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title">Log2minutes (barangay)</p>
-                                    <p class="subject">Client . Capstone-Project</p>
-                                </div>
-                            </div>
-                            <p class="p-description">Barangay administration dashboard for managing residents, records,
-                                and daily community operations.</p>
-                            <div class="p-tags">
-                                <span>Laravel</span>
-                                <span>Tailwind</span>
-                                <span>MySQL</span>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" title="Completed project repository"
-                                    aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
-                                    Github</a>
-                                <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
-                                    rel="noopener" title="View project image" aria-label="View project image"><i
-                                        class="fa-regular fa-image"></i> Image</a>
-                                <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
-                                    rel="noopener" title="Open project preview" aria-label="Open project preview"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                            </div>
-                        </div>
-
-                        <div class="card project-card">
-                            <div class="project-card-top">
-                                <div class="project-thumb">
-                                    <img src="./logo/Project-logo-libarary.png" alt="Library System logo"
-                                        class="project-thumb-img">
-                                </div>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title">Library System</p>
-                                    <p class="subject">System Administration and Maintenance</p>
-                                </div>
-                            </div>
-                            <p class="p-description">Library administration dashboard for managing catalog records,
-                                member registrations, book circulation, and daily operations.</p>
-                            <div class="p-tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Bootstrap</span>
-                            </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" title="Completed project repository"
-                                    aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
-                                    Github</a>
-                                <a class="project-card-button" href="./logo/Project-logo-libarary.png" target="_blank"
-                                    rel="noopener" title="View project image" aria-label="View project image"><i
-                                        class="fa-regular fa-image"></i> Image</a>
-                                <a class="project-card-button" href="#" target="_blank" rel="noopener"
-                                    title="Live project coming soon" aria-label="Live project coming soon"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                            </div>
-                        </div>
-
-                        <div class="card project-card">
-                            <div class="project-card-top">
-                                <div class="project-thumb">
-                                    <img src="./logo/Project-logo-Guidance-system.png" alt="Guidance System logo"
-                                        class="project-thumb-img">
-                                </div>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title">Guidance System</p>
-                                    <p class="subject">Introduction To Human Computer Interaction</p>
-                                </div>
-                            </div>
-                            <p class="p-description">Integrated administration dashboard for managing residents, student
-                                records, school coordination, and daily barangay operations.</p>
-                            <div class="p-tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Bootstrap</span>
-                            </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" title="Completed project repository"
-                                    aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
-                                    Github</a>
-                                <a class="project-card-button" href="./logo/Project-logo-Guidance-system.png"
-                                    target="_blank" rel="noopener" title="View project image"
-                                    aria-label="View project image"><i class="fa-regular fa-image"></i> Image</a>
-                                <a class="project-card-button" href="#" target="_blank" rel="noopener"
-                                    title="Live project coming soon" aria-label="Live project coming soon"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                            </div>
-                        </div>
-
-                        <!-- Set 2 (Duplicates for seamless loop) -->
-                        <div class="card project-card" aria-hidden="true">
-                            <div class="project-card-top">
-                                <a class="project-thumb project-image-button" href="./logo/project-logo-log2.jpg" target="_blank"
-                                    rel="noopener" title="Open Log2minutes image" aria-label="Open Log2minutes image">
-                                    <img src="./logo/project-logo-log2.jpg" alt="" class="project-thumb-img">
-                                </a>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title">Log2minutes (barangay)</p>
-                                    <p class="subject">Client . Capstone-Project</p>
-                                </div>
-                            </div>
-                            <p class="p-description">Barangay administration dashboard for managing residents, records,
-                                and daily community operations.</p>
-                            <div class="p-tags">
-                                <span>Laravel</span>
-                                <span>Tailwind</span>
-                                <span>MySQL</span>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" title="Completed project repository" aria-label="Completed project repository"><i
-                                        class="fa-brands fa-github"></i> Github</a>
-                                <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
-                                    rel="noopener" title="View project image" aria-label="View project image"><i class="fa-regular fa-image"></i> Image</a>
-                                <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
-                                    rel="noopener" title="Open project preview" aria-label="Open project preview"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                            </div>
-                        </div>
-
-                        <div class="card project-card" aria-hidden="true">
-                            <div class="project-card-top">
-                                <div class="project-thumb">
-                                    <img src="./logo/Project-logo-libarary.png" alt="" class="project-thumb-img">
-                                </div>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title">Library System</p>
-                                    <p class="subject">System Administration and Maintenance</p>
-                                </div>
-                            </div>
-                            <p class="p-description">Library administration dashboard for managing catalog records,
-                                member registrations, book circulation, and daily operations.</p>
-                            <div class="p-tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Bootstrap</span>
-                            </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" tabindex="-1"><i
-                                        class="fa-brands fa-github"></i> Github</a>
-                                <a class="project-card-button" href="./logo/Project-logo-libarary.png" target="_blank"
-                                    rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i> Image</a>
-                                <a class="project-card-button" href="#" target="_blank" rel="noopener" tabindex="-1"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                            </div>
-                        </div>
-
-                        <div class="card project-card" aria-hidden="true">
-                            <div class="project-card-top">
-                                <div class="project-thumb">
-                                    <img src="./logo/Project-logo-Guidance-system.png" alt="" class="project-thumb-img">
-                                </div>
-                                <div class="project-card-title-wrap">
-                                    <p class="p-title">Guidance System</p>
-                                    <p class="subject">Introduction To Human Computer Interaction</p>
-                                </div>
-                            </div>
-                            <p class="p-description">Integrated administration dashboard for managing residents, student
-                                records, school coordination, and daily barangay operations.</p>
-                            <div class="p-tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Bootstrap</span>
-                            </div>
-                            <div class="project-card-actions">
-                                <a class="project-card-button" href="#" tabindex="-1"><i
-                                        class="fa-brands fa-github"></i> Github</a>
-                                <a class="project-card-button" href="./logo/Project-logo-Guidance-system.png"
-                                    target="_blank" rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i>
-                                    Image</a>
-                                <a class="project-card-button" href="#" target="_blank" rel="noopener" tabindex="-1"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             </div>
 
             <!-- Page Footer -->
@@ -986,16 +1087,25 @@
                     <div class="page-footer-content">
                         <div class="page-footer-brand">
                             <div class="page-footer-title">Lin Bil Celestre</div>
-                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for Work</p>
+                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for
+                                Work</p>
                         </div>
                         <div class="page-footer-actions">
                             <div class="page-footer-socials">
-                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener"
+                                    class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="https://www.facebook.com/celestre.linbil" class="page-footer-social-btn" aria-label="Facebook" title="Facebook"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/in/linbil-celestre-6bb6b2396/" class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com"
+                                    target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email"
+                                    title="Email"><i class="fa-solid fa-envelope"></i></a>
                             </div>
-                            <button type="button" class="page-footer-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top" aria-label="Back to top">
+                            <button type="button" class="page-footer-scroll-top"
+                                onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top"
+                                aria-label="Back to top">
                                 <i class="fa-solid fa-arrow-up"></i>
                                 <span>Top</span>
                             </button>
@@ -1053,13 +1163,12 @@
                     <div class="contact-info-socials">
                         <span class="contact-socials-label">Find me on</span>
                         <div class="contact-socials-row">
-                            <a href="#" class="contact-social-btn" title="GitHub"><i
+                            <a href="https://github.com/linbil-celestre" class="contact-social-btn" title="GitHub"><i
                                     class="fa-brands fa-github"></i></a>
-                            <a href="#" class="contact-social-btn" title="Facebook"><i
+                            <a href="https://www.facebook.com/celestre.linbil" class="contact-social-btn" title="Facebook"><i
                                     class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="contact-social-btn" title="Twitter / X"><i
-                                    class="fa-brands fa-x-twitter"></i></a>
-                            <a href="#" class="contact-social-btn" title="LinkedIn"><i
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" class="contact-social-btn" title="email"><i class="fa-solid fa-envelope"></i>
+                            <a href="" class="contact-social-btn" title="LinkedIn"><i
                                     class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                     </div>
@@ -1075,17 +1184,16 @@
                         <div class="contact-qr-scanline"></div>
                         <img src="qr-code.png" alt="QR Code - scan to contact" class="contact-qr-img">
                         <div class="contact-qr-overlay">
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" target="_blank" rel="noopener" class="contact-qr-overlay-btn" title="Send message via Gmail">
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com"
+                                target="_blank" rel="noopener" class="contact-qr-overlay-btn"
+                                title="Send message via Gmail">
                                 <i class="fa-solid fa-paper-plane"></i>
-                                <span>Message Me</span> 
+                                <span>Message Me</span>
                             </a>
                         </div>
                     </div>
-                   
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" target="_blank" rel="noopener" class="contact-qr-view-action-btn" title="Send message via Gmail">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Send Message</span>
-                    </a>
+
+                 
 
                     <p class="contact-qr-hint">
                         <i class="fa-solid fa-mobile-screen-button"></i>
@@ -1100,16 +1208,25 @@
                     <div class="page-footer-content">
                         <div class="page-footer-brand">
                             <div class="page-footer-title">Lin Bil Celestre</div>
-                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for Work</p>
+                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for
+                                Work</p>
                         </div>
                         <div class="page-footer-actions">
                             <div class="page-footer-socials">
-                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener"
+                                    class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="https://www.facebook.com/celestre.linbil" class="page-footer-social-btn" aria-label="Facebook" title="Facebook"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/in/linbil-celestre-6bb6b2396/" class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com"
+                                    target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email"
+                                    title="Email"><i class="fa-solid fa-envelope"></i></a>
                             </div>
-                            <button type="button" class="page-footer-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top" aria-label="Back to top">
+                            <button type="button" class="page-footer-scroll-top"
+                                onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top"
+                                aria-label="Back to top">
                                 <i class="fa-solid fa-arrow-up"></i>
                                 <span>Top</span>
                             </button>
@@ -1269,13 +1386,16 @@
 
                 <div class="cert-3d-wrapper">
                     <!-- 3D Slider Component -->
-                    <div class="cert-3d-slider" id="cert3dSlider" aria-label="Other Certificates 3D Slider" tabindex="0">
-                        
+                    <div class="cert-3d-slider" id="cert3dSlider" aria-label="Other Certificates 3D Slider"
+                        tabindex="0">
+
                         <!-- Navigation Arrows -->
-                        <button class="cert-3d-nav prev-btn" id="cert3dPrev" aria-label="Previous Certificate" type="button">
+                        <button class="cert-3d-nav prev-btn" id="cert3dPrev" aria-label="Previous Certificate"
+                            type="button">
                             <i class="fa-solid fa-chevron-left"></i>
                         </button>
-                        <button class="cert-3d-nav next-btn" id="cert3dNext" aria-label="Next Certificate" type="button">
+                        <button class="cert-3d-nav next-btn" id="cert3dNext" aria-label="Next Certificate"
+                            type="button">
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
 
@@ -1284,88 +1404,88 @@
                             <div class="cert-3d-stage" id="cert3dStage">
                                 <!-- Card 1 -->
                                 <article class="cert-3d-card" data-index="0"
-                                    data-title="Introduction to Computer System Servicing"
-                                    data-issuer="TESDA"
+                                    data-title="Introduction to Computer System Servicing" data-issuer="TESDA"
                                     data-link="./Requiements/Tesda/NCSS.jpg">
                                     <div class="cert-3d-card-img-wrap">
-                                        <img src="./Requiements/Tesda/NCSS.jpg" alt="Introduction to Computer System Servicing" loading="lazy">
+                                        <img src="./Requiements/Tesda/NCSS.jpg"
+                                            alt="Introduction to Computer System Servicing" loading="lazy">
                                         <div class="cert-3d-card-overlay"></div>
                                     </div>
                                 </article>
 
                                 <!-- Card 2 -->
                                 <article class="cert-3d-card" data-index="1"
-                                    data-title="COVID-19 Preventive Measures in the Workplace"
-                                    data-issuer="TESDA"
+                                    data-title="COVID-19 Preventive Measures in the Workplace" data-issuer="TESDA"
                                     data-link="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg">
                                     <div class="cert-3d-card-img-wrap">
-                                        <img src="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg" alt="COVID-19 Preventive Measures in the Workplace" loading="lazy">
+                                        <img src="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg"
+                                            alt="COVID-19 Preventive Measures in the Workplace" loading="lazy">
                                         <div class="cert-3d-card-overlay"></div>
                                     </div>
                                 </article>
 
                                 <!-- Card 3 -->
-                                <article class="cert-3d-card" data-index="2"
-                                    data-title="Adobe Premire Pro"
+                                <article class="cert-3d-card" data-index="2" data-title="Adobe Premire Pro"
                                     data-issuer="Seminar"
                                     data-link="./Requiements/Certificate/Adobe Premire Pro_page.jpg">
                                     <div class="cert-3d-card-img-wrap">
-                                        <img src="./Requiements/Certificate/Adobe Premire Pro_page.jpg" alt="Adobe Premire Pro" loading="lazy">
+                                        <img src="./Requiements/Certificate/Adobe Premire Pro_page.jpg"
+                                            alt="Adobe Premire Pro" loading="lazy">
                                         <div class="cert-3d-card-overlay"></div>
                                     </div>
                                 </article>
 
                                 <!-- Card 4 -->
                                 <article class="cert-3d-card" data-index="3"
-                                    data-title="MICROSOFT EXCEL FOR DATA ANALYSIS"
-                                    data-issuer="DICT"
+                                    data-title="MICROSOFT EXCEL FOR DATA ANALYSIS" data-issuer="DICT"
                                     data-link="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg">
                                     <div class="cert-3d-card-img-wrap">
-                                        <img src="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg" alt="MICROSOFT EXCEL FOR DATA ANALYSIS" loading="lazy">
+                                        <img src="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg"
+                                            alt="MICROSOFT EXCEL FOR DATA ANALYSIS" loading="lazy">
                                         <div class="cert-3d-card-overlay"></div>
                                     </div>
                                 </article>
 
                                 <!-- Card 5 (Duplicated for 3D fan depth) -->
                                 <article class="cert-3d-card" data-index="4"
-                                    data-title="Introduction to Computer System Servicing"
-                                    data-issuer="TESDA"
+                                    data-title="Introduction to Computer System Servicing" data-issuer="TESDA"
                                     data-link="./Requiements/Tesda/NCSS.jpg">
                                     <div class="cert-3d-card-img-wrap">
-                                        <img src="./Requiements/Tesda/NCSS.jpg" alt="Introduction to Computer System Servicing" loading="lazy">
+                                        <img src="./Requiements/Tesda/NCSS.jpg"
+                                            alt="Introduction to Computer System Servicing" loading="lazy">
                                         <div class="cert-3d-card-overlay"></div>
                                     </div>
                                 </article>
 
                                 <!-- Card 6 -->
                                 <article class="cert-3d-card" data-index="5"
-                                    data-title="COVID-19 Preventive Measures in the Workplace"
-                                    data-issuer="TESDA"
+                                    data-title="COVID-19 Preventive Measures in the Workplace" data-issuer="TESDA"
                                     data-link="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg">
                                     <div class="cert-3d-card-img-wrap">
-                                        <img src="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg" alt="COVID-19 Preventive Measures in the Workplace" loading="lazy">
+                                        <img src="./Requiements/Tesda/Practicing COVID-19 Preventive Measures in the Workplace.jpg"
+                                            alt="COVID-19 Preventive Measures in the Workplace" loading="lazy">
                                         <div class="cert-3d-card-overlay"></div>
                                     </div>
                                 </article>
 
                                 <!-- Card 7 -->
-                                <article class="cert-3d-card" data-index="6"
-                                    data-title="Adobe Premire Pro"
+                                <article class="cert-3d-card" data-index="6" data-title="Adobe Premire Pro"
                                     data-issuer="Seminar"
                                     data-link="./Requiements/Certificate/Adobe Premire Pro_page.jpg">
                                     <div class="cert-3d-card-img-wrap">
-                                        <img src="./Requiements/Certificate/Adobe Premire Pro_page.jpg" alt="Adobe Premire Pro" loading="lazy">
+                                        <img src="./Requiements/Certificate/Adobe Premire Pro_page.jpg"
+                                            alt="Adobe Premire Pro" loading="lazy">
                                         <div class="cert-3d-card-overlay"></div>
                                     </div>
                                 </article>
 
                                 <!-- Card 8 -->
                                 <article class="cert-3d-card" data-index="7"
-                                    data-title="MICROSOFT EXCEL FOR DATA ANALYSIS"
-                                    data-issuer="DICT"
+                                    data-title="MICROSOFT EXCEL FOR DATA ANALYSIS" data-issuer="DICT"
                                     data-link="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg">
                                     <div class="cert-3d-card-img-wrap">
-                                        <img src="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg" alt="MICROSOFT EXCEL FOR DATA ANALYSIS" loading="lazy">
+                                        <img src="./Requiements/Certificate/MICROSOFT EXCEL FOR DATA ANALYSIS_page.jpg"
+                                            alt="MICROSOFT EXCEL FOR DATA ANALYSIS" loading="lazy">
                                         <div class="cert-3d-card-overlay"></div>
                                     </div>
                                 </article>
@@ -1374,9 +1494,11 @@
 
                         <!-- Active Certificate Info (Title, Issuer, View Button) -->
                         <div class="cert-3d-info-box">
-                            <h3 class="cert-3d-title" id="cert3dActiveTitle">Introduction to Computer System Servicing</h3>
+                            <h3 class="cert-3d-title" id="cert3dActiveTitle">Introduction to Computer System Servicing
+                            </h3>
                             <span class="cert-3d-issuer" id="cert3dActiveIssuer">TESDA</span>
-                            <a href="./Requiements/Tesda/NCSS.jpg" target="_blank" rel="noopener" class="cert-3d-view-btn" id="cert3dActiveLink">
+                            <a href="./Requiements/Tesda/NCSS.jpg" target="_blank" rel="noopener"
+                                class="cert-3d-view-btn" id="cert3dActiveLink">
                                 <span>View Certificate</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
@@ -1400,16 +1522,25 @@
                     <div class="page-footer-content">
                         <div class="page-footer-brand">
                             <div class="page-footer-title">Lin Bil Celestre</div>
-                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for Work</p>
+                            <p class="page-footer-desc">Full-Stack Developer &bull; UI/UX Designer &bull; Available for
+                                Work</p>
                         </div>
                         <div class="page-footer-actions">
                             <div class="page-footer-socials">
-                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#" class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com" target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="https://github.com/linbil-celestre" target="_blank" rel="noopener"
+                                    class="page-footer-social-btn" aria-label="GitHub" title="GitHub"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="https://www.facebook.com/celestre.linbil/" class="page-footer-social-btn" aria-label="Facebook" title="Facebook"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/in/linbil-celestre-6bb6b2396/" class="page-footer-social-btn" aria-label="LinkedIn" title="LinkedIn"><i
+                                        class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=linbilcelestre3@gmail.com"
+                                    target="_blank" rel="noopener" class="page-footer-social-btn" aria-label="Email"
+                                    title="Email"><i class="fa-solid fa-envelope"></i></a>
                             </div>
-                            <button type="button" class="page-footer-scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top" aria-label="Back to top">
+                            <button type="button" class="page-footer-scroll-top"
+                                onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Back to top"
+                                aria-label="Back to top">
                                 <i class="fa-solid fa-arrow-up"></i>
                                 <span>Top</span>
                             </button>
@@ -1433,7 +1564,7 @@
             var btn = document.getElementById('contact-submit-btn');
             var success = document.getElementById('contact-form-success');
             btn.disabled = true;
-            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending…';
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sendingâ€¦';
             setTimeout(function () {
                 btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
                 btn.disabled = false;
@@ -1531,16 +1662,16 @@
            SERVICES CAROUSEL LOGIC
            ============================================================ */
         (function initServicesCarousel() {
-            var track    = document.getElementById('srvTrack');
-            var prevBtn  = document.getElementById('srvPrev');
-            var nextBtn  = document.getElementById('srvNext');
+            var track = document.getElementById('srvTrack');
+            var prevBtn = document.getElementById('srvPrev');
+            var nextBtn = document.getElementById('srvNext');
             var dotsWrap = document.getElementById('srvDots');
             if (!track || !prevBtn || !nextBtn) return;
 
-            var cards      = Array.from(track.querySelectorAll('.service-card'));
-            var total      = cards.length;
-            var current    = 0;
-            var perView    = 3; // cards visible at once
+            var cards = Array.from(track.querySelectorAll('.service-card'));
+            var total = cards.length;
+            var current = 0;
+            var perView = 3; // cards visible at once
 
             // Determine perView from viewport
             function getPerView() {
@@ -1557,12 +1688,12 @@
                 dotsWrap.innerHTML = '';
                 var steps = maxIndex() + 1;
                 for (var i = 0; i < steps; i++) {
-                    (function(idx) {
+                    (function (idx) {
                         var dot = document.createElement('button');
                         dot.className = 'srv-dot' + (idx === current ? ' active' : '');
                         dot.type = 'button';
                         dot.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
-                        dot.addEventListener('click', function() { goTo(idx); });
+                        dot.addEventListener('click', function () { goTo(idx); });
                         dotsWrap.appendChild(dot);
                     })(i);
                 }
@@ -1571,7 +1702,7 @@
             // Update dots highlight
             function updateDots() {
                 var dots = dotsWrap.querySelectorAll('.srv-dot');
-                dots.forEach(function(d, i) {
+                dots.forEach(function (d, i) {
                     d.classList.toggle('active', i === current);
                 });
             }
@@ -1580,7 +1711,7 @@
             function getOffset() {
                 if (!cards[0]) return 0;
                 var card = cards[0];
-                var gap  = parseInt(getComputedStyle(track).gap) || 18;
+                var gap = parseInt(getComputedStyle(track).gap) || 18;
                 return (card.offsetWidth + gap) * current;
             }
 
@@ -1601,21 +1732,21 @@
                 goTo(current);
             }
 
-            prevBtn.addEventListener('click', function() { goTo(current - 1); });
-            nextBtn.addEventListener('click', function() { goTo(current + 1); });
+            prevBtn.addEventListener('click', function () { goTo(current - 1); });
+            nextBtn.addEventListener('click', function () { goTo(current + 1); });
 
             // Keyboard support
-            document.getElementById('srvCarousel') && document.getElementById('srvCarousel').addEventListener('keydown', function(e) {
+            document.getElementById('srvCarousel') && document.getElementById('srvCarousel').addEventListener('keydown', function (e) {
                 if (e.key === 'ArrowRight') goTo(current + 1);
-                if (e.key === 'ArrowLeft')  goTo(current - 1);
+                if (e.key === 'ArrowLeft') goTo(current - 1);
             });
 
             // Touch / swipe
             var touchStartX = 0;
-            track.addEventListener('touchstart', function(e) {
+            track.addEventListener('touchstart', function (e) {
                 touchStartX = e.touches[0].clientX;
             }, { passive: true });
-            track.addEventListener('touchend', function(e) {
+            track.addEventListener('touchend', function (e) {
                 var diff = touchStartX - e.changedTouches[0].clientX;
                 if (Math.abs(diff) > 40) { diff > 0 ? goTo(current + 1) : goTo(current - 1); }
             }, { passive: true });
@@ -1958,6 +2089,22 @@
             // Initial render without text animation jump
             updateSlider(false);
             startAutoplay();
+        })();
+
+        /* -- Sidebar Skeleton Loading Screen Dismiss -- */
+        (function () {
+            var overlay = document.getElementById('sidebarLoadingOverlay');
+            if (!overlay) return;
+            var navItems = overlay.querySelectorAll('.sk-nav-item');
+            navItems.forEach(function (el, i) {
+                el.style.setProperty('--i', i);
+            });
+            setTimeout(function () {
+                overlay.classList.add('is-hidden');
+                setTimeout(function () {
+                    if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+                }, 700);
+            }, 900);
         })();
     </script>
 </body>

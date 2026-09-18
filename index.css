@@ -98,6 +98,92 @@ body::-webkit-scrollbar {
 }
 
 /* ============================================================
+   SIDEBAR — Skeleton Loading Screen
+   ============================================================ */
+.sidebar-loading-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--sidebar-bg);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 28px;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.5s ease 0.6s;
+    border-radius: 0;
+}
+
+.sidebar-loading-overlay.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+/* Shimmer keyframe */
+@keyframes sk-shimmer {
+    0%   { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+}
+
+.sk-avatar,
+.sk-line,
+.sk-nav-item,
+.sk-divider {
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0.04) 0%,
+        rgba(168,194,160,0.13) 40%,
+        rgba(255,255,255,0.06) 60%,
+        rgba(255,255,255,0.04) 100%
+    );
+    background-size: 800px 100%;
+    animation: sk-shimmer 1.4s linear infinite;
+    border-radius: 8px;
+}
+
+.sk-avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    align-self: center;
+    margin-bottom: 6px;
+    flex-shrink: 0;
+}
+
+.sk-line {
+    height: 12px;
+    border-radius: 6px;
+    align-self: center;
+}
+
+.sk-line--lg  { width: 80%; height: 14px; }
+.sk-line--md  { width: 60%; height: 10px; }
+.sk-line--sm  { width: 45%; height: 9px; }
+
+.sk-divider {
+    height: 1px;
+    width: 100%;
+    margin: 8px 0;
+    background: rgba(168, 194, 160, 0.1);
+    animation: none;
+    border-radius: 0;
+}
+
+.sk-nav-item {
+    height: 38px;
+    width: 100%;
+    border-radius: 10px;
+    animation-delay: calc(var(--i, 0) * 0.08s);
+}
+
+/* ============================================================
    SIDEBAR — Profile Section (Avatar, Name, Role)
    ============================================================ */
 .profile {
@@ -409,10 +495,26 @@ nav li.active a::after {
     animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
 }
 #page-home.active .dash-grid .summary-card:nth-of-type(2) {
-    animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.32s both;
+    animation: quick-facts-reveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.36s both;
 }
 #page-home.active .skill-bar span {
     animation: about-skill-fill 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+@keyframes quick-facts-reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(28px) scale(0.97);
+        box-shadow: 0 0 0 0 rgba(168, 194, 160, 0);
+    }
+    60% {
+        box-shadow: 0 0 22px 4px rgba(168, 194, 160, 0.18);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        box-shadow: 0 0 0 0 rgba(168, 194, 160, 0);
+    }
 }
 
 /* ============================================================
