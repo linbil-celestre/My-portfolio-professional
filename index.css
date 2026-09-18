@@ -4123,7 +4123,7 @@ a.contact-info-value:hover {
         gap: 6px;
     }
 
-    /* --- Page 4: Projects Mobile — Single Card View (Isang Card View) --- */
+    /* --- Page 4: Projects Mobile — Premium Single Card View --- */
     .projects-showcase-wrapper {
         margin-top: 10px;
     }
@@ -4157,7 +4157,7 @@ a.contact-info-value:hover {
         animation: project-scroll-side-right 22s linear infinite;
     }
 
-    /* Isang Card View: Each card is 100% of visible container */
+    /* === Premium Mobile Card Layout === */
     .project-card {
         width: 100% !important;
         min-width: 100% !important;
@@ -4165,32 +4165,88 @@ a.contact-info-value:hover {
         flex: 0 0 100% !important;
         scroll-snap-align: center;
         min-height: auto;
-        padding: 18px 16px;
-        border-radius: 14px;
+        padding: 0;
+        border-radius: 18px;
         box-sizing: border-box;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(168, 194, 160, 0.3);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(32, 37, 31, 0.10), 0 2px 8px rgba(168, 194, 160, 0.1);
+        flex-direction: column;
+        display: flex;
     }
 
-    .projects-vertical-container.is-paused .project-card[aria-hidden="true"] {
-        display: none !important;
-    }
-
-    .project-card-top {
-        gap: 10px;
-        margin-bottom: 6px;
+    /* Banner: project thumbnail shown full-width at top */
+    .project-card .project-card-top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin-bottom: 0;
     }
 
     .project-card .project-thumb {
-        width: 44px;
-        height: 44px;
+        width: 100%;
+        height: 130px;
+        border-radius: 0;
+        border: none;
+        background: linear-gradient(135deg, #1a2318 0%, #2d3d2a 50%, #1a2318 100%);
+        position: relative;
+        overflow: hidden;
         flex-shrink: 0;
-        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project-card .project-thumb::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(20, 24, 28, 0) 40%, rgba(20, 24, 28, 0.55) 100%);
+        pointer-events: none;
+    }
+
+    .project-card .project-thumb-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.88;
+        padding: 0;
+        border-radius: 0;
+        filter: saturate(1.1);
+    }
+
+    /* Title block sits below the banner */
+    .project-card .project-card-title-wrap {
+        width: 100%;
+    }
+
+    /* Content body: all text and actions */
+    .project-card-body-mobile {
+        padding: 14px 16px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+    }
+
+    /* Since there's no .project-card-body-mobile wrapper in HTML yet,
+       we use padding on card children directly */
+    .project-card .project-card-title-wrap {
+        padding: 12px 16px 0;
     }
 
     .project-card .p-title {
-        font-size: 0.84rem;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #171e16;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        line-height: 1.25;
+        margin: 0;
     }
 
     .project-card-title-long {
@@ -4200,14 +4256,19 @@ a.contact-info-value:hover {
     }
 
     .project-card .subject {
-        font-size: 0.68rem;
-        margin: 2px 0 0;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--accent);
+        letter-spacing: 0.03em;
+        margin: 3px 0 0;
+        text-transform: uppercase;
     }
 
     .project-card .p-description {
-        font-size: 0.76rem;
-        line-height: 1.45;
-        margin: 6px 0 0;
+        font-size: 0.78rem;
+        line-height: 1.5;
+        margin: 8px 16px 0;
+        color: #505c4e;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         line-clamp: 2;
@@ -4219,32 +4280,42 @@ a.contact-info-value:hover {
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
-        margin-top: 10px;
-        margin-left: 0;
-        width: 100%;
+        margin: 8px 16px 0;
+        width: auto;
     }
 
     .project-card .p-tags span {
-        padding: 3px 8px;
-        font-size: 0.66rem;
+        padding: 3px 9px;
+        font-size: 0.67rem;
+        font-weight: 600;
+        border-radius: 999px;
+        background: rgba(168, 194, 160, 0.18);
+        border: 1px solid rgba(168, 194, 160, 0.4);
+        color: #3a5238;
     }
 
     .project-card-actions {
         display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-top: 10px;
-        margin-left: 0;
-        width: 100%;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin: 10px 16px 16px;
+        width: auto;
     }
 
     .project-card-button {
-        flex: 1 1 auto;
+        flex: 1 1 0;
         text-align: center;
         justify-content: center;
-        padding: 6px 10px;
-        font-size: 0.72rem;
-        border-radius: 6px;
+        padding: 9px 10px;
+        font-size: 0.74rem;
+        font-weight: 600;
+        border-radius: 10px;
+        background: rgba(168, 194, 160, 0.15);
+        border: 1.5px solid rgba(89, 102, 83, 0.25);
+    }
+
+    .projects-vertical-container.is-paused .project-card[aria-hidden="true"] {
+        display: none !important;
     }
 
     /* --- Page 5: Certificates Mobile --- */
@@ -4426,13 +4497,26 @@ a.contact-info-value:hover {
         grid-template-columns: 1fr;
     }
 
-    /* --- Projects on Small Phones: Single Card View --- */
+    /* --- Projects on Small Phones: Compact Premium Card --- */
     .project-card {
         width: 100% !important;
         min-width: 100% !important;
         max-width: 100% !important;
         flex: 0 0 100% !important;
-        padding: 16px 14px;
+        padding: 0;
+    }
+
+    .project-card .project-thumb {
+        height: 110px;
+    }
+
+    .project-card .p-title {
+        font-size: 0.92rem;
+    }
+
+    .project-card-button {
+        padding: 8px 8px;
+        font-size: 0.7rem;
     }
 
     /* --- About: Tighten Education Elements --- */
