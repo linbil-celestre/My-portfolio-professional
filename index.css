@@ -2380,6 +2380,19 @@ a.contact-info-value:hover {
 /* ============================================================
    SERVICES PAGE
    ============================================================ */
+
+/* Keyframe: card slides up and fades in */
+@keyframes service-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2388,6 +2401,7 @@ a.contact-info-value:hover {
     margin: 0 auto;
 }
 
+/* Base card styles — hidden by default, shown when page is active */
 .service-card {
     display: flex;
     flex-direction: column;
@@ -2400,8 +2414,12 @@ a.contact-info-value:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     position: relative;
     overflow: hidden;
+    /* Start hidden for animation */
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
 }
 
+/* Top accent line on hover */
 .service-card::before {
     content: '';
     position: absolute;
@@ -2414,7 +2432,21 @@ a.contact-info-value:hover {
     transform-origin: left;
     transition: transform 0.35s ease;
     border-radius: 16px 16px 0 0;
+    z-index: 1;
 }
+
+/* Animate cards in when the services page is active */
+#page-services.active .service-card {
+    animation: service-card-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Staggered delays for each of the 6 cards */
+#page-services.active .service-card:nth-child(1) { animation-delay: 0.05s; }
+#page-services.active .service-card:nth-child(2) { animation-delay: 0.13s; }
+#page-services.active .service-card:nth-child(3) { animation-delay: 0.21s; }
+#page-services.active .service-card:nth-child(4) { animation-delay: 0.29s; }
+#page-services.active .service-card:nth-child(5) { animation-delay: 0.37s; }
+#page-services.active .service-card:nth-child(6) { animation-delay: 0.45s; }
 
 .service-card:hover {
     transform: translateY(-6px);
@@ -2426,6 +2458,7 @@ a.contact-info-value:hover {
     transform: scaleX(1);
 }
 
+/* Icon wrapper */
 .service-card-icon-wrap {
     width: 52px;
     height: 52px;
@@ -2449,6 +2482,7 @@ a.contact-info-value:hover {
     color: #4d6648;
 }
 
+/* Title */
 .service-card-title {
     font-size: 1.08rem;
     font-weight: 700;
@@ -2458,6 +2492,7 @@ a.contact-info-value:hover {
     font-family: 'Fraunces', serif;
 }
 
+/* Description */
 .service-card-desc {
     font-size: 0.875rem;
     color: #505850;
@@ -2466,6 +2501,7 @@ a.contact-info-value:hover {
     flex: 1;
 }
 
+/* Tag pills */
 .service-card-tags {
     display: flex;
     flex-wrap: wrap;
@@ -2505,6 +2541,7 @@ a.contact-info-value:hover {
         grid-template-columns: 1fr;
     }
 }
+
 
 /* ============================================================
    CERTIFICATES PAGE
