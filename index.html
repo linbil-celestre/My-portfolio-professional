@@ -511,7 +511,8 @@
                 <p class="role">OJT, Capstone, And Client Projects</p>
             </div>
 
-            <div class="projects-vertical-container" aria-label="Projects showcase">
+            <div class="projects-showcase-wrapper" id="projectsShowcaseWrapper">
+                <div class="projects-vertical-container" id="projectsContainer" aria-label="Projects showcase">
                 <!-- Left Column: 3 Cards scrolling PATAAS (UP) -->
                 <div class="projects-col-wrapper" aria-label="Projects column left">
                     <div class="projects-track-vertical projects-track-up">
@@ -874,6 +875,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -1472,6 +1474,51 @@
 
         // Initialize page display
         initPageFromHash();
+
+        /* ============================================================
+           PROJECTS INTERACTIVE CONTROLLER (PAUSE / STOP ON CARD CLICK)
+           ============================================================ */
+        (function initProjectsController() {
+            var wrapper = document.getElementById('projectsShowcaseWrapper');
+            var container = document.getElementById('projectsContainer');
+            if (!container) return;
+
+            var allCards = Array.from(container.querySelectorAll('.project-card'));
+            var isPaused = false;
+
+            function setPaused(paused) {
+                isPaused = paused;
+                if (wrapper) wrapper.classList.toggle('is-paused', isPaused);
+                if (container) container.classList.toggle('is-paused', isPaused);
+            }
+
+            // Click any card to stop / resume animation
+            allCards.forEach(function (card) {
+                card.addEventListener('click', function (e) {
+                    // If user clicked directly on an action link (GitHub, Image, Live), allow opening while pausing
+                    if (e.target.closest('a')) {
+                        setPaused(true);
+                        return;
+                    }
+
+                    var wasActive = card.classList.contains('is-active');
+
+                    if (wasActive && isPaused) {
+                        // Click again on the stopped card to resume
+                        allCards.forEach(function (c) { c.classList.remove('is-active'); });
+                        setPaused(false);
+                    } else {
+                        // Stop animation and highlight this card!
+                        allCards.forEach(function (c) { c.classList.remove('is-active'); });
+                        card.classList.add('is-active');
+                        setPaused(true);
+
+                        // Smoothly center the card in view
+                        card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                    }
+                });
+            });
+        })();
 
         /* ============================================================
            OTHER CERTIFICATES - 3D COVERFLOW CARD SLIDER LOGIC

@@ -1647,6 +1647,22 @@ nav li.active a::after {
     width: 100%;
 }
 
+/* ============================================================
+   PROJECTS SHOWCASE WRAPPER & CONTROLS
+   ============================================================ */
+.projects-showcase-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1180px;
+    margin-top: 14px;
+}
+
+/* Stop / Paused state for tracks */
+.projects-showcase-wrapper.is-paused .projects-track-vertical,
+.projects-vertical-container.is-paused .projects-track-vertical {
+    animation-play-state: paused !important;
+}
+
 /* Dual-Column Vertical Infinite Carousel: Left (Pataas / UP) & Right (Pababa / DOWN) */
 .projects-vertical-container {
     display: grid;
@@ -1724,12 +1740,38 @@ nav li.active a::after {
     background: rgba(255, 255, 255, 0.52);
     box-shadow: 0 14px 30px rgba(32, 37, 31, 0.06);
     transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
 }
 
 .project-card:hover {
     border-color: rgba(168, 194, 160, 0.75);
     box-shadow: 0 18px 36px rgba(32, 37, 31, 0.09);
     transform: translateY(-2px);
+}
+
+.project-card.is-active {
+    border-color: var(--accent) !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    box-shadow: 0 0 0 2.5px var(--accent), 0 18px 40px rgba(32, 37, 31, 0.14) !important;
+    transform: translateY(-3px) scale(1.015);
+    z-index: 6;
+}
+
+.project-card.is-active::after {
+    content: 'STOPPED';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #14181c;
+    background: var(--accent);
+    padding: 3px 8px;
+    border-radius: 999px;
+    pointer-events: none;
 }
 
 .project-card-top {
@@ -1812,6 +1854,20 @@ nav li.active a::after {
     gap: 8px;
     margin-top: 18px;
     width: 100%;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+@media (hover: hover) {
+    .project-card .project-card-actions {
+        opacity: 0.85;
+    }
+
+    .project-card:hover .project-card-actions,
+    .project-card.is-active .project-card-actions,
+    .projects-showcase-wrapper.is-paused .project-card-actions {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .project-card-actions:has(.project-card-button:nth-child(2):last-child) {
@@ -4067,14 +4123,30 @@ a.contact-info-value:hover {
         gap: 6px;
     }
 
-    /* --- Page 4: Projects Mobile Side Cards --- */
+    /* --- Page 4: Projects Mobile — Single Card View (Isang Card View) --- */
+    .projects-showcase-wrapper {
+        margin-top: 10px;
+    }
+
     .projects-vertical-container {
         gap: 14px;
-        padding: 6px 0;
+        padding: 4px 0;
+    }
+
+    .projects-col-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .projects-col-wrapper::-webkit-scrollbar {
+        display: none;
     }
 
     .projects-track-vertical {
-        gap: 12px;
+        gap: 0;
     }
 
     .projects-track-up {
@@ -4085,13 +4157,21 @@ a.contact-info-value:hover {
         animation: project-scroll-side-right 22s linear infinite;
     }
 
+    /* Isang Card View: Each card is 100% of visible container */
     .project-card {
-        width: 270px;
-        min-width: 270px;
-        max-width: 270px;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        scroll-snap-align: center;
         min-height: auto;
-        padding: 15px 13px;
-        border-radius: 12px;
+        padding: 18px 16px;
+        border-radius: 14px;
+        box-sizing: border-box;
+    }
+
+    .projects-vertical-container.is-paused .project-card[aria-hidden="true"] {
+        display: none !important;
     }
 
     .project-card-top {
@@ -4346,12 +4426,13 @@ a.contact-info-value:hover {
         grid-template-columns: 1fr;
     }
 
-    /* --- Projects on Small Phones --- */
+    /* --- Projects on Small Phones: Single Card View --- */
     .project-card {
-        width: 250px;
-        min-width: 250px;
-        max-width: 250px;
-        padding: 13px 11px;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        padding: 16px 14px;
     }
 
     /* --- About: Tighten Education Elements --- */
