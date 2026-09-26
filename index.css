@@ -2244,6 +2244,9 @@ nav li.active a::after {
 #page-contact.active .contact-qr-card {
     animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
 }
+#page-contact.active .contact-warning-box {
+    animation: page-fade-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
 
 .contact-card {
     display: grid;
@@ -2322,6 +2325,29 @@ nav li.active a::after {
     gap: 28px;
     padding: 28px;
     min-height: 100%;
+}
+
+/* Small picture section on left side */
+.contact-left-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.contact-profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    box-shadow: 0 4px 12px rgba(168, 194, 160, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(168, 194, 160, 0.4);
 }
 
 .contact-info-top {
@@ -2842,6 +2868,50 @@ a.contact-info-value:hover {
 .contact-qr-hint i {
     color: var(--accent);
     font-size: 0.9rem;
+}
+
+/* Warning box on right side */
+.contact-warning-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    margin-top: 16px;
+    border: 1px solid rgba(255, 193, 7, 0.4);
+    border-radius: 10px;
+    background: rgba(255, 193, 7, 0.08);
+}
+
+.contact-warning-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-warning-content {
+    flex: 1;
+}
+
+.contact-warning-title {
+    margin: 0 0 4px;
+    color: #20251f;
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+}
+
+.contact-warning-text {
+    margin: 0;
+    color: #687067;
+    font-size: 0.75rem;
+    line-height: 1.5;
 }
 
 /* ── Scan line animation ── */
