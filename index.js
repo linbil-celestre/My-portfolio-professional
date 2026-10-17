@@ -999,7 +999,7 @@
                     techPanel.classList.remove('is-hidden');
                     techPanel.classList.add('is-active');
 
-                    if (titleText) titleText.textContent = 'WEB DEVELOPMENT SKIILS';
+                    if (titleText) titleText.textContent = 'WEB DEVELOPMENT SKILLS';
                     if (btnText) btnText.textContent = 'VIDEO EDITING SKILLS';
                     if (btnIcon) {
                         btnIcon.className = 'fa-solid fa-chevron-right';
