@@ -72,14 +72,26 @@
                 li.classList.toggle('active', Boolean(link && link.dataset.page === target));
             });
 
-            // Update browser tab title
+            // Update browser tab title and favicon
             document.title = pageTitles[target] || 'Portfolio | Lin Bil Celestre';
+            ensureFavicon();
 
             if (target && target !== 'home') {
                 history.replaceState(null, '', '#' + target);
             } else {
                 history.replaceState(null, '', window.location.pathname);
             }
+        }
+
+        function ensureFavicon() {
+            var icon = document.querySelector("link[rel='icon']");
+            if (!icon) {
+                icon = document.createElement('link');
+                icon.rel = 'icon';
+                icon.type = 'image/jpeg';
+                document.head.appendChild(icon);
+            }
+            icon.href = './logo/logo3.jpg';
         }
 
         function initPageFromHash() {
