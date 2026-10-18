@@ -881,7 +881,7 @@ nav li.active a::after {
     margin: 0;
     color: #1a1e22;
     font-family: 'Fraunces', serif;
-    font-size: 1.25rem;
+    font-size: 1.20rem;
     font-weight: 600;
     line-height: 1.2;
 }
