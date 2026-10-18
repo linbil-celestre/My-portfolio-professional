@@ -4,9 +4,15 @@ in home page
 * highlights of my projects and works
 
 > in Card 1: Web Developement <
+ 
+ title of projects : portfolio my Classmate 
+
 - Developed and customized personal portfolio websites for classmates as part of our web development project. Used HTML, CSS, and JavaScript to create responsive, user-friendly, and visually appealing web pages. Utilized additional programming languages, frameworks, and development tools to improve website functionality, design, and user experience.
 
  >in Card 2: Technopreneurship<
+
+ title of projects: Attendance Qr Code 
+
 - Developed an innovative QR code-based attendance system designed to automate attendance recording through QR code scanning. The system helps improve attendance tracking efficiency and reduce manual recording. Also designed and created product identification IDs as part of the project.
 
  >in Card 3: Capstone<
@@ -15,4 +21,10 @@ in home page
 
 - Collaborated with a team to develop the Atiera Hotel and Restaurant Management System, an administrative system designed to manage hotel and restaurant operations. The project also included a contract analysis and legal risk assessment feature using WEKA. This feature analyzes uploaded contracts, generates risk scores to help assess potential legal risks and contract validity, and blurs sensitive information displayed in tables to protect confidentiality.
 
- >in Card 4: o<
+ >in Card 4: ojt Works<
+
+ booking system with master driving schools 
+ 
+ Collaborated with a team to develop an online booking and registration system for Master Driving School. The system allows students to register and book their preferred courses, such as TDC and PDC, at their chosen branch without the need for manual registration. It provides a convenient and accessible online process, helping students save time, reduce travel, and complete their registration without visiting distant branches in person.
+
+
