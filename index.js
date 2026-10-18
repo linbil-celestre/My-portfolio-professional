@@ -601,6 +601,13 @@
             var currentIndex = 0;
             var currentGroup = 'freelance';
 
+            function decodeHtml(html) {
+                if (!html) return '';
+                var txt = document.createElement('textarea');
+                txt.innerHTML = html;
+                return txt.value;
+            }
+
             function collectItems(group) {
                 currentGroup = group || 'freelance';
                 var links = document.querySelectorAll('a[data-lightbox="' + currentGroup + '"]');
@@ -608,10 +615,11 @@
                     var img = link.querySelector('img');
                     var titleAttr = link.getAttribute('data-title');
                     var fallbackTitle = (currentGroup === 'techno' ? 'Attendance QR ID ' : 'Project ') + (idx + 1);
+                    var cleanTitle = titleAttr ? decodeHtml(titleAttr) : (img ? img.getAttribute('alt') : fallbackTitle);
                     return {
                         src: link.getAttribute('href') || (img ? img.getAttribute('src') : ''),
-                        title: titleAttr ? titleAttr.replace(/&mdash;/g, '—') : (img ? img.getAttribute('alt') : fallbackTitle),
-                        alt: img ? img.getAttribute('alt') : fallbackTitle
+                        title: cleanTitle,
+                        alt: (img ? img.getAttribute('alt') : '') || cleanTitle || fallbackTitle
                     };
                 });
             }

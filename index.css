@@ -770,7 +770,7 @@ nav li.active a::after {
 .dash-section-title {
     margin: 0;
     font-family: 'Fraunces', serif;
-    font-size: 1.45rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: #20251f;
     letter-spacing: -0.015em;
