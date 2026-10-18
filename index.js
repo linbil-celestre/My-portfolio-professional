@@ -125,6 +125,11 @@
             var current = 0;
             var perView = 3; // cards visible at once
 
+            // Check if mobile view where cards are vertical boxes
+            function isMobile() {
+                return window.innerWidth <= 650;
+            }
+
             // Determine perView from viewport
             function getPerView() {
                 if (window.innerWidth <= 580) return 1;
@@ -138,6 +143,7 @@
             // Build dots
             function buildDots() {
                 dotsWrap.innerHTML = '';
+                if (isMobile()) return;
                 var steps = maxIndex() + 1;
                 for (var i = 0; i < steps; i++) {
                     (function (idx) {
@@ -153,6 +159,7 @@
 
             // Update dots highlight
             function updateDots() {
+                if (isMobile()) return;
                 var dots = dotsWrap.querySelectorAll('.srv-dot');
                 dots.forEach(function (d, i) {
                     d.classList.toggle('active', i === current);
@@ -169,6 +176,10 @@
 
             // Slide to index
             function goTo(idx) {
+                if (isMobile()) {
+                    track.style.transform = '';
+                    return;
+                }
                 current = Math.max(0, Math.min(idx, maxIndex()));
                 track.style.transform = 'translateX(-' + getOffset() + 'px)';
                 prevBtn.disabled = current === 0;
@@ -178,6 +189,11 @@
 
             // Recalculate on resize
             function onResize() {
+                if (isMobile()) {
+                    track.style.transform = '';
+                    dotsWrap.innerHTML = '';
+                    return;
+                }
                 perView = getPerView();
                 current = Math.min(current, maxIndex());
                 buildDots();
@@ -189,6 +205,7 @@
 
             // Keyboard support
             document.getElementById('srvCarousel') && document.getElementById('srvCarousel').addEventListener('keydown', function (e) {
+                if (isMobile()) return;
                 if (e.key === 'ArrowRight') goTo(current + 1);
                 if (e.key === 'ArrowLeft') goTo(current - 1);
             });
@@ -196,9 +213,11 @@
             // Touch / swipe
             var touchStartX = 0;
             track.addEventListener('touchstart', function (e) {
+                if (isMobile()) return;
                 touchStartX = e.touches[0].clientX;
             }, { passive: true });
             track.addEventListener('touchend', function (e) {
+                if (isMobile()) return;
                 var diff = touchStartX - e.changedTouches[0].clientX;
                 if (Math.abs(diff) > 40) { diff > 0 ? goTo(current + 1) : goTo(current - 1); }
             }, { passive: true });
@@ -206,9 +225,13 @@
             window.addEventListener('resize', onResize);
 
             // Init
-            perView = getPerView();
-            buildDots();
-            goTo(0);
+            if (!isMobile()) {
+                perView = getPerView();
+                buildDots();
+                goTo(0);
+            } else {
+                track.style.transform = '';
+            }
         })();
 
         /* CERTIFICATE GRID & CAROUSEL TOGGLE LOGIC */
