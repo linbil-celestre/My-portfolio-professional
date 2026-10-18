@@ -1446,6 +1446,15 @@ nav li.active a::after {
     line-height: 1.35;
 }
 
+.subject-sub {
+    margin: 3px 0 0;
+    color: #929990;
+    font-size: 0.62rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.4;
+}
+
 .p-description {
     max-width: 520px;
     margin: 10px 0 0;

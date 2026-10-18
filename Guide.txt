@@ -1,0 +1,18 @@
+
+in home page
+- Picture my Graduation on may 6 2026 change to background image
+* highlights of my projects and works
+
+> in Card 1: Web Developement <
+- Developed and customized personal portfolio websites for classmates as part of our web development project. Used HTML, CSS, and JavaScript to create responsive, user-friendly, and visually appealing web pages. Utilized additional programming languages, frameworks, and development tools to improve website functionality, design, and user experience.
+
+ >in Card 2: Technopreneurship<
+- Developed an innovative QR code-based attendance system designed to automate attendance recording through QR code scanning. The system helps improve attendance tracking efficiency and reduce manual recording. Also designed and created product identification IDs as part of the project.
+
+ >in Card 3: Capstone<
+
+ title of capstone - * Atiera Hotel and Restaurant Management System – Administrative with Contract Analysis and Legal Risk Assessment Using WEKA *
+
+- Collaborated with a team to develop the Atiera Hotel and Restaurant Management System, an administrative system designed to manage hotel and restaurant operations. The project also included a contract analysis and legal risk assessment feature using WEKA. This feature analyzes uploaded contracts, generates risk scores to help assess potential legal risks and contract validity, and blurs sensitive information displayed in tables to protect confidentiality.
+
+ >in Card 4: o<
