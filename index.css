@@ -7656,7 +7656,55 @@ a.contact-info-value:hover {
 }
 
 /* ============================================================
-   View Project Result Button (Freelance & Technopreneurship)
+   Tech Stack Bubbles — above View Project Result button
+   ============================================================ */
+.card-tech-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.tech-stack-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: #929990;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.tech-bubble-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tech-bubble {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    background: rgba(168, 194, 160, 0.13);
+    border: 1px solid rgba(168, 194, 160, 0.38);
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.64rem;
+    font-weight: 600;
+    color: #3d5439;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.tech-bubble:hover {
+    background: rgba(168, 194, 160, 0.28);
+    border-color: rgba(89, 102, 83, 0.6);
+    color: #253522;
+}
+
+/* ============================================================
+   View Project Result Button (Freelance &amp; Technopreneurship)
    ============================================================ */
 .freelance-result-btn {
     position: relative;
