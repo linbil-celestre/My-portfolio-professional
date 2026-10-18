@@ -95,7 +95,7 @@
                     <div class="card projects bento-card dash-hero-card">
 
                         <!-- Featured hero banner with header overlaid -->
-                        <a class="bento-hero-img-link" href="./background.jpg" target="_blank" rel="noopener">
+                        <a class="bento-hero-img-link" href="#project" data-page="project">
                             <div class="bento-hero-blur-bg" aria-hidden="true"></div>
                             <img src="./background.jpg" alt="Lin Bil Celestre" class="bento-hero-img">
                             <div class="bento-hero-overlay">
@@ -106,24 +106,36 @@
                                 </div>
                             </div>
                             <span class="bento-hero-badge"><i class="fa-solid fa-arrow-up-right-from-square"></i> Latest</span>
+                            <!-- Hover reveal: View Project Result -->
+                            <div class="hero-hover-result">
+                                <i class="fa-solid fa-square-poll-vertical"></i>
+                                <span>View Project Result</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square hero-hover-result-arrow"></i>
+                            </div>
                         </a>
 
                     </div>
 
                 </div><!-- end dash-grid -->
+
                 <!-- Divider between hero banner and bottom cards -->
                 <div class="dash-divider"></div>
 
+                <!-- Section Header: Highlights of My Projects on My Work -->
+                <div class="dash-section-header">
+                    <h1 class="dash-section-title">Highlights of My Projects on My Work</h1>
+                </div>
+
                 <!-- BOTTOM CARDS ROW: 4 cards -->
                 <div class="dash-bottom-row">
-
+                
                     <!-- CARD 1: Freelance Work -->
                     <div class="card bento-card freelance-grid-card">
                         <div class="bento-card-header">
                             <div class="bento-badge-icon"><i class="fa-solid fa-images"></i></div>
                             <div class="bento-header-text">
                                 <h3 class="bento-card-title">Freelance Work</h3>
-                                <p class="bento-card-sub">Web Development . Portfolio</p>
+                                <p class="bento-card-sub">Web Development &bull; Portfolio</p>
                             </div>
                         </div>
                         <p class="freelance-card-desc">Client web applications built with responsive design and modern layouts.</p>
@@ -432,7 +444,17 @@
                     <div class="page-footer-divider"></div>
                     <div class="page-footer-bottom">
                         <p class="page-footer-copy">&copy; 2026 Lin Bil Celestre. All rights reserved.</p>
-                        <p class="page-footer-tag">Crafted with HTML, CSS &amp; JavaScript</p>
+                        <div class="page-footer-contact">
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="footer-contact-text">linbilcelestre31@gmail.com</span>
+                            </span>
+                            <span class="footer-contact-sep">&middot;</span>
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="footer-contact-text">0912 647 212</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </footer>
@@ -444,7 +466,7 @@
         <section class="page" id="page-about">
             <div class="section-header">
                 <h1 class="greeting">About Me</h1>
-                <p class="role">Introduction, Tech Skills, and Education Background</p>
+                <p class="role"></p>
             </div>
 
             <div class="about-container">
@@ -745,7 +767,17 @@
                     <div class="page-footer-divider"></div>
                     <div class="page-footer-bottom">
                         <p class="page-footer-copy">&copy; 2026 Lin Bil Celestre. All rights reserved.</p>
-                        <p class="page-footer-tag">Crafted with HTML, CSS &amp; JavaScript</p>
+                        <div class="page-footer-contact">
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="footer-contact-text">linbilcelestre31@gmail.com</span>
+                            </span>
+                            <span class="footer-contact-sep">&middot;</span>
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="footer-contact-text">0912 647 212</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </footer>
@@ -987,7 +1019,17 @@
                     <div class="page-footer-divider"></div>
                     <div class="page-footer-bottom">
                         <p class="page-footer-copy">&copy; 2026 Lin Bil Celestre. All rights reserved.</p>
-                        <p class="page-footer-tag">Crafted with HTML, CSS &amp; JavaScript</p>
+                        <div class="page-footer-contact">
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="footer-contact-text">linbilcelestre31@gmail.com</span>
+                            </span>
+                            <span class="footer-contact-sep">&middot;</span>
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="footer-contact-text">0912 647 212</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </footer>
@@ -1001,29 +1043,10 @@
         <!-- Project Style -->
         <section class="page" id="page-project">
             <div class="section-header proj-section-header">
-                <div class="proj-header-top">
-                    <h1 class="greeting" id="projH1">Projects</h1>
-                    <!-- Projects / Video Toggle Switch -->
-                    <div class="proj-view-toggle" id="projViewToggle" role="group" aria-label="Switch project view">
-                        <button class="proj-toggle-btn active" id="toggleProjects" aria-pressed="true">
-                            <i class="fa-solid fa-layer-group"></i> Projects
-                        </button>
-                        <div class="proj-toggle-slider"></div>
-                        <button class="proj-toggle-btn" id="toggleVideo" aria-pressed="false">
-                            <i class="fa-solid fa-circle-play"></i> Video
-                        </button>
-                    </div>
-                </div>
-                <p class="role" id="projSubtitle">OJT, Capstone, And Client Projects</p>
+                <h1 class="greeting" id="projH1">Projects</h1>
             </div>
 
-            <div class="projects-showcase-wrapper" id="projectsShowcaseWrapper">
-                <div class="projects-vertical-container" id="projectsContainer" aria-label="Projects showcase">
-                    <!-- Left Column: 3 Cards scrolling PATAAS (UP) -->
-                    <div class="projects-col-wrapper" aria-label="Projects column left">
-                        <div class="projects-track-vertical projects-track-up">
-                            <!-- Set 1 (Originals) -->
-                            <!-- Master Driving Cards 1 -->
+            <div class="projects-grid-container" id="projectsContainer" aria-label="Projects showcase">
                             <div class="card project-card">
                                 <div class="project-card-top">
                                     <div class="project-thumb">
@@ -1126,101 +1149,7 @@
                                 </div>
                             </div>
 
-                            <!-- Set 2 (Duplicates for seamless loop) -->
-                            <div class="card project-card" aria-hidden="true">
-                                <div class="project-card-top">
-                                    <div class="project-thumb">
-                                        <img src="./logo/project-logo-master.jpg" alt="" class="project-thumb-img">
-                                    </div>
-                                    <div class="project-card-title-wrap">
-                                        <p class="p-title">Master Driving School</p>
-                                        <p class="subject">OJT (On Job Traning)</p>
-                                    </div>
-                                </div>
-                                <p class="p-description">Responsive landing page for a driving school business with
-                                    service
-                                    details and contact information.</p>
-                                <div class="p-tags">
-                                    <span>React js</span>
-                                    <span>Tailwind</span>
-                                    <span>JavaScript</span>
-                                    <span>Bootstrap</span>
-                                </div>
-                                <div class="project-card-actions">
-                                    <a class="project-card-button"
-                                        href="https://github.com/linbil-celestre/Master_Driving_Site.git"
-                                        tabindex="-1"><i class="fa-brands fa-github"></i> GitHub</a>
-                                    <a class="project-card-button" href="./logo/project-logo-master.jpg" target="_blank"
-                                        rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i> Image</a>
-                                    <a class="project-card-button" href="https://masterdriving.ph/home" target="_blank"
-                                        rel="noopener" tabindex="-1"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                                </div>
-                            </div>
 
-                            <div class="card project-card" aria-hidden="true">
-                                <div class="project-card-top">
-                                    <div class="project-thumb">
-                                        <img src="./logo/Project-logo-Ateria.png" alt="" class="project-thumb-img">
-                                    </div>
-                                    <div class="project-card-title-wrap">
-                                        <p class="p-title project-card-title-long">Ateria Hotel and Restaurant
-                                            Management
-                                            System</p>
-                                        <p class="subject">Capstone-Project</p>
-                                    </div>
-                                </div>
-                                <p class="p-description">Operational web platform for managing hotel and restaurant
-                                    operations, records, and activity flow.</p>
-                                <div class="p-tags">
-                                    <span>PHP</span>
-                                    <span>MySQL</span>
-                                    <span>Bootstrap</span>
-                                    <span>Xampp</span>
-                                </div>
-                                <div class="project-card-actions">
-                                    <a class="project-card-button"
-                                        href="https://github.com/linbil-celestre/administrative-hotel.git    "
-                                        tabindex="-1"><i class="fa-brands fa-github"></i> GitHub</a>
-                                    <a class="project-card-button" href="./logo/Project-logo-Ateria.png" target="_blank"
-                                        rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i> Image</a>
-                                </div>
-                            </div>
-
-                            <div class="card project-card" aria-hidden="true">
-                                <div class="project-card-top">
-                                    <div class="project-thumb">
-                                        <img src="./logo/Project-logo-SMS.png" alt="" class="project-thumb-img">
-                                    </div>
-                                    <div class="project-card-title-wrap">
-                                        <p class="p-title">School Management System</p>
-                                        <p class="subject">Client . Capstone-Project</p>
-                                    </div>
-                                </div>
-                                <p class="p-description">School administration dashboard for managing students, records,
-                                    and
-                                    daily school operations.</p>
-                                <div class="p-tags">
-                                    <span>PHP</span>
-                                    <span>Tailwind</span>
-                                    <span>MySQL</span>
-                                    <span>JavaScript</span>
-                                </div>
-                                <div class="project-card-actions">
-                                    <a class="project-card-button"
-                                        href="https://github.com/linbil-celestre/SchoolManagementSystem-SMS-.git"
-                                        tabindex="-1"><i class="fa-brands fa-github"></i> Github</a>
-                                    <a class="project-card-button" href="./logo/Project-logo-SMS.png" target="_blank"
-                                        rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i> Image</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Column: 3 Cards scrolling PABABA (DOWN) -->
-                    <div class="projects-col-wrapper" aria-label="Projects column right">
-                        <div class="projects-track-vertical projects-track-down">
-                            <!-- Set 1 (Originals) -->
                             <div class="card project-card">
                                 <div class="project-card-top">
                                     <a class="project-thumb project-image-button" href="./logo/project-logo-log2.jpg"
@@ -1328,329 +1257,9 @@
                                 </div>
                             </div>
 
-                            <!-- Set 2 (Duplicates for seamless loop) -->
-                            <div class="card project-card" aria-hidden="true">
-                                <div class="project-card-top">
-                                    <a class="project-thumb project-image-button" href="./logo/project-logo-log2.jpg"
-                                        target="_blank" rel="noopener" title="Open Log2minutes image"
-                                        aria-label="Open Log2minutes image">
-                                        <img src="./logo/project-logo-log2.jpg" alt="" class="project-thumb-img">
-                                    </a>
-                                    <div class="project-card-title-wrap">
-                                        <p class="p-title">Log2minutes (barangay)</p>
-                                        <p class="subject">Client . Capstone-Project</p>
-                                    </div>
-                                </div>
-                                <p class="p-description">Barangay administration dashboard for managing residents,
-                                    records,
-                                    and daily community operations.</p>
-                                <div class="p-tags">
-                                    <span>Laravel</span>
-                                    <span>Tailwind</span>
-                                    <span>MySQL</span>
-                                    <span>JavaScript</span>
-                                </div>
-                                <div class="project-card-actions">
-                                    <a class="project-card-button" href="https://github.com/jampz-dev/lgu2minutes.git"
-                                        title="Completed project repository"
-                                        aria-label="Completed project repository"><i class="fa-brands fa-github"></i>
-                                        Github</a>
-                                    <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
-                                        rel="noopener" title="View project image" aria-label="View project image"><i
-                                            class="fa-regular fa-image"></i> Image</a>
-                                    <a class="project-card-button" href="./logo/project-logo-log2.jpg" target="_blank"
-                                        rel="noopener" title="Open project preview" aria-label="Open project preview"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                                </div>
-                            </div>
-
-                            <div class="card project-card" aria-hidden="true">
-                                <div class="project-card-top">
-                                    <div class="project-thumb">
-                                        <img src="./logo/Project-logo-libarary.png" alt="" class="project-thumb-img">
-                                    </div>
-                                    <div class="project-card-title-wrap">
-                                        <p class="p-title">Library System</p>
-                                        <p class="subject">System Administration and Maintenance</p>
-                                    </div>
-                                </div>
-                                <p class="p-description">Library administration dashboard for managing catalog records,
-                                    member registrations, book circulation, and daily operations.</p>
-                                <div class="p-tags">
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>JavaScript</span>
-                                    <span>Bootstrap</span>
-                                </div>
-                                <div class="project-card-actions">
-                                    <a class="project-card-button" href="https://github.com/linbil-celestre/library.git"
-                                        tabindex="-1"><i class="fa-brands fa-github"></i> Github</a>
-                                    <a class="project-card-button" href="./logo/Project-logo-libarary.png"
-                                        target="_blank" rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i>
-                                        Image</a>
-                                    <a class="project-card-button"
-                                        href="https://linbil-celestre.github.io/library/login.html" target="_blank"
-                                        rel="noopener" tabindex="-1"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                                </div>
-                            </div>
-
-                            <div class="card project-card" aria-hidden="true">
-                                <div class="project-card-top">
-                                    <div class="project-thumb">
-                                        <img src="./logo/Project-logo-Guidance-system.png" alt=""
-                                            class="project-thumb-img">
-                                    </div>
-                                    <div class="project-card-title-wrap">
-                                        <p class="p-title">Guidance System</p>
-                                        <p class="subject">Introduction To Human Computer Interaction</p>
-                                    </div>
-                                </div>
-                                <p class="p-description">Integrated administration dashboard for managing residents,
-                                    student
-                                    records, school coordination, and daily barangay operations.</p>
-                                <div class="p-tags">
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>JavaScript</span>
-                                    <span>Bootstrap</span>
-                                </div>
-                                <div class="project-card-actions">
-                                    <a class="project-card-button" href="https://github.com/linbil-celestre/Guidance"
-                                        tabindex="-1"><i class="fa-brands fa-github"></i> Github</a>
-                                    <a class="project-card-button" href="./logo/Project-logo-Guidance-system.png"
-                                        target="_blank" rel="noopener" tabindex="-1"><i class="fa-regular fa-image"></i>
-                                        Image</a>
-                                    <a class="project-card-button"
-                                        href="https://linbil-celestre.github.io/Guidance/login.html" target="_blank"
-                                        rel="noopener" tabindex="-1"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <!-- ============================================================
-                 PROJECT VIDEO PANEL (shown when Video tab is active)
-                 ============================================================ -->
-            <div class="proj-video-panel" id="projVideoPanel">
-                <!-- Video Panel Header (Clean and minimal) -->
-                <div class="pvideo-header-row">
-                    <div class="pvideo-header-left">
-                        <h2 class="pvideo-title">Featured Works</h2>
-                        <p class="pvideo-desc">A curated reel of video edits, transitions, motion graphics, and
-                            storytelling.</p>
-                    </div>
-                </div>
 
-                <!-- Infinite Video Carousel Viewport & Track (0 Duplicate Cards) -->
-                <div class="pvideo-carousel-wrap" id="pvideoCarouselWrap">
-                    <div class="pvideo-carousel-viewport" id="pvideoCarouselViewport">
-                        <div class="pvideo-carousel-track" id="pvideoCarouselTrack">
-
-                            <!-- Card 1: Travel Vlog -->
-                            <div class="pvideo-card" data-video-index="0" data-video-title="Travel Vlog"
-                                data-video-sub="YouTube Video" data-video-dur="02:36"
-                                data-video-desc="A short travel vlog highlighting my trip and experiences.">
-                                <div class="pvideo-thumb-wrap">
-                                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
-                                        alt="Travel Vlog preview" class="pvideo-thumb-img" loading="lazy">
-                                    <div class="pvideo-thumb-overlay">
-                                        <span class="pvideo-thumb-text font-script">Travel Vlog</span>
-                                    </div>
-                                    <div class="pvideo-dur-pill">
-                                        <i class="fa-solid fa-play"></i> <span>02:36</span>
-                                    </div>
-                                    <div class="pvideo-play-hover" aria-hidden="true">
-                                        <div class="pvideo-play-circle"><i class="fa-solid fa-play"></i></div>
-                                    </div>
-                                </div>
-                                <div class="pvideo-body">
-                                    <h3 class="pvideo-card-title">Travel Vlog</h3>
-                                    <p class="pvideo-card-sub">YouTube Video</p>
-                                    <div class="pvideo-tech-badges">
-                                        <span class="pvideo-badge badge-pr" title="Adobe Premiere Pro">Pr</span>
-                                        <span class="pvideo-badge badge-ae" title="Adobe After Effects">Ae</span>
-                                    </div>
-                                    <p class="pvideo-card-desc">A short travel vlog highlighting my trip and
-                                        experiences.</p>
-                                </div>
-                            </div>
-
-                            <!-- Card 2: Gaming Highlights -->
-                            <div class="pvideo-card" data-video-index="1" data-video-title="Gaming Highlights"
-                                data-video-sub="TikTok / Reels" data-video-dur="03:12"
-                                data-video-desc="Edited highlights with smooth transitions and effects.">
-                                <div class="pvideo-thumb-wrap">
-                                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
-                                        alt="Gaming Highlights preview" class="pvideo-thumb-img" loading="lazy">
-                                    <div class="pvideo-thumb-overlay">
-                                        <span class="pvideo-thumb-text font-gaming">GAME<br>HIGHLIGHTS</span>
-                                    </div>
-                                    <div class="pvideo-dur-pill">
-                                        <i class="fa-solid fa-play"></i> <span>03:12</span>
-                                    </div>
-                                    <div class="pvideo-play-hover" aria-hidden="true">
-                                        <div class="pvideo-play-circle"><i class="fa-solid fa-play"></i></div>
-                                    </div>
-                                </div>
-                                <div class="pvideo-body">
-                                    <h3 class="pvideo-card-title">Gaming Highlights</h3>
-                                    <p class="pvideo-card-sub">TikTok / Reels</p>
-                                    <div class="pvideo-tech-badges">
-                                        <span class="pvideo-badge badge-pr" title="Adobe Premiere Pro">Pr</span>
-                                        <span class="pvideo-badge badge-capcut"
-                                            title="CapCut Video Editor">CapCut</span>
-                                    </div>
-                                    <p class="pvideo-card-desc">Edited highlights with smooth transitions and effects.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Card 3: Product Promo -->
-                            <div class="pvideo-card" data-video-index="2" data-video-title="Product Promo"
-                                data-video-sub="Commercial / Advertisement" data-video-dur="01:20"
-                                data-video-desc="A simple promotional video for a local coffee brand.">
-                                <div class="pvideo-thumb-wrap">
-                                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80"
-                                        alt="Product Promo preview" class="pvideo-thumb-img" loading="lazy">
-                                    <div class="pvideo-thumb-overlay">
-                                        <div class="pvideo-thumb-text font-coffee">
-                                            <span class="coffee-title">COFFEE</span>
-                                            <span class="coffee-sub">BRAND PROMO</span>
-                                        </div>
-                                    </div>
-                                    <div class="pvideo-dur-pill">
-                                        <i class="fa-solid fa-play"></i> <span>01:20</span>
-                                    </div>
-                                    <div class="pvideo-play-hover" aria-hidden="true">
-                                        <div class="pvideo-play-circle"><i class="fa-solid fa-play"></i></div>
-                                    </div>
-                                </div>
-                                <div class="pvideo-body">
-                                    <h3 class="pvideo-card-title">Product Promo</h3>
-                                    <p class="pvideo-card-sub">Commercial / Advertisement</p>
-                                    <div class="pvideo-tech-badges">
-                                        <span class="pvideo-badge badge-pr" title="Adobe Premiere Pro">Pr</span>
-                                        <span class="pvideo-badge badge-ae" title="Adobe After Effects">Ae</span>
-                                    </div>
-                                    <p class="pvideo-card-desc">A simple promotional video for a local coffee brand.</p>
-                                </div>
-                            </div>
-
-                            <!-- Card 4: School Project -->
-                            <div class="pvideo-card" data-video-index="3" data-video-title="School Project"
-                                data-video-sub="Short Film" data-video-dur="04:18"
-                                data-video-desc="A short film with cinematic color grading and storytelling.">
-                                <div class="pvideo-thumb-wrap">
-                                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80"
-                                        alt="School Project preview" class="pvideo-thumb-img" loading="lazy">
-                                    <div class="pvideo-thumb-overlay">
-                                        <span class="pvideo-thumb-text font-cinema">A NEW<br>CHAPTER</span>
-                                    </div>
-                                    <div class="pvideo-dur-pill">
-                                        <i class="fa-solid fa-play"></i> <span>04:18</span>
-                                    </div>
-                                    <div class="pvideo-play-hover" aria-hidden="true">
-                                        <div class="pvideo-play-circle"><i class="fa-solid fa-play"></i></div>
-                                    </div>
-                                </div>
-                                <div class="pvideo-body">
-                                    <h3 class="pvideo-card-title">School Project</h3>
-                                    <p class="pvideo-card-sub">Short Film</p>
-                                    <div class="pvideo-tech-badges">
-                                        <span class="pvideo-badge badge-pr" title="Adobe Premiere Pro">Pr</span>
-                                        <span class="pvideo-badge badge-ae" title="Adobe After Effects">Ae</span>
-                                    </div>
-                                    <p class="pvideo-card-desc">A short film with cinematic color grading and
-                                        storytelling.</p>
-                                </div>
-                            </div>
-
-                            <!-- Card 5: Social Media Edit -->
-                            <div class="pvideo-card" data-video-index="4" data-video-title="Social Media Edit"
-                                data-video-sub="TikTok / Reels" data-video-dur="01:45"
-                                data-video-desc="A fun and engaging short video for social media.">
-                                <div class="pvideo-thumb-wrap">
-                                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
-                                        alt="Social Media Edit preview" class="pvideo-thumb-img" loading="lazy">
-                                    <div class="pvideo-thumb-overlay">
-                                        <div class="pvideo-thumb-text font-lately">
-                                            <span>LIFE<br>LATELY</span>
-                                            <span class="lately-smile"><i class="fa-regular fa-face-smile"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="pvideo-dur-pill">
-                                        <i class="fa-solid fa-play"></i> <span>01:45</span>
-                                    </div>
-                                    <div class="pvideo-play-hover" aria-hidden="true">
-                                        <div class="pvideo-play-circle"><i class="fa-solid fa-play"></i></div>
-                                    </div>
-                                </div>
-                                <div class="pvideo-body">
-                                    <h3 class="pvideo-card-title">Social Media Edit</h3>
-                                    <p class="pvideo-card-sub">TikTok / Reels</p>
-                                    <div class="pvideo-tech-badges">
-                                        <span class="pvideo-badge badge-capcut"
-                                            title="CapCut Video Editor">CapCut</span>
-                                        <span class="pvideo-badge badge-ps" title="Adobe Photoshop">Ps</span>
-                                    </div>
-                                    <p class="pvideo-card-desc">A fun and engaging short video for social media.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video Player Lightbox / Modal -->
-            <div class="pvideo-modal-backdrop" id="pvideoModal" aria-hidden="true" role="dialog" aria-modal="true">
-                <div class="pvideo-modal-dialog">
-                    <button type="button" class="pvideo-modal-close" id="pvideoModalClose"
-                        aria-label="Close video player">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <div class="pvideo-player-screen">
-                        <div class="pvideo-player-cinema-bg" id="pvideoCinemaBg"></div>
-                        <div class="pvideo-player-center">
-                            <div class="pvideo-player-play-ring" id="pvideoPlayRing">
-                                <i class="fa-solid fa-play"></i>
-                            </div>
-                            <p class="pvideo-player-title-preview" id="pvideoModalPreviewTitle">Travel Vlog</p>
-                            <span class="pvideo-player-tag-preview" id="pvideoModalPreviewTag">Demo Reel Preview</span>
-                        </div>
-                        <div class="pvideo-player-bar">
-                            <div class="pvideo-bar-track">
-                                <div class="pvideo-bar-fill"></div>
-                            </div>
-                            <div class="pvideo-bar-controls">
-                                <div class="pvideo-bar-left">
-                                    <button type="button" class="pvideo-bar-btn"><i
-                                            class="fa-solid fa-play"></i></button>
-                                    <span class="pvideo-bar-time" id="pvideoModalTime">00:00 / 02:36</span>
-                                </div>
-                                <div class="pvideo-bar-right">
-                                    <button type="button" class="pvideo-bar-btn"><i
-                                            class="fa-solid fa-volume-high"></i></button>
-                                    <button type="button" class="pvideo-bar-btn"><i
-                                            class="fa-solid fa-expand"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pvideo-modal-info">
-                        <div class="pvideo-modal-meta">
-                            <h3 class="pvideo-modal-title" id="pvideoModalTitle">Travel Vlog</h3>
-                            <span class="pvideo-modal-badge" id="pvideoModalSub">YouTube Video</span>
-                        </div>
-                        <p class="pvideo-modal-desc" id="pvideoModalDesc">A short travel vlog highlighting my trip and
-                            experiences.</p>
-                    </div>
-                </div>
-            </div>
 
             <!-- Page Footer -->
             <footer class="page-footer">
@@ -1728,7 +1337,17 @@
                     <div class="page-footer-divider"></div>
                     <div class="page-footer-bottom">
                         <p class="page-footer-copy">&copy; 2026 Lin Bil Celestre. All rights reserved.</p>
-                        <p class="page-footer-tag">Crafted with HTML, CSS &amp; JavaScript</p>
+                        <div class="page-footer-contact">
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="footer-contact-text">linbilcelestre31@gmail.com</span>
+                            </span>
+                            <span class="footer-contact-sep">&middot;</span>
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="footer-contact-text">0912 647 212</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </footer>
@@ -1904,7 +1523,17 @@
                     <div class="page-footer-divider"></div>
                     <div class="page-footer-bottom">
                         <p class="page-footer-copy">&copy; 2026 Lin Bil Celestre. All rights reserved.</p>
-                        <p class="page-footer-tag">Crafted with HTML, CSS &amp; JavaScript</p>
+                        <div class="page-footer-contact">
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="footer-contact-text">linbilcelestre31@gmail.com</span>
+                            </span>
+                            <span class="footer-contact-sep">·</span>
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="footer-contact-text">0912 647 212</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </footer>
@@ -2261,7 +1890,17 @@
                     <div class="page-footer-divider"></div>
                     <div class="page-footer-bottom">
                         <p class="page-footer-copy">&copy; 2026 Lin Bil Celestre. All rights reserved.</p>
-                        <p class="page-footer-tag">Crafted with HTML, CSS &amp; JavaScript</p>
+                        <div class="page-footer-contact">
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span class="footer-contact-text">linbilcelestre31@gmail.com</span>
+                            </span>
+                            <span class="footer-contact-sep">·</span>
+                            <span class="footer-contact-item footer-contact-blur" title="Hover to reveal">
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="footer-contact-text">0912 647 212</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </footer>
